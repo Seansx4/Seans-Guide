@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kosy Kennels | Kennels</title>
+    <!-- add icon link -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <meta
+      name="description"
+      content="Kosy Kennels boarding kennel service with over 25 years experience. Your dogs physical and mental health are both looked after!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <links
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/587420a4c9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav collapsible">
+        <span class="nav__item paw">
+          <a href="index.html">
+            <i class="fas fa-paw"></i>
+          </a>
+        </span>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="kennels.html">Kennels</a></li>
+          <li class="nav__item"><a href="cattery.html">Cattery</a></li>
+          <li class="nav__item"><a href="grooming.html">Grooming</a></li>
+          <li class="nav__item"><a href="rates.html">Rates</a></li>
+          <li class="nav__item"><a href="directions.html">Directions</a></li>
+          <li class="nav__item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section data-aos="fade-up" class="block container">
+      <header class="block__header">
+        <h2>Boarding Kennels</h2>
+      </header>
+      <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+        <div class="feature__content">
+          <h3 class="feature__heading">Information</h3>
+
+          <p>
+            Our dog boarding kennels were first built in 1994. Our Kennels were
+            built so that each of our dog kennels are provided with an
+            individual sleeping and feeding enclosure. Each Kennel is cleaned
+            and disinfected daily. There is access to water at all times and
+            food is prepared and given as per owner's instructions.We also offer
+            a freezer facility for fresh and cooked meats.
+          </p>
+          <p>
+            We supply high quality dry and canned food. If the dog is on
+            prescription or specialised food eg. Science Plan, Royal Canin, the
+            owner should supply this.
+          </p>
+        </div>
+        <img
+          class="feature__image image--rounded"
+          src="images/dog playing.jpg"
+          alt="Puppy playing outside"
+        />
+      </article>
+
+      <article data-aos="fade-right" class="feature grid grid--1x2">
+        <img
+          class="feature__image image--rounded"
+          src="images/vaccinations.jpg"
+          alt="Company policy on vaccinations"
+        />
+
+        <img
+          class="feature__image image--rounded"
+          src="images/dogs smiling.jpg"
+          alt="Happy dogs smiling"
+        />
+      </article>
+    </section>
+
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Kosy Kennels</h2>
+            <svg class="icon icon--white collapsible-icon">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="kennels.html">Kennels</a></li>
+              <li><a href="cattery.html">Cattery</a></li>
+              <li><a href="grooming.html">Grooming</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Information</h2>
+            <svg class="icon icon--white collapsible-icon">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="rates.html">Rates</a></li>
+              <li><a href="directions.html">Directions</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="footer__brand">
+          <a class="nav__brand" href="index.html">
+            <i class="fas fa-paw"></i
+          ></a>
+          <p class="footer__year">2022</p>
+        </section>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

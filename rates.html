@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paula's | Home</title>
+    <!-- add icon link -->
+    <link rel="icon" href="images/favicon.png" type="image/x-icon" />
+    <meta name="description" content="Rates for services from Kosy Kennels" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <links
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/587420a4c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav collapsible">
+        <span class="nav__item paw">
+          <a href="index.html">
+            <i class="fas fa-paw"></i>
+          </a>
+        </span>
+        <svg class="icon icon--white nav__toggler">
+          <use href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="index.html">Home</a></li>
+          <li class="nav__item"><a href="kennels.html">Kennels</a></li>
+          <li class="nav__item"><a href="cattery.html">Cattery</a></li>
+          <li class="nav__item"><a href="grooming.html">Grooming</a></li>
+          <li class="nav__item"><a href="rates.html">Rates</a></li>
+          <li class="nav__item"><a href="directions.html">Directions</a></li>
+          <li class="nav__item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="block">
+      <div class="container" data-aos="fade-right">
+        <header class="container__header">
+          <h2>Dog Kennels</h2>
+        </header>
+        <article class="feature grid grid--1x2">
+          <div
+            class="feature__content aos-init aos-animate"
+            data-aos="zoom-in-up"
+          >
+            <table class="pricing">
+              <tr class="pricing__entry">
+                <th class="pricing__header">Service</th>
+                <th class="pricing__header">Price</th>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">1 Dog</td>
+                <td class="pricing__info">from €15.00 per day</td>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">2 Dogs sharing</td>
+                <td class="pricing__info">from €28.00 per day</td>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">3 Dogs sharing</td>
+                <td class="pricing__info">from €42.00 per day</td>
+              </tr>
+            </table>
+          </div>
+          <img class="feature__image" src="images/dogs smiling.jpg" alt="" />
+        </article>
+      </div>
+
+      <div class="container">
+        <header class="container__header">
+          <h2>Cattery</h2>
+        </header>
+        <article class="feature grid grid--1x2" data-aos="fade-up">
+          <div class="feature__content">
+            <table class="pricing">
+              <tr class="pricing__entry">
+                <th class="pricing__header">Service</th>
+                <th class="pricing__header">Price</th>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">1 Cat</td>
+                <td class="pricing__info">€10.00 per day</td>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">2 Cats sharing</td>
+                <td class="pricing__info">€18.00 per day</td>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">3 Cats sharing</td>
+                <td class="pricing__info">€24.00 per day</td>
+              </tr>
+            </table>
+          </div>
+          <img
+            class="feature__image"
+            src="images/sleepy cats.jpg"
+            alt="Cats sleeping"
+          />
+        </article>
+      </div>
+
+      <div class="container">
+        <header class="container__header">
+          <h2>Grooming</h2>
+        </header>
+
+        <article class="feature grid grid--1x2" data-aos="fade-right">
+          <div
+            class="feature__content aos-init aos-animate"
+            data-aos="zoom-in-up"
+          >
+            <table class="pricing">
+              <tr class="pricing__entry">
+                <th class="pricing__header">Service</th>
+                <th class="pricing__header">Price</th>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">Small Dogs</td>
+                <td class="pricing__info">start from €35.00</td>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">Large Dogs</td>
+                <td class="pricing__info">Start from €55.00</td>
+              </tr>
+              <tr class="pricing__entry">
+                <td class="pricing__info">Giant Dogs</td>
+                <td class="pricing__info">Start from €75.00</td>
+              </tr>
+            </table>
+            <p>
+              *Wash, cut & blow dry (price depends on size & condition of dog)
+            </p>
+          </div>
+          <img
+            class="feature__image"
+            src="images/groomed doggos.jpg"
+            alt="Dogs after being groomed"
+          />
+        </article>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="container">
+        <header class="container__header">
+          <h2>Collection & Deliveries</h2>
+        </header>
+        <ul class="list list--tick" data-aos="fade-down">
+          <li class="list__item">
+            We charge a rate of €1 per km from our location for collection and
+            delivery services
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Kosy Kennels</h2>
+            <svg class="icon icon--white collapsible-icon">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="kennels.html">Kennels</a></li>
+              <li><a href="cattery.html">Cattery</a></li>
+              <li><a href="grooming.html">Grooming</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <header class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Information</h2>
+            <svg class="icon icon--white collapsible-icon">
+              <use href="images/sprite.svg#chevron"></use>
+            </svg>
+          </header>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="rates.html">Rates</a></li>
+              <li><a href="directions.html">Directions</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="footer__brand">
+          <a class="nav__brand" href="index.html">
+            <i class="fas fa-paw"></i
+          ></a>
+          <p class="footer__year">2022</p>
+        </section>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

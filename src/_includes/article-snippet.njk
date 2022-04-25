@@ -1,0 +1,9 @@
+
+
+        <li>
+            <p>{{ post.data.title }}</p>
+             <p>{{ post.data.date | postDate }}</p>
+            <img style="height:200px;" src="{{post.data.image}}" alt="{{post.data.imageAlt}}">
+            <a href="{{ post.url }}">Continue Reading</a>
+        </li>
+

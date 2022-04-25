@@ -1,0 +1,20 @@
+---
+title: Blog
+layout: 'base.njk'
+---
+
+
+    <section data-aos="fade-up" class="block container">
+      <header class="block__header">
+        <h2>Boarding Kennels</h2>
+      </header>
+
+    <ul>
+    {%- for post in collections.post | reverse -%}
+        
+    {% include 'article-snippet.njk' %}
+    {%- endfor -%}
+
+
+    </ul>
+

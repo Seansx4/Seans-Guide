@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <header class="header">
@@ -43,7 +44,7 @@
         <li>
             <p>My fifth blog</p>
              <p>7 Apr 2022</p>
-            <img style="height:200px;" src="/images/dog.jpg" alt="Cat">
+            <img style="height:200px;" src="/images/dogs.jpg" alt="Cat">
             <a href="/blogs/fifth_blog/">Continue Reading</a>
         </li>
 
@@ -128,6 +129,18 @@
   </div>
 </footer>
   </footer>
+
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 </body>
 
 </html>

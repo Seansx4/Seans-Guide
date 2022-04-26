@@ -1,6 +1,11 @@
 ---
 title: Blog
 layout: 'base.njk'
+pagination:
+  data: collections.post
+  size: 2
+  alias: posts
+
 ---
 
 
@@ -9,12 +14,35 @@ layout: 'base.njk'
         <h2>Boarding Kennels</h2>
       </header>
 
-    <ul>
+    {# <ul>
     {%- for post in collections.post | reverse -%}
         
     {% include 'article-snippet.njk' %}
     {%- endfor -%}
 
 
-    </ul>
+    </ul>  #}
 
+    <div>
+
+      {% for post in posts %}
+ {% include 'article-snippet.njk' %}
+{% endfor %}
+</div>
+ <ul>
+  <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Prev</a>{% endif %}</li>
+{# {% for post in posts %}
+  <li>{% include 'article-snippet.njk' %}</li>
+{% endfor %} #}
+<li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% endif %}</li>
+</ul>
+
+
+
+{# <ul>
+  <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Prev</a>{% endif %}</li>   
+  {% for post in posts %}
+  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+{% endfor %} 
+<li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% endif %}</li>
+</ul> #}

@@ -14,35 +14,50 @@ pagination:
         <h2>Boarding Kennels</h2>
       </header>
 
-    {# <ul>
-    {%- for post in collections.post | reverse -%}
+
+{% for post in posts %}
+    
+
+      <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+        <div class="feature__content">
+          <h3 class="feature__heading">{{ post.data.title }}</h3>
+          <p>{{ post.data.date | postDate }}</p>
+          <a href="{{ post.url }}">Continue Reading</a>
+        </div>
+         <img
+          class="feature__image image--rounded"
+          src="{{ post.data.image }}"
+          alt="{{ post.data.imageAlt }}"
+        />
         
-    {% include 'article-snippet.njk' %}
-    {%- endfor -%}
+     
+    
+      
 
-
-    </ul>  #}
-
-    <div>
-
-      {% for post in posts %}
- {% include 'article-snippet.njk' %}
+      </article>    
 {% endfor %}
-</div>
+
+            
+            
+
+
+
+
+
+
+
+{# <p>gaaaaaaaaay</p>
+
+    {% for post in posts %}
+     {% include 'article-snippet.njk' %}
+     
+    {% endfor %}
+</div> #}
  <ul>
   <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Prev</a>{% endif %}</li>
-{# {% for post in posts %}
-  <li>{% include 'article-snippet.njk' %}</li>
-{% endfor %} #}
+
 <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% endif %}</li>
 </ul>
 
 
 
-{# <ul>
-  <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Prev</a>{% endif %}</li>   
-  {% for post in posts %}
-  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
-{% endfor %} 
-<li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% endif %}</li>
-</ul> #}

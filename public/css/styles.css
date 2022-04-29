@@ -708,3 +708,12 @@ a {
 .quote {
   font-style: italic;
 }
+
+.pagination{
+  text-align: center;
+}
+
+.pagination_list > li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+}

@@ -22,6 +22,7 @@ pagination:
         <div class="feature__content">
           <h3 class="feature__heading">{{ post.data.title }}</h3>
           <p>{{ post.data.date | postDate }}</p>
+          <p>{{ post.data.description }}</p>
           <a href="{{ post.url }}">Continue Reading</a>
         </div>
          <img
@@ -44,20 +45,17 @@ pagination:
 
 
 
-
-
-{# <p>gaaaaaaaaay</p>
-
-    {% for post in posts %}
-     {% include 'article-snippet.njk' %}
-     
-    {% endfor %}
-</div> #}
- <ul>
+<div class="pagination">
+ <ul class="pagination_list">
   <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Prev</a>{% endif %}</li>
+
+
+
+
+<li><span> {{ pagination.pageNumber + 1 }} </span></li> 
+<li><span> {{ pagination.pageNumber + 2 }} </span></li>
 
 <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% endif %}</li>
 </ul>
-
-
+</div>
 

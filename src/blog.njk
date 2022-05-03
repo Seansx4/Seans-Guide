@@ -31,10 +31,6 @@ pagination:
           alt="{{ post.data.imageAlt }}"
         />
         
-     
-    
-      
-
       </article>    
 {% endfor %}
 
@@ -47,15 +43,23 @@ pagination:
 
 <div class="pagination">
  <ul class="pagination_list">
-  <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Prev</a>{% endif %}</li>
+  <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">&laquo;</a>
 
+  {% endif %}</li>
 
+ <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{{ pagination.pageNumber - 1 }}</a>{% endif %}</li>
 
+ <li><a class="active" href="{{ pagination.href }}">{{ pagination.pageNumber }}</a></li>
+ 
+ <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">{{ pagination.pageNumber + 1 }}</a>{% endif %}</li>
 
-<li><span> {{ pagination.pageNumber + 1 }} </span></li> 
-<li><span> {{ pagination.pageNumber + 2 }} </span></li>
+<li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">&raquo;</a>{% endif %}</li>
 
-<li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% endif %}</li>
 </ul>
+
+
+
+
+
 </div>
 

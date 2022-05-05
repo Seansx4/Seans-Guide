@@ -5,7 +5,7 @@ author: Seangus
 tags:
   - post
   - featured
-subheading1: First para
+subheading1: Happy Hampos
 paragraph1: |-
   Hopefully this blog still publishes
 
@@ -32,4 +32,6 @@ paragraph2: "<p>It is very important to ensure the mental health of your
 
   vero officia voluptatum provident, fuga est expedita corrupti culpa rem
   ut!</p>"
+image2: https://www.zooplus.co.uk/magazine/wp-content/uploads/2018/03/hamster-language-1024x682.jpg
+imageAlt2: hamster eating
 ---

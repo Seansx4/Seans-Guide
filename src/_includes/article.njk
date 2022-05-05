@@ -29,6 +29,33 @@ layout: "base.njk"
 
         {{ paragraph2 | safe }}
       </div>
+      {% if 'image2' %}
+      <img
+        class="feature__image image--rounded"
+        src="{{ image2 }}"
+        alt="{{ imageAlt2 }}"
+      />
+      {% endif %}
+    </article>
+
+    {% endif %} {% if 'subheading3' %}
+
+    <article class="feature">
+      <div class="feature__content">
+        <h3 class="feature__heading">{{ subheading3 }}</h3>
+
+        {{ paragraph3 | safe }}
+      </div>
+    </article>
+
+    {% endif %} {% if 'subheading4' %}
+
+    <article class="feature">
+      <div class="feature__content">
+        <h3 class="feature__heading">{{ subheading4 }}</h3>
+
+        {{ paragraph2 | safe }}
+      </div>
     </article>
 
     {% endif %}

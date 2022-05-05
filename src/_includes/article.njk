@@ -23,17 +23,12 @@ layout: "base.njk"
 
     {% if 'subheading2' in content %}
 
-    <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    <article class="feature">
       <div class="feature__content">
         <h3 class="feature__heading">{{ subheading2 }}</h3>
 
         {{ paragraph2 | safe }}
       </div>
-      <img
-        class="feature__image image--rounded"
-        src="{{ image2 }}"
-        alt="{{ imageAlt2 }}"
-      />
     </article>
 
     {% endif %}

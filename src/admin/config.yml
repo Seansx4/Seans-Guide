@@ -69,7 +69,7 @@ collections:
           widget: "markdown",
           required: false,
         }
-      - { label: "Image 4", name: "image3", widget: "image", required: false }
+      - { label: "Image 4", name: "image4", widget: "image", required: false }
       - {
           label: "Image caption 4",
           name: "imageAlt4",

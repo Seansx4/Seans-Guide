@@ -2,9 +2,47 @@
 layout: "base.njk"
 ---
 
-<!-- Need to figure out an IF statement for IF true to only include second paragraph if present  -->
-
 <section class="block">
+  <div class="container">
+    <header class="block__header" data-aos="fade-up">
+      <h2>{{ title }}</h2>
+    </header>
+
+    <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+      <div class="feature__content">
+        <h3 class="feature__heading">{{ subheading1 }}</h3>
+
+        {{ content | safe }}
+      </div>
+      <img
+        class="feature__image image--rounded"
+        src="{{ image1 }}"
+        alt="{{ imageAlt1 }}"
+      />
+    </article>
+
+    {% if 'subheading2' in content %}
+
+    <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+      <div class="feature__content">
+        <h3 class="feature__heading">{{ subheading2 }}</h3>
+
+        {{ paragraph2 | safe }}
+      </div>
+      <img
+        class="feature__image image--rounded"
+        src="{{ image2 }}"
+        alt="{{ imageAlt2 }}"
+      />
+    </article>
+
+    {% endif %}
+  </div>
+
+  <div>Please work</div>
+</section>
+
+<!-- <section class="block">
   <div class="container">
     <header class="block__header" data-aos="fade-up">
       <h2>{{ title }}</h2>
@@ -42,23 +80,6 @@ layout: "base.njk"
   </div>
 
   <div>Please work</div>
-</section>
-
-<!-- <section class="block">
-  <div class="container">
-    <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-      <div class="feature__content">
-        <h3 class="feature__heading">{{ title }}</h3>
-
-        {{ content | safe }}
-      </div>
-      <img
-        class="feature__image image--rounded"
-        src="{{ image }}"
-        alt="{{ imageAlt }}"
-      />
-    </article>
-  </div>
 </section> -->
 
 <script src="js/main.js"></script>

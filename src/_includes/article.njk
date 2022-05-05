@@ -21,6 +21,8 @@ layout: "base.njk"
       />
     </article>
 
+    {% if 'subheading2' in content %}
+
     <article class="feature">
       <div class="feature__content">
         <h3 class="feature__heading">{{ subheading2 }}</h3>
@@ -28,9 +30,9 @@ layout: "base.njk"
         {{ paragraph2 | safe }}
       </div>
     </article>
-  </div>
 
-  <div>Please work</div>
+    {% endif %}
+  </div>
 </section>
 
 <!-- <section class="block">

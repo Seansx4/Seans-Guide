@@ -13,10 +13,6 @@ paragraph1: |-
 image1: https://ichef.bbci.co.uk/images/ic/1008xn/p06bn91c.jpg
 imageAlt1: happy hedgehog
 subheading2: Headgehog Mental Health
-paragraph2: >-
-  It is very important to ensure the mental health of your hedgehog is peak.
-  Feed the good boi yummy bois.
-
-
-  ![happy hamster](https://petkeen.com/wp-content/uploads/2021/04/hamster-eating4-pixabay.webp "hungy")
+paragraph2: It is very important to ensure the mental health of your hedgehog is
+  peak. Feed the good boi yummy bois.
 ---

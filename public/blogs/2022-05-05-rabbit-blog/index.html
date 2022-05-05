@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rabbit Blog</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rabbit Blog</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header class="header">
   <nav class="nav collapsible">
     <span class="nav__item paw">
       <a href="index.html">
@@ -25,35 +25,34 @@
     </ul>
   </nav>
 </header>
-  <main>
-          <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-        <div class="feature__content">
-          <h3 class="feature__heading">Rabbit Blog</h3>
 
-         <p>This is a rabbit</p>
-        </div>
-        <img
-          class="feature__image image--rounded"
-          src="https://rabbitwelfare.co.uk/wp-content/uploads/2021/12/bean1-scaled-e1642514613742.jpg"
-          alt="rabbit"
-        />
-      </article>      
-    
+    <main>
+      
+<section class="block">
+  <div class="container">
+    <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+      <div class="feature__content">
+        <h3 class="feature__heading">Rabbit Blog</h3>
 
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
- 
+        <p>This is a rabbit</p>
+      </div>
+      <img
+        class="feature__image image--rounded"
+        src="https://rabbitwelfare.co.uk/wp-content/uploads/2021/12/bean1-scaled-e1642514613742.jpg"
+        alt="rabbit"
+      />
+    </article>
+  </div>
+</section>
 
-
-
-
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
     </main>
-  <footer>
-  <footer class="block block--dark footer">
+    <footer><footer class="block block--dark footer">
   <div class="container grid footer__sections">
     <section class="collapsible collapsible--expanded footer__section">
       <header class="collapsible__header">
@@ -92,19 +91,18 @@
     </section>
   </div>
 </footer>
-  </footer>
+</footer>
 
-  <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
-</body>
-
+    </script>
+  </body>
 </html>

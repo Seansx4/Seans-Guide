@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>example</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>example</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header class="header">
   <nav class="nav collapsible">
     <span class="nav__item paw">
       <a href="index.html">
@@ -25,8 +25,9 @@
     </ul>
   </nav>
 </header>
-  <main>
-    
+
+    <main>
+      
 
 <section class="block hero">
   <div class="container grid grid--1x2">
@@ -148,24 +149,22 @@
 
 
         <ul>
-          <h2>working</h2>
-
-        
-            <p>Paginantion Blog</p>
-             <p>Invalid DateTime</p>
-            <img style="height:200px;" src="src/images/logo1.jpeg" alt="KCB">
-            <a href="/blogs/2022-04-26-paginantion-blog/">Continue Reading</a>
-     
-
-
-
-        
-            <p>CMS Blog</p>
-             <p>Invalid DateTime</p>
-            <img style="height:200px;" src="src/images/image.jpg" alt="Man with a surf board">
-            <a href="/blogs/2022-04-25-cms-blog/">Continue Reading</a>
-     
-
+          <h2>working</h2><p>Paginantion Blog</p>
+<p>Invalid DateTime</p>
+<img
+  style="height: 200px"
+  src="src/images/logo1.jpeg"
+  alt="KCB"
+/>
+<a href="/blogs/2022-04-26-paginantion-blog/">Continue Reading</a>
+<p>CMS Blog</p>
+<p>Invalid DateTime</p>
+<img
+  style="height: 200px"
+  src="src/images/image.jpg"
+  alt="Man with a surf board"
+/>
+<a href="/blogs/2022-04-25-cms-blog/">Continue Reading</a>
 </ul>
 
 
@@ -177,8 +176,7 @@
 </script>
 
     </main>
-  <footer>
-  <footer class="block block--dark footer">
+    <footer><footer class="block block--dark footer">
   <div class="container grid footer__sections">
     <section class="collapsible collapsible--expanded footer__section">
       <header class="collapsible__header">
@@ -217,19 +215,18 @@
     </section>
   </div>
 </footer>
-  </footer>
+</footer>
 
-  <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
-</body>
-
+    </script>
+  </body>
 </html>

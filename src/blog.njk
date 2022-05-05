@@ -1,75 +1,48 @@
 ---
 title: Blog
-layout: 'base.njk'
+layout: "base.njk"
 pagination:
   data: collections.post
-  size: 2
+  size: 4
   alias: posts
-
 ---
 
+<section data-aos="fade-up" class="block container">
+  <header class="block__header">
+    <h2>Boarding Kennels</h2>
+  </header>
 
-    <section data-aos="fade-up" class="block container">
-      <header class="block__header">
-        <h2>Boarding Kennels</h2>
-      </header>
+  {% for post in posts | reverse %}
 
+  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    <div class="feature__content">
+      <h3 class="feature__heading">{{ post.data.title }}</h3>
+      <p>{{ post.data.date | postDate }}</p>
+      <p>{{ post.data.description }}</p>
+      <a href="{{ post.url }}">Continue Reading</a>
+    </div>
+    <img
+      class="feature__image image--rounded"
+      src="{{ post.data.image }}"
+      alt="{{ post.data.imageAlt }}"
+    />
+  </article>
+  {% endfor %} {% include 'pagination.njk' %}
 
-{% for post in posts | reverse %}
-
-    
-
-      <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-        <div class="feature__content">
-          <h3 class="feature__heading">{{ post.data.title }}</h3>
-          <p>{{ post.data.date | postDate }}</p>
-          <p>{{ post.data.description }}</p>
-          <a href="{{ post.url }}">Continue Reading</a>
-        </div>
-         <img
-          class="feature__image image--rounded"
-          src="{{ post.data.image }}"
-          alt="{{ post.data.imageAlt }}"
-        />
-        
-      </article>    
-{% endfor %}
-
-            
-            
-
-
-
-
-
-<div class="pagination">
- <ul class="pagination_list">
-  <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">&laquo;</a>
-
-  {% endif %}</li>
-
- <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{{ pagination.pageNumber - 1 }}</a>{% endif %}</li>
-
- <li><a class="active" href="{{ pagination.href }}">{{ pagination.pageNumber }}</a></li>
- 
- <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">{{ pagination.pageNumber + 1 }}</a>{% endif %}</li>
-
-<li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">&raquo;</a>{% endif %}</li>
-
-</ul>
-
-
-
-
-
-</div>
-
-<div class="pagination">
- <ul class="pagination_list">
-  <li>
-<a href="/featured-blogs/">Feauted Blogs</a></li>
-<li>
-<a href="/cat-blogs/">Cat Blogs</a></li><li>
-<a href="/dog-blogs/">Dog Blogs</a></li><li>
-<a href="/rabbit-blogs/">Rabbit Blogs</a></li>
-</ul></div>
+  <div class="pagination">
+    <ul class="pagination_list">
+      <li>
+        <a href="/featured-blogs/">Feauted Blogs</a>
+      </li>
+      <li>
+        <a href="/cat-blogs/">Cat Blogs</a>
+      </li>
+      <li>
+        <a href="/dog-blogs/">Dog Blogs</a>
+      </li>
+      <li>
+        <a href="/rabbit-blogs/">Rabbit Blogs</a>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rabbit Blogs</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rabbit Blogs</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header class="header">
   <nav class="nav collapsible">
     <span class="nav__item paw">
       <a href="index.html">
@@ -25,8 +25,9 @@
     </ul>
   </nav>
 </header>
-  <main>
-    
+
+    <main>
+      
 
     <section data-aos="fade-up" class="block container">
       <header class="block__header">
@@ -107,8 +108,7 @@
 <a href="/rabbit-blogs/">Rabbit Blogs</a></li>
 </ul></div>
     </main>
-  <footer>
-  <footer class="block block--dark footer">
+    <footer><footer class="block block--dark footer">
   <div class="container grid footer__sections">
     <section class="collapsible collapsible--expanded footer__section">
       <header class="collapsible__header">
@@ -147,19 +147,18 @@
     </section>
   </div>
 </footer>
-  </footer>
+</footer>
 
-  <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
-</body>
-
+    </script>
+  </body>
 </html>

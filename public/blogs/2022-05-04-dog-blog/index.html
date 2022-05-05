@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog blog</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog blog</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header class="header">
   <nav class="nav collapsible">
     <span class="nav__item paw">
       <a href="index.html">
@@ -25,36 +25,35 @@
     </ul>
   </nav>
 </header>
-  <main>
-          <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-        <div class="feature__content">
-          <h3 class="feature__heading">Dog blog</h3>
 
-         <p>This is a blog about dogs. For the original visit <a href="https://www.theguardian.com/science/2019/jun/17/how-dogs-capture-your-heart-evolution-puppy-dog-eyes">here</a>.</p>
+    <main>
+      
+<section class="block">
+  <div class="container">
+    <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+      <div class="feature__content">
+        <h3 class="feature__heading">Dog blog</h3>
 
-        </div>
-        <img
-          class="feature__image image--rounded"
-          src="https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=620&amp;quality=45&amp;auto=format&amp;fit=max&amp;dpr=2&amp;s=064680b85e72644d9cc2e69e2763c541"
-          alt="Pug"
-        />
-      </article>      
-    
+        <p>This is a blog about dogs. For the original visit <a href="https://www.theguardian.com/science/2019/jun/17/how-dogs-capture-your-heart-evolution-puppy-dog-eyes">here</a>.</p>
 
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
- 
+      </div>
+      <img
+        class="feature__image image--rounded"
+        src="https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=620&amp;quality=45&amp;auto=format&amp;fit=max&amp;dpr=2&amp;s=064680b85e72644d9cc2e69e2763c541"
+        alt="Pug"
+      />
+    </article>
+  </div>
+</section>
 
-
-
-
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
     </main>
-  <footer>
-  <footer class="block block--dark footer">
+    <footer><footer class="block block--dark footer">
   <div class="container grid footer__sections">
     <section class="collapsible collapsible--expanded footer__section">
       <header class="collapsible__header">
@@ -93,19 +92,18 @@
     </section>
   </div>
 </footer>
-  </footer>
+</footer>
 
-  <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
-</body>
-
+    </script>
+  </body>
 </html>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Featured Blog</title>
-  <link rel="stylesheet" href="/css/styles.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</head>
-<body>
-  <header class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Featured Blog</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header class="header">
   <nav class="nav collapsible">
     <span class="nav__item paw">
       <a href="index.html">
@@ -25,90 +25,89 @@
     </ul>
   </nav>
 </header>
-  <main>
-    
 
-    <section data-aos="fade-up" class="block container">
-      <header class="block__header">
-        <h2>Featured Blogs</h2>
-      </header>
+    <main>
+      
+<section data-aos="fade-up" class="block container">
+  <header class="block__header">
+    <h2>Featured Blogs</h2>
+  </header>
 
+  
 
+  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    <div class="feature__content">
+      <h3 class="feature__heading">CMS Blog</h3>
+      <p>Invalid DateTime</p>
+      <p>This blog has been added through the CMS</p>
+      <a href="/blogs/2022-04-25-cms-blog/">Continue Reading</a>
+    </div>
+    <img
+      class="feature__image image--rounded"
+      src="src/images/image.jpg"
+      alt="Man with a surf board"
+    />
+  </article>
+  
 
-    
+  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    <div class="feature__content">
+      <h3 class="feature__heading">Paginantion Blog</h3>
+      <p>Invalid DateTime</p>
+      <p>Testing pagination</p>
+      <a href="/blogs/2022-04-26-paginantion-blog/">Continue Reading</a>
+    </div>
+    <img
+      class="feature__image image--rounded"
+      src="src/images/logo1.jpeg"
+      alt="KCB"
+    />
+  </article>
+   <div class="pagination">
+  <ul class="pagination_list">
+    <li>
+      
+    </li>
 
-      <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-        <div class="feature__content">
-          <h3 class="feature__heading">CMS Blog</h3>
-          <p>Invalid DateTime</p>
-          <p>This blog has been added through the CMS</p>
-          <a href="/blogs/2022-04-25-cms-blog/">Continue Reading</a>
-        </div>
-         <img
-          class="feature__image image--rounded"
-          src="src/images/image.jpg"
-          alt="Man with a surf board"
-        />
-        
-      </article>    
+    <li>
+      
+    </li>
 
-    
+    <li>
+      <a class="active" href="[object Object]">0</a>
+    </li>
 
-      <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-        <div class="feature__content">
-          <h3 class="feature__heading">Paginantion Blog</h3>
-          <p>Invalid DateTime</p>
-          <p>Testing pagination</p>
-          <a href="/blogs/2022-04-26-paginantion-blog/">Continue Reading</a>
-        </div>
-         <img
-          class="feature__image image--rounded"
-          src="src/images/logo1.jpeg"
-          alt="KCB"
-        />
-        
-      </article>    
+    <li>
+      
+    </li>
 
-
-            
-            
-
-
-
-
-
-<div class="pagination">
- <ul class="pagination_list">
-  <li></li>
-
- <li></li>
-
- <li><a class="active" href="[object Object]">0</a></li>
- 
- <li></li>
-
-<li></li>
-
-</ul>
-
-
-
-
-
+    <li>
+      
+    </li>
+  </ul>
 </div>
 
-<div class="pagination">
- <ul class="pagination_list">
-  <li>
-<a href="/featured-blogs/">Feauted Blogs</a></li>
-<li>
-<a href="/cat-blogs/">Cat Blogs</a></li><li>
-<a href="/dog-blogs/">Dog Blogs</a></li><li>
-<a href="/rabbit-blogs/">Rabbit Blogs</a></li>
-</ul></div>
+
+  <div class="pagination">
+    <ul class="pagination_list">
+      <li>
+        <a href="/featured-blogs/">Feauted Blogs</a>
+      </li>
+      <li>
+        <a href="/cat-blogs/">Cat Blogs</a>
+      </li>
+      <li>
+        <a href="/dog-blogs/">Dog Blogs</a>
+      </li>
+      <li>
+        <a href="/rabbit-blogs/">Rabbit Blogs</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
     </main>
-  <footer>
-  <footer class="block block--dark footer">
+    <footer><footer class="block block--dark footer">
   <div class="container grid footer__sections">
     <section class="collapsible collapsible--expanded footer__section">
       <header class="collapsible__header">
@@ -147,19 +146,18 @@
     </section>
   </div>
 </footer>
-  </footer>
+</footer>
 
-  <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    });
-  }
-</script>
-</body>
-
+    </script>
+  </body>
 </html>

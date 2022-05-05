@@ -722,14 +722,11 @@ a {
 .pagination a.active {
   background-color: #4caf50;
   color: white;
+  pointer-events: none;
 }
 
 .pagination a:hover:not(.active) {
   background-color: #ddd;
-}
-
-.no-click {
-  pointer-events: none;
 }
 
 .pagination_list > li {

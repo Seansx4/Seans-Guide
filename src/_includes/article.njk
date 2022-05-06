@@ -21,7 +21,7 @@ layout: "base.njk"
       />
     </article>
 
-    {% if 'subheading2' in post %}
+    {% if 'subheading2' %}
 
     <article class="feature">
       <div class="feature__content">
@@ -29,7 +29,7 @@ layout: "base.njk"
 
         {{ paragraph2 | safe }}
       </div>
-      {% if 'image2' in post %}
+      {% if 'image2' %}
       <img
         class="feature__image image--rounded"
         src="{{ image2 }}"
@@ -40,7 +40,7 @@ layout: "base.njk"
 
     {% endif %} 
     
-    {% if 'subheading3' in post %}
+    {% if 'subheading3' %}
 
     <article class="feature">
       <div class="feature__content">
@@ -48,7 +48,7 @@ layout: "base.njk"
 
         {{ paragraph3 | safe }}
       </div>
-      {% if 'image3' in post %}
+      {% if 'image3' %}
       <img
         class="feature__image image--rounded"
         src="{{ image3 }}"

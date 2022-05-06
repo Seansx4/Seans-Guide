@@ -29,14 +29,19 @@ layout: "base.njk"
 
         {{ paragraph2 | safe }}
       </div>
-      {% if imageAlt2|length %}
+     
+    </article>
+     {% if imageAlt2|length %}
+
+       {# class="feature__image image--rounded" #}
+       <div style="display:grid; place-items: center;">
       <img
-        class="feature__image image--rounded"
+        style="width:80%;"
         src="{{ image2 }}"
         alt="{{ imageAlt2 }}"
       />
+      </div>
       {% endif %}
-    </article>
 
     {% endif %} 
     

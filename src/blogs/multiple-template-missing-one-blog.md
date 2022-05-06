@@ -5,16 +5,12 @@ author: Seangus
 tags:
   - post
   - featured
-subheading1: Happy Hampos
-paragraph1: |-
-  Hopefully this blog still publishes
-
-  I am not so sure that it will but we will see.
+subheading1: P1 Heading
+paragraph1: <p>This is paragraph 1.</p>
 image1: https://ichef.bbci.co.uk/images/ic/1008xn/p06bn91c.jpg
 imageAlt1: happy hedgehog
-subheading2: Headgehog Mental Health
-paragraph2: "<p>It is very important to ensure the mental health of your
-  hedgehog is peak. Feed the good boi yummy bois.</p>
+subheading2: P2 Heading
+paragraph2: "<p>This is paragraph 2.</p>
 
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
@@ -34,7 +30,7 @@ paragraph2: "<p>It is very important to ensure the mental health of your
   ut!</p>"
 image2: https://www.zooplus.co.uk/magazine/wp-content/uploads/2018/03/hamster-language-1024x682.jpg
 imageAlt2: hamster eating
-subheading3: Hamster Food
-paragraph3: <p> It's important to feed your hamsters to keep them happy.
-paragraph4: <p> Please work </p>
+subheading3: Paragraph 3
+paragraph3: <p> This is paragraph 3.</p>
+paragraph4: <p> Please don't show </p>
 ---

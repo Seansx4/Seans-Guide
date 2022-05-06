@@ -48,7 +48,7 @@ layout: "base.njk"
 
         {{ paragraph3 | safe }}
       </div>
-      {% if 'image3' in content %}
+      {% if 'image3' %}
       <img
         class="feature__image image--rounded"
         src="{{ image3 }}"
@@ -59,7 +59,7 @@ layout: "base.njk"
 
     {% endif %} 
     
-    {% if 'subheading4' in content %}
+    {% if 'subheading4' %}
 
     <article class="feature">
       <div class="feature__content">

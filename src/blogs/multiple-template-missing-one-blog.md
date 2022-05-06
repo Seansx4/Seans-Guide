@@ -34,4 +34,6 @@ paragraph2: "<p>It is very important to ensure the mental health of your
   ut!</p>"
 image2: https://www.zooplus.co.uk/magazine/wp-content/uploads/2018/03/hamster-language-1024x682.jpg
 imageAlt2: hamster eating
+subheading3: Hamster Food
+paragraph3: <p> It's important to feed your hamsters to keep them happy.
 ---

@@ -1,8 +1,10 @@
-<p>{{ post.data.title }}</p>
+<h3>{{ post.data.title }}</h3>
 <p>{{ post.data.date | postDate }}</p>
-<img
-  style="height: 200px"
-  src="{{ post.data.image1 }}"
-  alt="{{ post.data.imageAlt1 }}"
-/>
+<p>{{ post.data.description }}</p>
 <a href="{{ post.url }}">Continue Reading</a>
+</div>
+<img
+class="feature__image"
+src="{{ post.data.image1 }}"
+alt="{{ post.data.imageAlt1 }}"
+/>

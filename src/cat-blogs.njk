@@ -16,16 +16,7 @@ pagination:
 
   <article class="feature grid grid--1x2" data-aos="zoom-in-up">
     <div class="feature__content">
-      <h3>{{ post.data.title }}</h3>
-      <p>{{ post.data.date | postDate }}</p>
-      <p>{{ post.data.description }}</p>
-      <a href="{{ post.url }}">Continue Reading</a>
-    </div>
-    <img
-      class="feature__image image--rounded"
-      src="{{ post.data.image1 }}"
-      alt="{{ post.data.imageAlt1 }}"
-    />
+ {% include 'article-snippet.njk' %}
   </article>
   {% endfor %} {% include 'pagination.njk' %}
   <div class="pagination">

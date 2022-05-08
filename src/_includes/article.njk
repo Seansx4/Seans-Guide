@@ -10,7 +10,7 @@ layout: "base.njk"
 
     <article class="feature grid grid--1x2" data-aos="zoom-in-up">
       <div class="feature__content">
-        <h3 class="feature__heading">{{ subheading1 }}</h3>
+       
 
         {{ paragraph1 | safe }}
       </div>
@@ -33,10 +33,10 @@ layout: "base.njk"
     </article>
      {% if imageAlt2|length %}
 
-       {# class="feature__image image--rounded" #}
-       <div style="display:grid; place-items: center;">
+     
+       <div class="blog__image__container">
       <img
-        style="width:80%;"
+      class="feature__image"
         src="{{ image2 }}"
         alt="{{ imageAlt2 }}"
       />
@@ -55,11 +55,15 @@ layout: "base.njk"
         {{ paragraph3 | safe }}
       </div>
       {% if imageAlt3|length %}
+
+        <div class="blog__image__container">
       <img
-        class="feature__image image--rounded"
+        class="feature__image"
         src="{{ image3 }}"
         alt="{{ imageAlt3 }}"
       />
+      <p> {{ imageAlt }} <p>
+      </div>
       {% endif %}
     </article>
 

@@ -434,6 +434,7 @@ a {
 }
 .feature__heading {
   margin-top: 1rem 0;
+  text-align: center;
 }
 
 .feature__image {
@@ -732,4 +733,9 @@ a {
 .pagination_list > li {
   display: inline-block;
   /* You can also add some margins here to make it look prettier */
+}
+
+.blog__image__container {
+  display: grid;
+  place-items: center;
 }

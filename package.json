@@ -13,5 +13,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
     "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "luxon": "^2.4.0"
   }
 }

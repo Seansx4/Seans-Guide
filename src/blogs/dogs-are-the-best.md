@@ -1,5 +1,6 @@
 ---
 title: Dogs are the best
+datum: Apr 8th 22
 description: Blog on why dogs are the best pet
 author: Chungus
 tags:

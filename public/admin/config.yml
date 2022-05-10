@@ -12,8 +12,8 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "Blog Date",
-          name: "date",
+          label: "Blog Datum",
+          name: "datum",
           widget: "datetime",
           default: "",
           format: "MMM Do YY",

@@ -11,6 +11,13 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Blog Date",
+          name: "date",
+          widget: "datetime",
+          default: "",
+          format: "MMM Do YY",
+        }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }

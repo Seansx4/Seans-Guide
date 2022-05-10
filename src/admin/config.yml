@@ -12,7 +12,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - {
-          label: "Blog Date",
+          label: "Blog Datum",
           name: "datum",
           widget: "datetime",
           default: "",

@@ -69,5 +69,8 @@ paragraph2: "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
   optio consequatur! Doloribus eaque animi numquam ea ratione! Enim impedit
   corrupti exercitationem eaque itaque, vero id possimus quae maiores
   repudiandae!</p>"
+image2: https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s800-c85.webp
+imageAlt2: Lazy Cat
+caption2: A lazy Cat
 subheading1: Cats sub heading
 ---

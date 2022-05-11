@@ -61,7 +61,7 @@ collections:
         }
       - { label: "Image 3", name: "image3", widget: "image", required: false }
       - {
-          label: "Image 3 ALT,
+          label: "Image 3 ALT",
           name: "imageAlt3",
           widget: "string",
           required: false,

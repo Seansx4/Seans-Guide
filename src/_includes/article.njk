@@ -10,8 +10,6 @@ layout: "base.njk"
 
     <article class="feature grid grid--1x2" data-aos="zoom-in-up">
       <div class="feature__content">
-       
-
         {{ paragraph1 | safe }}
       </div>
       <img
@@ -19,6 +17,7 @@ layout: "base.njk"
         src="{{ image1 }}"
         alt="{{ imageAlt1 }}"
       />
+      <p>{{ caption1 }}</p>
     </article>
 
     {% if subheading2|length %}
@@ -29,24 +28,14 @@ layout: "base.njk"
 
         {{ paragraph2 | safe }}
       </div>
-     
     </article>
-     {% if imageAlt2|length %}
+    {% if imageAlt2|length %}
+    <div class="blog__image__container">
+      <img class="feature__image" src="{{ image2 }}" alt="{{ imageAlt2 }}" />
+      <p>{{ caption2 }}</p>
+    </div>
 
-     
-       <div class="blog__image__container">
-      <img
-      class="feature__image"
-        src="{{ image2 }}"
-        alt="{{ imageAlt2 }}"
-      />
-      <p> {{ imageAlt2 }} <p>
-      </div>
-      {% endif %}
-
-    {% endif %} 
-    
-    {% if subheading3|length %}
+    {% endif %} {% endif %} {% if subheading3|length %}
 
     <article class="feature">
       <div class="feature__content">
@@ -54,28 +43,41 @@ layout: "base.njk"
 
         {{ paragraph3 | safe }}
       </div>
-      {% if imageAlt3|length %}
-
-        <div class="blog__image__container">
-      <img
-        class="feature__image"
-        src="{{ image3 }}"
-        alt="{{ imageAlt3 }}"
-      />
-      <p> {{ imageAlt }} <p>
-      </div>
-      {% endif %}
     </article>
 
-    {% endif %}
-    
-     {% if subheading4|length %}
+    {% if imageAlt3|length %}
+
+    <div class="blog__image__container">
+      <img class="feature__image" src="{{ image3 }}" alt="{{ imageAlt3 }}" />
+      <p>{{ caption3 }}</p>
+      <p></p>
+    </div>
+
+    {% endif %} {% endif %} {% if subheading4|length %}
 
     <article class="feature">
       <div class="feature__content">
         <h3 class="feature__heading">{{ subheading4 }}</h3>
 
         {{ paragraph4 | safe }}
+      </div>
+    </article>
+
+    {% if imageAlt4|length %}
+
+    <div class="blog__image__container">
+      <img class="feature__image" src="{{ image4 }}" alt="{{ imageAlt4 }}" />
+      <p>{{ caption4 }}</p>
+      <p></p>
+    </div>
+
+    {% endif %} {% endif %} {% if subheading5|length %}
+
+    <article class="feature">
+      <div class="feature__content">
+        <h3 class="feature__heading">{{ subheading5 }}</h3>
+
+        {{ paragraph5 | safe }}
       </div>
     </article>
 

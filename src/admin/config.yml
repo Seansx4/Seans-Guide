@@ -45,7 +45,12 @@ collections:
           required: false,
         }
 
-      - { label: "Image 2 Caption", name: "caption2", widget: "string" }
+      - {
+          label: "Image 2 Caption",
+          name: "caption2",
+          widget: "string",
+          required: false,
+        }
 
       - {
           label: "Heading 3",
@@ -66,7 +71,12 @@ collections:
           widget: "string",
           required: false,
         }
-      - { label: "Image 3 Caption", name: "caption3", widget: "string" }
+      - {
+          label: "Image 3 Caption",
+          name: "caption3",
+          widget: "string",
+          required: false,
+        }
       - {
           label: "Heading 4",
           name: "subheading4",
@@ -86,7 +96,12 @@ collections:
           widget: "string",
           required: false,
         }
-      - { label: "Image 4 Caption", name: "caption4", widget: "string" }
+      - {
+          label: "Image 4 Caption",
+          name: "caption4",
+          widget: "string",
+          required: false,
+        }
 
       - {
           label: "Heading 5",

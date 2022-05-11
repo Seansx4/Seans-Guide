@@ -83,6 +83,13 @@ collections:
           widget: "string",
           required: false,
         }
+
+      - {
+          label: "Paragraph 5",
+          name: "paragraph5",
+          widget: "markdown",
+          required: false,
+        }
     # fields:
     #   - { label: "Title", name: "title", widget: "string" }
     #   - { label: "Description", name: "description", widget: "string" }

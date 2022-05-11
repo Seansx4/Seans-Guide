@@ -22,43 +22,10 @@ pagination:
   <div class="feature__content">
 {% include 'article-snippet.njk' %}
 </article>
-{% endfor %}
+{% endfor %} {% include 'pagination.njk' %}
 
             
             
 
 
 
-
-
-<div class="pagination">
- <ul class="pagination_list">
-  <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">&laquo;</a>
-
-  {% endif %}</li>
-
- <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">{{ pagination.pageNumber - 1 }}</a>{% endif %}</li>
-
- <li><a class="active" href="{{ pagination.href }}">{{ pagination.pageNumber }}</a></li>
- 
- <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">{{ pagination.pageNumber + 1 }}</a>{% endif %}</li>
-
-<li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">&raquo;</a>{% endif %}</li>
-
-</ul>
-
-
-
-
-
-</div>
-
-<div class="pagination">
- <ul class="pagination_list">
-  <li>
-<a href="/featured-blogs/">Feauted Blogs</a></li>
-<li>
-<a href="/cat-blogs/">Cat Blogs</a></li><li>
-<a href="/dog-blogs/">Dog Blogs</a></li><li>
-<a href="/rabbit-blogs/">Rabbit Blogs</a></li>
-</ul></div>

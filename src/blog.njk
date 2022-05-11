@@ -10,22 +10,11 @@ pagination:
 
 <section data-aos="fade-up" class="block container">
   <header class="block__header">
-    <h2>Boarding Kennels</h2>
+    <h2>Blog by Category</h2>
   </header>
 
-  
-  {% for post in posts %}
-
-  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-    <div class="feature__content">
- {% include 'article-snippet.njk' %}
-  </article>
-  {% endfor %}
-
-  {% include 'pagination.njk' %}
-
-  <div class="pagination">
-    <ul class="pagination_list">
+  <div class="center">
+    <ul class="center_list">
       <li>
         <a href="/featured-blogs/">Feauted Blogs</a>
       </li>
@@ -40,4 +29,16 @@ pagination:
       </li>
     </ul>
   </div>
+  
+  {% for post in posts %}
+
+  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    <div class="feature__content">
+ {% include 'article-snippet.njk' %}
+  </article>
+  {% endfor %}
+
+  {% include 'pagination.njk' %}
+
+  
 </section>

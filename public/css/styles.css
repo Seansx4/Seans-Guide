@@ -710,27 +710,27 @@ a {
   font-style: italic;
 }
 
-.pagination {
+.center {
   text-align: center;
 }
-.pagination a {
+.center a {
   color: black;
   float: left;
   padding: 8px 16px;
   text-decoration: none;
 }
 
-.pagination a.active {
+.center a.active {
   background-color: #4caf50;
   color: white;
   pointer-events: none;
 }
 
-.pagination a:hover:not(.active) {
+.center a:hover:not(.active) {
   background-color: #ddd;
 }
 
-.pagination_list > li {
+.center_list > li {
   display: inline-block;
   /* You can also add some margins here to make it look prettier */
 }

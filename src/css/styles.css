@@ -739,3 +739,10 @@ a {
   display: grid;
   place-items: center;
 }
+
+@media screen and (min-width: 1024px) {
+  .blog__image__container {
+    width: 60%;
+    margin: auto;
+  }
+}

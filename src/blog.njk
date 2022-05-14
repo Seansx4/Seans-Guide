@@ -1,5 +1,6 @@
 ---
 title: Blog
+metaDescription: List of Kosy Kennels most recent blogs. Browse by category!
 layout: "base.njk"
 pagination:
   data: collections.post
@@ -10,35 +11,13 @@ pagination:
 
 <section data-aos="fade-up" class="block container">
   <header class="block__header">
-    <h2>Blog by Category</h2>
+    <h1 class="blog--header">Blog by Category</h1>
   </header>
 
-  <div class="center">
-    <ul class="center_list">
-      <li>
-        <a href="/featured-blogs/">Feauted Blogs</a>
-      </li>
-      <li>
-        <a href="/cat-blogs/">Cat Blogs</a>
-      </li>
-      <li>
-        <a href="/dog-blogs/">Dog Blogs</a>
-      </li>
-      <li>
-        <a href="/rabbit-blogs/">Rabbit Blogs</a>
-      </li>
-    </ul>
-  </div>
-  
-  {% for post in posts %}
+  {% include 'blog-categories.njk' %} {% for post in posts %}
 
   <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-    <div class="feature__content">
- {% include 'article-snippet.njk' %}
+    {% include 'article-snippet.njk' %}
   </article>
-  {% endfor %}
-
-  {% include 'pagination.njk' %}
-
-  
+  {% endfor %} {% include 'pagination.njk' %}
 </section>

@@ -106,6 +106,17 @@ a {
   color: var(--color-primary);
 }
 
+.link-blog {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.link-blog:hover {
+  color: var(--color-primary);
+}
+
 /*------------------------------------------------------------*/
 /* Lists */
 /*------------------------------------------------------------*/
@@ -745,5 +756,22 @@ a {
     width: 60%;
     height: 60%;
     margin: auto;
+  }
+}
+
+.header--link {
+  color: #4caf50;
+}
+
+.blog--header {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+  /*Hero styling. */
+  line-height: 1.1;
+  font-size: 4rem;
+}
+@media screen and (min-width: 1024px) {
+  .blog--header {
+    font-size: 4rem;
   }
 }

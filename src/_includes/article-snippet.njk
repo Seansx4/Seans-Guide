@@ -1,11 +1,16 @@
-<h3>{{ post.data.title }}</h3>
-{# <p>{{ post.data.datum | postDate }}</p> #}
-<p>{{ post.data.datum }}</p>
-<p>{{ post.data.description }}</p>
-<a href="{{ post.url }}">Continue Reading</a>
+<div class="feature__content">
+  <h3>
+    <a class="link-blog" href="{{ post.url }}">{{ post.data.title }}</a>
+  </h3>
+  {#
+  <p>{{ post.data.datum | postDate }}</p>
+  #}
+  <p>{{ post.data.datum }}</p>
+  <p>{{ post.data.description }}</p>
 </div>
-<img
-class="feature__image"
-src="{{ post.data.image1 }}"
-alt="{{ post.data.imageAlt1 }}"
-/>
+<a href="{{ post.url }}"
+  ><img
+    class="feature__image"
+    src="{{ post.data.image1 }}"
+    alt="{{ post.data.imageAlt1 }}"
+/></a>

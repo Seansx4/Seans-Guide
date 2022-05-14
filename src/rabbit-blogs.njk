@@ -1,6 +1,6 @@
 ---
 title: Rabbit Blogs
-layout: 'base.njk'
+layout: "base.njk"
 pagination:
   data: collections.rabbit-blogs
   size: 2
@@ -8,24 +8,15 @@ pagination:
   alias: posts
 ---
 
+<section data-aos="fade-up" class="block container">
+  <header class="block__header">
+    <h1 class="blog--header">Rabbit Blogs</h1>
+  </header>
 
-    <section data-aos="fade-up" class="block container">
-      <header class="block__header">
-        <h1 class="blog--header">Rabbit Blogs</h1>
-      </header>
+  {% for post in posts %}
 
-
-{% for post in posts %}
-    
-
-<article class="feature grid grid--1x2" data-aos="zoom-in-up">
-  <div class="feature__content">
-{% include 'article-snippet.njk' %}
-</article>
-{% endfor %} {% include 'pagination.njk' %}
-
-            
-            
-
-
-
+  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    {% include 'article-snippet.njk' %}
+  </article>
+  {% endfor %} {% include 'pagination.njk' %}
+</section>

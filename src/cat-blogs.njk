@@ -15,8 +15,7 @@ pagination:
   {% for post in posts %}
 
   <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-    <div class="feature__content">
- {% include 'article-snippet.njk' %}
+    {% include 'article-snippet.njk' %}
   </article>
   {% endfor %} {% include 'pagination.njk' %}
 </section>

@@ -108,8 +108,8 @@ a {
 
 .link-blog {
   color: var(--color-accent);
-  text-transform: uppercase;
-  font-size: 2rem;
+  /* text-transform: uppercase; */
+  /* font-size: 2rem; */
   font-weight: 700;
 }
 

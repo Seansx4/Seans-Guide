@@ -1,6 +1,7 @@
 ---
 title: Cat blogs
-datum: Apr 10th 22
+datum: Apr 7th 22
+blogTitle: Catz
 description: Test for cat blogs
 author: Ozzie
 tags:
@@ -20,7 +21,6 @@ paragraph1: "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
   mollitia corporis eum qui animi natus ut dolores maxime aliquam.</p>"
 image1: https://www.fearfreehappyhomes.com/wp-content/uploads/2020/08/shutterstock_707431309-e1554172878508.jpg
 imageAlt1: Cat walking
-caption1: A walking cat
 subheading2: Cats r gay
 paragraph2: "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
   Repellendus culpa numquam nesciunt voluptates dolorem, magni sapiente corrupti
@@ -72,6 +72,7 @@ paragraph2: "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
 image2: https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s800-c85.webp
 imageAlt2: Lazy Cat
 caption2: A lazy cat
+subheading3: Cats r straight
 paragraph3: "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
   Repellendus culpa numquam nesciunt voluptates dolorem, magni sapiente corrupti
   adipisci debitis quasi consequatur laborum vel ipsam cupiditate praesentium,
@@ -119,6 +120,6 @@ paragraph3: "<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
   optio consequatur! Doloribus eaque animi numquam ea ratione! Enim impedit
   corrupti exercitationem eaque itaque, vero id possimus quae maiores
   repudiandae!</p>"
+caption1: A walking cat
 subheading1: Cats sub heading
-subheading3: Cats r straight
 ---

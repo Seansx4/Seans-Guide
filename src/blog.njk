@@ -5,8 +5,8 @@ layout: "base.njk"
 pagination:
   data: collections.post
   size: 4
-  reverse: true
   alias: posts
+  reverse: true
 ---
 
 <section data-aos="fade-up" class="block container">
@@ -14,7 +14,7 @@ pagination:
     <h1 class="blog--header">Blog by Category</h1>
   </header>
 
-  {% include 'blog-categories.njk' %} {% for post in posts | reverse %}
+  {% include 'blog-categories.njk' %} {% for post in posts %}
 
   <article class="feature grid grid--1x2" data-aos="zoom-in-up">
     {% include 'article-snippet.njk' %}

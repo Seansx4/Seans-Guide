@@ -1,8 +1,7 @@
 ---
 title: example
-layout: 'base.njk'
+layout: "base.njk"
 ---
-
 
 <section class="block hero">
   <div class="container grid grid--1x2">
@@ -122,19 +121,12 @@ layout: 'base.njk'
   </div>
 </section>
 
+<ul>
+  <h2>working</h2>
 
-        <ul>
-          <h2>working</h2>
-          
-         {%- for post in collections.featured | reverse -%}
-        
-          {% include 'article-snippet.njk' %}
-         {%- endfor -%}
-
-
-    </ul>
-
-
+  {%- for post in collections.post | reverse -%} {% include
+  'article-snippet.njk' %} {%- endfor -%}
+</ul>
 
 <script src="js/main.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

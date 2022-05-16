@@ -1,16 +1,16 @@
 ---
-title: Rabbit Blogs
+title: DIY Blogs
 layout: "base.njk"
 pagination:
-  data: collections.rabbit-blogs
-  size: 2
-  reverse: true
+  data: collections.DIY
+  size: 10
   alias: posts
+  reverse: true
 ---
 
 <section data-aos="fade-up" class="block container">
   <header class="block__header">
-    <h1 class="blog--header">Rabbit Blogs</h1>
+    <h1 class="blog--header">DIY Blogs</h1>
   </header>
 
   {% for post in posts %}

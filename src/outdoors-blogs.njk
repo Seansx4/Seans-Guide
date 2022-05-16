@@ -1,16 +1,16 @@
 ---
-title: Dog Blogs
+title: Outdoor-Blogs
 layout: "base.njk"
 pagination:
-  data: collections.dog-blogs
-  size: 2
+  data: collections.outdoors
+  size: 10
   alias: posts
   reverse: true
 ---
 
 <section data-aos="fade-up" class="block container">
   <header class="block__header">
-    <h1 class="blog--header">Dog Blogs</h1>
+    <h1 class="blog--header">Outdoor Blogs</h1>
   </header>
 
   {% for post in posts %}

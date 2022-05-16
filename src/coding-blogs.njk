@@ -1,16 +1,16 @@
 ---
-title: Cat Blogs
+title: Coding Blogs
 layout: "base.njk"
 pagination:
-  data: collections.cat-blogs
+  data: collections.coding
   size: 2
-  alias: posts
   reverse: true
+  alias: posts
 ---
 
 <section data-aos="fade-up" class="block container">
   <header class="block__header">
-    <h1 class="blog--header">Cat Blogs</h1>
+    <h1 class="blog--header">Coding Blogs</h1>
   </header>
 
   {% for post in posts %}

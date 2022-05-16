@@ -124,7 +124,7 @@ collections:
         }
   - name: "Cat Blog"
     label: "Cat Blog"
-    folder: "src/blogs/cat blogs"
+    folder: "src/blogs/cat-blogs"
     create: true
     slug: "{{slug}}"
     fields:
@@ -145,7 +145,12 @@ collections:
       - { label: "Blog Title", name: "blogTitle", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          default: ["post", "cat-blogs"],
+        }
       - { label: "Paragraph 1", name: "paragraph1", widget: "markdown" }
       - { label: "Image 1", name: "image1", widget: "image" }
       - { label: "Image 1 ALT", name: "imageAlt1", widget: "string" }

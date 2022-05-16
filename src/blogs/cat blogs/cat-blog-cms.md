@@ -6,6 +6,7 @@ description: blog cms
 author: catasourus
 tags:
   - post
+  - cat-blogs
 paragraph1: <p>blah blah</p<
 image1: src/images/image.jpg
 imageAlt1: man surfing

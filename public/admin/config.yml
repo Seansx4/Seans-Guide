@@ -122,7 +122,7 @@ collections:
           widget: "markdown",
           required: false,
         }
-  - name: "Coding"
+  - name: "coding"
     label: "Coding"
     folder: "src/blogs/tech/coding"
     create: true
@@ -245,7 +245,7 @@ collections:
           widget: "markdown",
           required: false,
         }
-  - name: "SEO"
+  - name: "seo"
     label: "SEO"
     folder: "src/blogs/tech/SEO"
     create: true
@@ -369,7 +369,7 @@ collections:
           required: false,
         }
 
-  - name: "Outdoors"
+  - name: "outdoors"
     label: "Outdoors"
     folder: "src/blogs/outdoors"
     create: true
@@ -493,8 +493,8 @@ collections:
           required: false,
         }
 
-- name: "DIY"
-    label: "Outdoors"
+- name: "diy"
+    label: "DIY"
     folder: "src/blogs/DIY"
     create: true
     slug: "{{slug}}"

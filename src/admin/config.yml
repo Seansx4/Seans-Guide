@@ -122,7 +122,6 @@ collections:
           widget: "markdown",
           required: false,
         }
-collections:
   - name: "Cat Blog"
     label: "Cat Blog"
     folder: "src/blogs/cat blogs"

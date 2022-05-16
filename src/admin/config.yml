@@ -123,7 +123,7 @@ collections:
           required: false,
         }
 collections:
-  - name: "blog"
+  - name: "Cat blog"
     label: "Blog"
     folder: "src/blogs/cat blogs"
     create: true

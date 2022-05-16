@@ -493,7 +493,7 @@ collections:
           required: false,
         }
 
-- name: "diy"
+  - name: "diy"
     label: "DIY"
     folder: "src/blogs/DIY"
     create: true

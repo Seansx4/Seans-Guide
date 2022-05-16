@@ -123,8 +123,8 @@ collections:
           required: false,
         }
 collections:
-  - name: "Cat blog"
-    label: "Blog"
+  - name: "Cat Blog"
+    label: "Cat Blog"
     folder: "src/blogs/cat blogs"
     create: true
     slug: "{{slug}}"

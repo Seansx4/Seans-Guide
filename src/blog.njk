@@ -10,15 +10,20 @@ pagination:
 ---
 
 <section data-aos="fade-up" class="block container">
+
   <header class="block__header">
     <h1 class="blog--header">Blog by Category</h1>
   </header>
 
-  {% include 'blog-categories.njk' %} {% for post in posts %}
+  {% include 'blog-categories.njk' %}
+  <hr class="article__break">
+   {% for post in posts %}
 
   <article class="feature grid grid--1x2" data-aos="zoom-in-up">
     {% include 'article-snippet.njk' %}
   </article>
+
+  <hr class="article__break">
  
 {% endfor %}
 

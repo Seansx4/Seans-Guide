@@ -230,6 +230,9 @@ a {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .article__break{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -440,7 +443,7 @@ a {
 /*------------------------------------------------------------*/
 
 .feature {
-  gap: 4rem 2rem;
+  gap: 2rem;
   margin: 2rem 0;
 }
 .feature__heading {
@@ -747,6 +750,10 @@ a {
 
 .center a:hover:not(.active) {
   background-color: #ddd;
+}
+
+.center_list {
+  padding-inline-start: 0;
 }
 
 .center_list > li {

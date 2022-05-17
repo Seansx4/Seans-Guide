@@ -225,6 +225,10 @@ a {
   display: grid;
 }
 
+.article__break{
+  margin: 6rem 0;
+}
+
 @media screen and (min-width: 768px) {
   /* Class only activates if media query is met. Takes all the available space, divides it by 2 and gives each column an equal slice. */
   .grid--1x2 {

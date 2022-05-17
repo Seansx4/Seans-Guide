@@ -1,0 +1,22 @@
+---
+title: SEO-Blogs
+layout: "base.njk"
+pagination:
+  data: collections.SEO
+  size: 10
+  alias: posts
+  reverse: true
+---
+
+<section data-aos="fade-up" class="block container">
+  <header class="block__header">
+    <h1 class="blog--header">SEO Blogs</h1>
+  </header>
+
+  {% for post in posts %}
+
+  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    {% include 'article-snippet.njk' %}
+  </article>
+  {% endfor %} {% include 'pagination.njk' %}
+</section>

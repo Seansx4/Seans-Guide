@@ -1,18 +1,58 @@
-<!-- ---
-title: Coding Blogs
-layout: "base.njk"
-pagination:
-  data: collections.coding
-  size: 2
-  reverse: true
-  alias: posts
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Blogs</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header class="header">
+  <nav class="nav collapsible">
+    <span class="nav__item paw">
+      <a href="/">
+        Seans Guide
+      </a>
+    </span>
+    <svg class="icon icon--white nav__toggler">
+      <use href="/images/sprite.svg#menu"></use>
+    </svg>
+    <ul class="list nav__list collapsible__content">
+      <li class="nav__item"><a href="/">Home</a></li>
+      <li class="nav__item"><a href="/blog/">Blog</a></li>
+    </ul>
+  </nav>
+</header>
 
+    <main>
+      
 <section data-aos="fade-up" class="block container">
   <header class="block__header">
     <h1 class="blog--header">Coding Blogs</h1>
   </header>
 
+  
+
+  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    <div class="feature__content">
+  <h3>
+    <a class="link-blog" href="/blogs/tech/coding/second-cat-blog/">second cat blog</a>
+  </h3>
+  
+  <p>May 16th 22</p>
+  <p>cats</p>
+</div>
+<a href="/blogs/tech/coding/second-cat-blog/"
+  ><img
+    class="feature__image"
+    src="src/images/logo1.jpeg"
+    alt="cat"
+/></a>
+
+  </article>
    <div class="center">
   <ul class="center_list">
     <li>
@@ -24,7 +64,7 @@ pagination:
     </li>
 
     <li>
-      <a class="active" href=""></a>
+      <a class="active" href="[object Object]">0</a>
     </li>
 
     <li>
@@ -57,6 +97,60 @@ pagination:
 </div>
 
 
-</section> -->
+</section>
 
-<h2>working</h2>
+    </main>
+    <footer><footer class="block block--dark footer">
+  <div class="container grid footer__sections">
+    <section class="collapsible collapsible--expanded footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Kosy Kennels</h2>
+        <svg class="icon icon--white collapsible-icon">
+          <use href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kennels.html">Kennels</a></li>
+          <li><a href="cattery.html">Cattery</a></li>
+          <li><a href="grooming.html">Grooming</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Information</h2>
+        <svg class="icon icon--white collapsible-icon">
+          <use href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="rates.html">Rates</a></li>
+          <li><a href="directions.html">Directions</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer__brand">
+      <a class="nav__brand" href="index.html"> <i class="fas fa-paw"></i></a>
+      <p class="footer__year">2022</p>
+    </section>
+  </div>
+</footer>
+</footer>
+    <script src="/js/main.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

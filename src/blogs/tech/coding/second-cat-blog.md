@@ -6,7 +6,7 @@ description: cats
 author: cat
 tags:
   - post
-  - cat-blogs
+  - coding
 paragraph1: <p>cat</p>
 image1: src/images/logo1.jpeg
 imageAlt1: cat

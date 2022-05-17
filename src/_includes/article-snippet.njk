@@ -7,10 +7,12 @@
   #}
   <p>{{ post.data.datum }}</p>
   <p>{{ post.data.description }}</p>
+  <a href="{{ post.url }}">Continue Reading</a>
 </div>
-<a href="{{ post.url }}"
-  ><img
+<div class="feature__order">
+<img
     class="feature__image"
     src="{{ post.data.image1 }}"
     alt="{{ post.data.imageAlt1 }}"
-/></a>
+/>
+</div>

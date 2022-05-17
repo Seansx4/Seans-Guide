@@ -452,6 +452,10 @@ a {
   width: 100%;
 }
 
+.feature__order {
+  grid-row-start: 1;
+}
+
 /* Margin for first .feature__content is too large at twelve. Target first .feature__content only and half the margin. */
 
 .feature:first-of-type {
@@ -465,6 +469,10 @@ a {
 
   .feature {
     margin: 6rem 0;
+  }
+
+  .feature__order {
+    grid-row-start: auto;
   }
 }
 

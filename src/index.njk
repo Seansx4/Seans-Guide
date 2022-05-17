@@ -127,8 +127,6 @@ layout: "base.njk"
   {%- for post in collections.post | reverse -%} {% include
   'article-snippet.njk' %} {%- endfor -%}
 </ul>
-
-<script src="js/main.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();

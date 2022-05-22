@@ -225,7 +225,7 @@ a {
   display: grid;
 }
 
-.article__break{
+.article__break {
   margin: 6rem 0;
 }
 
@@ -234,7 +234,7 @@ a {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
-  .article__break{
+  .article__break {
     display: none;
   }
 }
@@ -308,7 +308,7 @@ a {
 }
 
 .block--dark {
-  background: #868686;
+  background: #000;
   color: #fff;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -325,7 +325,7 @@ a {
 /*------------------------------------------------------------*/
 
 .nav {
-  background: var(--color-primary);
+  background: #000;
   /* background: #fff; */
   /* By default flex direction is horizontal. */
   display: flex;
@@ -418,6 +418,13 @@ a {
   margin-top: 0;
 }
 
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  margin: 2rem 0 5rem;
+}
+
 /* For styling --> start with more generic classes and then specialise further in you go. */
 /* Overriding original polygon. */
 /* End up deleting as fix from orignal source later in course but keeping code for reference.
@@ -436,7 +443,7 @@ a {
     align-self: center;
   }
 
-  .hero__image {
+  .hero__header {
     /* Image too large leading to horizontal scrolling. Have to set width to 100%. */
     margin-top: 10rem;
   }

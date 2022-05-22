@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Featured Blog</title>
-    <meta name="description" content="" />
+    <title>Contact | Sean&#39;s Guide</title>
+    <meta name="description" content="Please get in touch with any comments or suggestions for a website post!" />
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,95 +38,53 @@
 
     <main>
       
-<section data-aos="fade-up" class="block container">
+<section class="block container">
   <header class="block__header">
-    <h1 class="blog--header">Featured Blogs</h1>
+    <h2 class="block__first--on--page">
+      <span class="branding">Contact</span>
+    </h2>
+    <p>Submit a query and I will reply as soon as possible!</p>
   </header>
 
-  
+  <div class="card--containter">
+    <div class="card">
+      <div class="card__body">
+        <form
+          action="https://formspree.io/f/mayveqvp"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="form">
+            <input type="text" name="Name" placeholder="Name*" class="input" />
+            <td>
+              <input
+                type="email"
+                name="Email"
+                placeholder="Email*"
+                class="input"
+              />
+            </td>
+            <input type="text" name="Phone" placeholder="Phone" class="input" />
+            <textarea
+              rows="5"
+              name="Message"
+              placeholder="Your message..."
+              class="message"
+            ></textarea>
 
-  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-    <div class="feature__content">
-  <h3>
-    <a class="link-blog" href="/blogs/multiple-template-missing-one-blog/">Multiple Template Missing One Blog</a>
-  </h3>
-  
-  <p></p>
-  <p>This is a test</p>
-  <a href="/blogs/multiple-template-missing-one-blog/">Continue Reading</a>
-</div>
-<div class="feature__order">
-<img
-    class="feature__image"
-    src="https://ichef.bbci.co.uk/images/ic/1008xn/p06bn91c.jpg"
-    alt="happy hedgehog"
-/>
-</div>
-  </article>
-  
-
-  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-    <div class="feature__content">
-  <h3>
-    <a class="link-blog" href="/blogs/multiple-paragraph-templates/">Multiple Paragraph Templates</a>
-  </h3>
-  
-  <p></p>
-  <p>This blog is to test the multiple paragraph blogs option</p>
-  <a href="/blogs/multiple-paragraph-templates/">Continue Reading</a>
-</div>
-<div class="feature__order">
-<img
-    class="feature__image"
-    src="https://images.squarespace-cdn.com/content/v1/5369465be4b0507a1fd05af0/1528837069483-LD1R6EJDDHBY8LBPVHIU/randall-ruiz-272502.jpg"
-    alt="Turtle swimming"
-/>
-</div>
-  </article>
-   <div class="center">
-  <ul class="center_list">
-    <li>
-      
-    </li>
-
-    <li>
-      
-    </li>
-
-    <li>
-      <a class="active" href="[object Object]">0</a>
-    </li>
-
-    <li>
-      
-    </li>
-
-    <li>
-      
-    </li>
-  </ul>
-</div>
-<div class="center">
-  <ul class="center_list">
-    <li>
-      <a href="/featured-blogs/">Feautured</a>
-    </li>
-    <li>
-      <a href="/coding-blogs/">Coding</a>
-    </li>
-    <li>
-      <a href="/SEO-blogs/">SEO</a>
-    </li>
-    <li>
-      <a href="/DIY-blogs/">DIY</a>
-    </li>
-    <li>
-      <a href="/outdoors-blogs/">Outdoors</a>
-    </li>
-  </ul>
-</div>
-
-
+            <button
+              id="Contact Button"
+              class="btn btn--outline btn--block"
+              type="submit"
+              value="Submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
     </main>

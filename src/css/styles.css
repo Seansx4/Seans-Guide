@@ -201,7 +201,7 @@ a {
 }
 
 .btn--secondary:hover {
-  background-color: #0c7207;
+  background-color: #000;
   color: #fff;
 }
 
@@ -495,7 +495,7 @@ a {
 /*------------------------------------------------------------*/
 
 .footer {
-  background-color: #6e6e6e;
+  background-color: #232323;
   margin-top: 2rem;
 }
 
@@ -692,13 +692,13 @@ a {
   width: 100%;
   padding: 10px;
   margin: 0px;
-  border: 1px solid #0f8a09;
+  border: 1px solid #000;
   margin: 2rem auto;
 }
 .input:focus,
 .input:focus {
   outline: none;
-  border-bottom: 1px solid #0f8a09;
+  border-bottom: 1px solid #000;
 }
 
 ::placeholder {
@@ -724,9 +724,9 @@ a {
 }
 
 .btn--outline:hover {
-  background: var(--color-primary);
+  background: #353839;
   color: #fff;
-  border: 2px solid #0f8a09;
+  border: 2px solid #353839;
 }
 
 @media screen and (min-width: 1024px) {

@@ -245,6 +245,20 @@ collections:
           widget: "markdown",
           required: false,
         }
+
+      - { label: "Image 5", name: "image5", widget: "image", required: false }
+      - {
+          label: "Image 5 ALT",
+          name: "imageAlt5",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 5 Caption",
+          name: "caption4",
+          widget: "string",
+          required: false,
+        }
   - name: "seo"
     label: "SEO"
     folder: "src/blogs/tech/SEO"

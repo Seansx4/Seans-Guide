@@ -81,6 +81,15 @@ layout: "base.njk"
         {{ paragraph5 | safe }}
       </div>
     </article>
+    {% if imageAlt5|length %}
+
+    <div class="blog__image__container">
+      <img class="feature__image" src="{{ image5 }}" alt="{{ imageAlt5 }}" />
+      <p>{{ caption5 }}</p>
+      <p></p>
+    </div>
+
+    {% endif %}
 
     {% endif %}
   </div>

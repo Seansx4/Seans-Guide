@@ -7,7 +7,7 @@ author: catasourus
 tags:
   - post
   - SEO
-paragraph1: <p>blah blah</p<
+paragraph1: <p>blah blah</p><p>Please work</p>
 image1: src/images/image.jpg
 imageAlt1: man surfing
 ---

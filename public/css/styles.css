@@ -53,7 +53,7 @@ h3 {
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 h2 {
@@ -298,6 +298,7 @@ a {
 
 .block__heading {
   margin-top: 0;
+  text-align: center;
 }
 
 .block__header,
@@ -347,7 +348,7 @@ a {
 
 .nav__item {
   padding: 0.5rem 2rem;
-  border-bottom: solid 1px #d2d0db;
+  /* border-bottom: solid 1px #d2d0db; */
 }
 
 .nav__item > a {
@@ -377,7 +378,6 @@ a {
 /* Hack to fix dodgey bottom margin of logo. */
 .nav__brand {
   transform: translateY(5px);
-  border-bottom: 0;
 }
 
 .nav__brand:hover {
@@ -428,6 +428,7 @@ a {
   color: #b9c3cf;
   letter-spacing: 1px;
   margin: 2rem 0 5rem;
+  text-align: center;
 }
 
 /* For styling --> start with more generic classes and then specialise further in you go. */

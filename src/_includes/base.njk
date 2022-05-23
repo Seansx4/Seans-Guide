@@ -24,6 +24,10 @@
     <main>
       {{ content | safe }}
     </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
     <footer>{% include 'footer.njk' %}</footer>
     <script src="/js/main.js"></script>
     <script>

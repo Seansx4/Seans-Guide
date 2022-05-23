@@ -12,11 +12,13 @@ layout: "base.njk"
       <div class="feature__content">
         {{ paragraph1 | safe }}
       </div>
+      <div class="feature__order">
       <img
         class="feature__image image--rounded"
         src="{{ image1 }}"
         alt="{{ imageAlt1 }}"
       />
+      </div>
     </article>
 
     {% if subheading2|length %}

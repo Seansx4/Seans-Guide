@@ -7,7 +7,7 @@ description: blog
 author: blog
 tags:
   - post
-  - featured
+  - coding
 paragraph1: testy
 image1: src/images/logo1.jpeg
 imageAlt1: a

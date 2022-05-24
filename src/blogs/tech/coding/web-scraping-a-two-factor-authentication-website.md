@@ -57,33 +57,29 @@ image2: /images/contentpage.png
 imageAlt2: Content page with URLs
 caption2: BigCommerce page with the list of URLs
 subheading3: ------
-paragraph3: >-
+paragraph3: >
   <p>While we can see what looks like links to our webpages, if we right click
   and press inspect on any given link we can see that it is actually a link to
   another page. </p>
+image3: /images/inspectcontentpage.jpg
+imageAlt3: Inspecting URLs
+caption3: Inspecting URLss
+subheading4: ------
+paragraph4: <p>This next page acts as an editorial page for the webpage, and it
+  is here that the webpage URL is stored.</p>
+image4: /images/editorialpage.png
+imageAlt4: Editorial page
+caption4: Editorial page, note you can see the correct web page URL.
+subheading5: ------
+paragraph5: >-
+  <p>This means our task is split into two stages. First, we must scrape the
+  list of editorial URLs on the dashboard, before visiting each URL individually
+  and scraping the required webpage URL. </p>
 
 
-  ```
-
-  <div>
-
-  <p>No Way this is very cool </p>
-
-  </div>
-
-  ```
 
 
-
-
-  <div class="blog__image__container">
-
-
-  ![](/images/inspectcontentpage.jpg)
-
-
-  <p>Inspecting the URLs of the content page</p>
-
-
-  </div>
+  <p>The first step of our web scraping journey is to attempt to access our BigCommerce dashboard. To do this we must login and pass our one-time 2FA code for login. To simulate the process, we are going to login to the dashboard from an incognito browser. This ensures we follow the same route our program will, and that we are not automatically logged in.</p>
+image5: /images/login.png
+imageAlt5: Login
 ---

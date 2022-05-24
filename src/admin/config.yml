@@ -259,6 +259,278 @@ collections:
           widget: "string",
           required: false,
         }
+
+      - {
+          label: "Heading 6",
+          name: "subheading6",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 6",
+          name: "paragraph6",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 6", name: "image6", widget: "image", required: false }
+      - {
+          label: "Image 6 ALT",
+          name: "imageAlt6",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 6 Caption",
+          name: "caption6",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Heading 7",
+          name: "subheading7",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 7",
+          name: "paragraph7",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 7", name: "image7", widget: "image", required: false }
+      - {
+          label: "Image 7 ALT",
+          name: "imageAlt7",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 7 Caption",
+          name: "caption7",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Heading 8",
+          name: "subheading8",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 8",
+          name: "paragraph8",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 8", name: "image8", widget: "image", required: false }
+      - {
+          label: "Image 8 ALT",
+          name: "imageAlt8",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 8 Caption",
+          name: "caption8",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Heading 9",
+          name: "subheading9",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 9",
+          name: "paragraph9",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 9", name: "image9", widget: "image", required: false }
+      - {
+          label: "Image 9 ALT",
+          name: "imageAlt9",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 9 Caption",
+          name: "caption9",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Heading 10",
+          name: "subheading10",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 10",
+          name: "paragraph10",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 10", name: "image10", widget: "image", required: false }
+      - {
+          label: "Image 10 ALT",
+          name: "imageAlt10",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 10 Caption",
+          name: "caption10",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Heading 11",
+          name: "subheading11",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 11",
+          name: "paragraph11",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 11", name: "image11", widget: "image", required: false }
+      - {
+          label: "Image 11 ALT",
+          name: "imageAlt11",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 11 Caption",
+          name: "caption11",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Heading 12",
+          name: "subheading12",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 12",
+          name: "paragraph12",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 12", name: "image12", widget: "image", required: false }
+      - {
+          label: "Image 12 ALT",
+          name: "imageAlt12",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 12 Caption",
+          name: "caption12",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Heading 13",
+          name: "subheading13",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 13",
+          name: "paragraph13",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 13", name: "image13", widget: "image", required: false }
+      - {
+          label: "Image 13 ALT",
+          name: "imageAlt13",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 13 Caption",
+          name: "caption13",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Heading 14",
+          name: "subheading14",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 14",
+          name: "paragraph14",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 14", name: "image14", widget: "image", required: false }
+      - {
+          label: "Image 14 ALT",
+          name: "imageAlt14",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 14 Caption",
+          name: "caption14",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Heading 15",
+          name: "subheading15",
+          widget: "string",
+          required: false,
+        }
+
+      - {
+          label: "Paragraph 15",
+          name: "paragraph15",
+          widget: "markdown",
+          required: false,
+        }
+
+      - { label: "Image 15", name: "image15", widget: "image", required: false }
+      - {
+          label: "Image 15 ALT",
+          name: "imageAlt15",
+          widget: "string",
+          required: false,
+        }
+      - {
+          label: "Image 15 Caption",
+          name: "caption15",
+          widget: "string",
+          required: false,
+        }
   - name: "outdoors"
     label: "Outdoors"
     folder: "src/blogs/outdoors"

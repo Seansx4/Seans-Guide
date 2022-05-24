@@ -255,7 +255,7 @@ collections:
         }
       - {
           label: "Image 5 Caption",
-          name: "caption5",
+          name: "caption4",
           widget: "string",
           required: false,
         }

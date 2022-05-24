@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Blogs</title>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
+    <header class="header">
+  <nav class="nav collapsible">
+    <span class="nav__item paw">
+      <a href="index.html">
+        <i class="fas fa-paw"></i>
+      </a>
+    </span>
+    <svg class="icon icon--white nav__toggler">
+      <use href="images/sprite.svg#menu"></use>
+    </svg>
+    <ul class="list nav__list collapsible__content">
+      <li class="nav__item"><a href="/">Home</a></li>
+      <li class="nav__item"><a href="/blog/">Blog</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <main>
+      
+<section data-aos="fade-up" class="block container">
+  <header class="block__header">
+    <h1 class="blog--header">Cat Blogs</h1>
+  </header>
+
+  
+
+  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+    <div class="feature__content">
+  <h3>
+    <a class="link-blog" href="/blogs/cat-blogs/">Cat blogs</a>
+  </h3>
+  
+  <p>Apr 7th 22</p>
+  <p>Test for cat blogs</p>
+</div>
+<a href="/blogs/cat-blogs/"
+  ><img
+    class="feature__image"
+    src="https://www.fearfreehappyhomes.com/wp-content/uploads/2020/08/shutterstock_707431309-e1554172878508.jpg"
+    alt="Cat walking"
+/></a>
+
+  </article>
+   <div class="center">
+  <ul class="center_list">
+    <li>
+      <a href="/cat-blogs/"
+        >&laquo;</a
+      >
+
+      
+    </li>
+
+    <li>
+      <a
+        href="/cat-blogs/"
+        >0</a
+      >
+    </li>
+
+    <li>
+      <a class="active" href="[object Object]">1</a>
+    </li>
+
+    <li>
+      
+    </li>
+
+    <li>
+      
+    </li>
+  </ul>
+</div>
+<div class="center">
+  <ul class="center_list">
+    <li>
+      <a href="/featured-blogs/">Feauted Blogs</a>
+    </li>
+    <li>
+      <a href="/cat-blogs/">Cat Blogs</a>
+    </li>
+    <li>
+      <a href="/dog-blogs/">Dog Blogs</a>
+    </li>
+    <li>
+      <a href="/rabbit-blogs/">Rabbit Blogs</a>
+    </li>
+  </ul>
+</div>
+
+
+</section>
+
+    </main>
+    <footer><footer class="block block--dark footer">
+  <div class="container grid footer__sections">
+    <section class="collapsible collapsible--expanded footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Kosy Kennels</h2>
+        <svg class="icon icon--white collapsible-icon">
+          <use href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kennels.html">Kennels</a></li>
+          <li><a href="cattery.html">Cattery</a></li>
+          <li><a href="grooming.html">Grooming</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="collapsible footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Information</h2>
+        <svg class="icon icon--white collapsible-icon">
+          <use href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="rates.html">Rates</a></li>
+          <li><a href="directions.html">Directions</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="footer__brand">
+      <a class="nav__brand" href="index.html"> <i class="fas fa-paw"></i></a>
+      <p class="footer__year">2022</p>
+    </section>
+  </div>
+</footer>
+</footer>
+
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

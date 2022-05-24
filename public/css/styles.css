@@ -807,10 +807,3 @@ a {
     font-size: 4rem;
   }
 }
-
-.code_terminal {
-  background-color: #eee;
-  border: 1px solid #999;
-  display: block;
-  padding: 20px;
-}

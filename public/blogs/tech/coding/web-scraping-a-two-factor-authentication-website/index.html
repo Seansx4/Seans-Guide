@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Scraping a Two-Factor Authentication Website</title>
+    <meta name="description" content="This blog outlines how to correctly web scrape a dynamic website protected with 2FA using Python and Selenium." />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E6SGQCPF41"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E6SGQCPF41');
+</script>
+
+  </head>
+  <body>
+    <header class="header">
+  <nav class="nav collapsible">
+    <span class="nav__item">
+      <a class="nav__brand" href="/">
+        <img src="/images/logo.jpg" alt="Brand logo" />
+      </a>
+    </span>
+
+    <svg class="icon icon--white nav__toggler">
+      <use href="/images/sprite.svg#menu"></use>
+    </svg>
+    <ul class="list nav__list collapsible__content">
+      <li class="nav__item"><a href="/">Home</a></li>
+      <li class="nav__item"><a href="/blog/">Blog</a></li>
+      <li class="nav__item"><a href="/contact/">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <main>
+      
+<section class="block">
+  <div class="container">
+    <header class="block__header" data-aos="fade-up">
+      <h1 class="blog--header">Web Scraping Content from Two-Factor Authentication Website</h1>
+    </header>
+
+    <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+      <div class="feature__content">
+        <p>Web scraping is a fantastic tool for any programmer to add to their arsenal. Web scraping allows you to automate data retrieval from webpages. For example, you could scrape a list of email addresses from a website, the price of products from another, or even the Google results page for specific search queries. The possibilities are endless, and process is both helpful and fun to set up. Win Win.  </p>
+
+
+
+<p>I learned to web scrape from hours of watching YouTube videos, reading blogs and tinkering with different lines of code, so I know first-hand that it is easy to be overwhelmed when you first look into web scraping. The first obstacle you will encounter is the numerous considerations to take into account. These range from which programming language to use, what kind of website you are scraping, to what libraries are available. I personally use Python for my web scraping antics and as such is what I outline in the demo below.</p>
+      </div>
+      <div class="feature__order">
+        <img
+          class="feature__image image--rounded"
+          src="/images/code.jpg"
+          alt="Python code for web scraping"
+        />
+      </div>
+    </article>
+
+    
+
+    <article class="feature">
+      <div class="feature__content">
+        <h3 class="feature__heading">Overview</h3>
+
+        <p>In this blog I am going to outline how to scrape a website with two-factor authentication. Two-factor authentication (2FA) provides extra security to a user account. When a user attempts to login to a platform protected with 2FA, a once off passcode is often sent to the email address associated with the account. </p>
+
+<p>When attempting to scrape a 2FA protected website myself, I found various tutorials outlining how to login to a regular website, but very sparse information on how to circumnavigate 2FA. I should make it clear that this tutorial is for someone who is the true owner of an account protected with 2FA and not a guide on how to hack someone else’s account. </p>
+
+<p>I like to keep my blogs focused on the topic of discussion, so I won’t be going through the technicalities of how to install the required dependencies (Selenium and the WebDriver) in this blog, or any basic concepts of Python programming. In the future I am going to write some content surrounding this but for now I will leave it up to you to do some quick research (I recommend YouTube). </p>
+
+
+
+<p>There are two possible options to take when trying to overcome this problem, but which option you chose depends largely on what kind of website you are trying to scrape. If you are unsure of what kind of website you are scraping, check out my guide Static vs Dynamic Sites: What’s the Difference? </p>
+
+<p>If your site is a static website you can simply use the beautifulsoup library in conjunction with a neat little trick to store your cookies (link). This allows you to bypass login and TFA and scrape the data as required. If you are scraping a dynamic website however, thing can be a little more complicated. </p>
+
+
+
+<p>Below I have outlined how to use Selenium to scrape the user dashboard of a BigCommerce website. BigCommerce is a popular ecommerce provider. The user dashboard for a BigCommerce website is dynamically generated and protected by 2FA at login. While this example may be different to the problem you are trying to solve, the solution should still function. </p>
+
+<p>For this example, we need to fetch the URL for each of our web pages (this was my original problem as BigCommerce does not allow the export of your webpage URLs). Below is the list of our webpages once we have logged into our dashboard.</p>
+      </div>
+    </article>
+    
+    <div class="blog__image__container">
+      <img class="feature__image" src="/images/content-page.png" alt="Content page with URLs" />
+      <p>BigCommerce page with the list of URLs</p>
+    </div>
+
+                  
+  </div>
+</section>
+
+<section data-aos="fade-up" class="block container">
+  <header class="block__header">
+    <h3>Blog by Category</h3>
+  </header>
+
+  <div class="center">
+  <ul class="center_list">
+    <li>
+      <a href="/featured-blogs/">Feautured</a>
+    </li>
+    <li>
+      <a href="/coding-blogs/">Coding</a>
+    </li>
+    <!-- <li>
+      <a href="/DIY-blogs/">DIY</a>
+    </li>
+    <li>
+      <a href="/outdoors-blogs/">Outdoors</a>
+    </li> -->
+  </ul>
+</div>
+
+</section>
+
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+    </main>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+    <footer><footer class="block block--dark footer">
+  <div class="container grid footer__sections">
+    <section class="collapsible collapsible--expanded footer__section">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading footer__heading">Sean's Guide</h2>
+        <svg class="icon icon--white collapsible-icon">
+          <use href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="footer__brand">
+      <a class="nav__brand" href="index.html">
+        <img src="/images/logo2.jpg" alt="Brand logo"
+      /></a>
+      <p class="footer__year">2022</p>
+    </section>
+  </div>
+</footer>
+</footer>
+    <script src="/js/main.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

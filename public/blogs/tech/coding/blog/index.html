@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
-    <meta name="description" content="List of Kosy Kennels most recent blogs. Browse by category!" />
+    <title>blog</title>
+    <meta name="description" content="blog" />
     <link rel="stylesheet" href="/css/styles.css" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -41,10 +41,32 @@
 
     <main>
       
-<section data-aos="fade-up" class="block container">
+<section class="block">
+  <div class="container">
+    <header class="block__header" data-aos="fade-up">
+      <h1 class="blog--header">blog</h1>
+    </header>
 
+    <article class="feature grid grid--1x2" data-aos="zoom-in-up">
+      <div class="feature__content">
+        testy
+      </div>
+      <div class="feature__order">
+        <img
+          class="feature__image image--rounded"
+          src="src/images/logo1.jpeg"
+          alt="a"
+        />
+      </div>
+    </article>
+
+                 
+  </div>
+</section>
+
+<section data-aos="fade-up" class="block container">
   <header class="block__header">
-    <h1 class="blog--header">Blog by Category</h1>
+    <h3>Blog by Category</h3>
   </header>
 
   <div class="center">
@@ -64,81 +86,13 @@
   </ul>
 </div>
 
-  <hr class="article__break">
-   
-
-  <article class="feature grid grid--1x2" data-aos="zoom-in-up">
-    <div class="feature__content">
-  <h3>
-    <a class="link-blog" href="/blogs/test/">test</a>
-  </h3>
-  
-  <p>May 24th 22</p>
-  <p>test</p>
-  <a href="/blogs/test/">Continue Reading</a>
-</div>
-<div class="feature__order">
-<img
-    class="feature__image"
-    src="src/images/image.jpg"
-    alt="test"
-/>
-</div>
-  </article>
-
-  <hr class="article__break">
- 
-
-
-   <div class="center">
-  <ul class="center_list">
-    <li>
-      <a href="/blog/"
-        >&laquo;</a
-      >
-
-      
-    </li>
-
-    <li>
-      <a
-        href="/blog/"
-        >0</a
-      >
-    </li>
-
-    <li>
-      <a class="active" href="[object Object]">1</a>
-    </li>
-
-    <li>
-      
-    </li>
-
-    <li>
-      
-    </li>
-  </ul>
-</div>
-<div class="center">
-  <ul class="center_list">
-    <li>
-      <a href="/featured-blogs/">Feautured</a>
-    </li>
-    <li>
-      <a href="/coding-blogs/">Coding</a>
-    </li>
-    <!-- <li>
-      <a href="/DIY-blogs/">DIY</a>
-    </li>
-    <li>
-      <a href="/outdoors-blogs/">Outdoors</a>
-    </li> -->
-  </ul>
-</div>
-
-
 </section>
+
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
     </main>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

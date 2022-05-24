@@ -56,4 +56,21 @@ paragraph2: >-
 image2: /images/contentpage.png
 imageAlt2: Content page with URLs
 caption2: BigCommerce page with the list of URLs
+subheading3: ------
+paragraph3: "<p>While we can see what looks like links to our webpages, if we
+  right click and press inspect on any given link we can see that it is actually
+  a link to another page. </p>
+
+
+
+  \ <div class=\"blog__image__container\">\r
+
+  \      <img class=\"feature__image\"
+  src=\"![](/images/inspectcontentpage.jpg)\" alt=\"Inspecting URLs\" />\r
+
+  \      <p>Inspecting URLs</p>\r
+
+  \      <p></p>\r
+
+  \    </div>\n"
 ---

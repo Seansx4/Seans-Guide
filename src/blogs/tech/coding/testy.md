@@ -9,7 +9,7 @@ tags:
   - post
   - coding
 paragraph1: test
-image1: src/images/sg.jpg
+image1: /images/capture.jpg
 imageAlt1: test
 subheading2: test
 paragraph2: P2

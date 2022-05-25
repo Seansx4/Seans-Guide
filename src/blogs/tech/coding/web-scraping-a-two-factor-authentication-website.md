@@ -129,5 +129,162 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
   \          </code>\r
 
-  \        </pre>\n"
+  \        </pre>
+
+
+  <p>Next we initialise our chrome driver for the actual scraping. This is
+  done by storing the browser driver file path in a variable and then using that
+  variable to instantiate a driver object. The chrome service is to avoid
+  depreciation in future releases. If you don’t understand just trust me and
+  follow the guide.</p>
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  chrome_options = Options()\r
+
+  \r
+
+  path = Service(\"C:\\Program Files (x86)\\chromedriver.exe\")\r
+
+  \r
+
+  driver = webdriver.Chrome(service=path)
+
+  \ </code>\r
+
+  \        </pre>
+
+
+  \r
+
+  <p>The next step is to create some variables to store our user email,
+  password for login, dashboard URL and the URL for the page containing our
+  links, in this instance I have named it content.</p>
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  username = \"useremail@mail.com\"\r
+
+  password = \"userpassword1\"\r
+
+  \r
+
+  dashboard =
+  \"https://store-h68l9z2lnx.mybigcommerce.com/manage/dashboard\"\r
+
+  content =
+  \"https://store-h68l9z2lnx.mybigcommerce.com/manage/content/pages\"
+
+  \ </code>\r
+
+  \        </pre>
+
+
+  <p>We then pass the dashboard URL to the driver. When the driver attempts to
+  access the dashboard page however, it will automatically be redirected to the
+  login page instead. This is where our variables come into play.</p>
+
+  <p>We use the “.find_element” function to find the user input fields which
+  we earlier identified. We then use the “.send_keys” method and pass our
+  matching constants, so username into the email input and password into the
+  password input. At this stage, our driver finds the email, input and enters
+  our username, which we have previously defined as our email address. We then
+  locate the login button by its name of “commit”, and use .click() to continue.
+  The next part is where the cunning of the program comes to play.</p>
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  driver.get(dashboard)\r
+
+  \r
+
+  driver.find_element(By.NAME, \"user[email]\").send_keys(username)\r
+
+  driver.find_element(By.NAME, \"user[password]\").send_keys(password)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+
+  \ </code>\r
+
+  \        </pre>
+
+
+  <p>We create a variable called “verification” which stores a run time user
+  input. This allows our program to pause. During this pause we check our emails
+  for the verification code, paste it into the terminal and hit enter. Be sure
+  not to include any spaces after the code or else the program will crash. Once
+  we hit enter our program continues from where it left off. At this point it
+  finds the input field for the verification code. Using “.send_keys” we send
+  the new “verification” variable to the input field before using “.click()” to
+  verify the code.</p>
+
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  verification = input(\"Enter verification code: \")\r
+
+  \r
+
+  driver.find_element(By.NAME,device_verification[otp_code]\").send_keys(veri\
+  fication)\r
+
+  \r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+
+  \ </code>\r
+
+  \        </pre>
+
+
+  <p>Just like that we are into the BigCommerce dashboard past the 2FA! At
+  this stage we can navigate directly to the URL stored in our content variable.
+  This “content” page contains the links to our webpages editorial pages, which
+  in turn store our desired URLs. In this example I had to switch iframes to the
+  iframe containing the content we require, but this step is not usually
+  required. </p>
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  driver.get(content)\r
+
+  driver.switch_to.frame(\"content-iframe\")\r
+
+  \r
+
+  \r
+
+
+  \ </code>\r
+
+  \        </pre>
+
+
+  <p>Inspecting each page link we can see that it is contained within an <a>
+  tag that has a title of “Edit this page”, and so it is this that we target in
+  our scraping bot. </p>
+
+
+  \r\n"
+image8: /images/inspectingurl.jpg
+imageAlt8: Inspecting URL
 ---

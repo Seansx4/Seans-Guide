@@ -88,7 +88,7 @@ paragraph6: <p>By inspecting the email field, we can see the code for the input.
   id = “user_email”. We can use either of these for our function but in this
   case I am going to use the name attribute for the sake of consistency, as the
   login button has a name but not an ID. </p>
-image6: /images/inspecting-email-input.jpg
+image6: /images/inspectingemailinput.jpg
 imageAlt6: Inspecting email input
 caption6: Using developer tools we inspect the email input field. We then repeat
   this for the password field and the login button to find their names.
@@ -101,7 +101,7 @@ paragraph7: >-
   <p>From this we can see that the password has a name=“user[password]” and the login button has a name=“commit”.</p>
 
   <p>After logging in manually you will be redirected towards a new page for the 2FA. On this page carry out the same inspection process to find the name of the code field and the verify button.</p>
-image7: /images/inspecting-verify.jpg
+image7: /images/inspectingverify.jpg
 imageAlt7: Inspecting the verify option
 subheading8: ------
 paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
@@ -115,7 +115,7 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
   \          <code>\r
 
-  \           from selenium import webdriver\r
+  from selenium import webdriver\r
 
   from selenium.webdriver.common.by import By\r
 

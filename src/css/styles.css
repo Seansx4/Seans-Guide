@@ -809,9 +809,12 @@ a {
 }
 .code_terminal {
   background-color: #eee;
-  border: 1px solid #999;
   display: block;
   padding: 20px;
+  display: grid;
+  place-items: center;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
 }
 
 .click-zoom input[type="checkbox"] {
@@ -827,5 +830,10 @@ a {
   .click-zoom input[type="checkbox"]:checked ~ img {
     transform: scale(1.5);
     cursor: zoom-out;
+  }
+
+  .code_terminal {
+    width: 70%;
+    margin: auto;
   }
 }

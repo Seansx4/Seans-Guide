@@ -67,7 +67,7 @@ caption3: Inspecting URLss
 subheading4: ------
 paragraph4: <p>This next page acts as an editorial page for the webpage, and it
   is here that the webpage URL is stored.</p>
-image4: /images/editorialpage.png
+image4: /images/editorialpage.jpg
 imageAlt4: Editorial page
 caption4: Editorial page, note you can see the correct web page URL.
 subheading5: ------
@@ -80,6 +80,6 @@ paragraph5: >-
 
 
   <p>The first step of our web scraping journey is to attempt to access our BigCommerce dashboard. To do this we must login and pass our one-time 2FA code for login. To simulate the process, we are going to login to the dashboard from an incognito browser. This ensures we follow the same route our program will, and that we are not automatically logged in.</p>
-image5: /images/login.png
+image5: /images/login.jpg
 imageAlt5: Login
 ---

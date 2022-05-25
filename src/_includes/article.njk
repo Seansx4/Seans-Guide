@@ -13,11 +13,16 @@ layout: "base.njk"
         {{ paragraph1 | safe }}
       </div>
       <div class="feature__order">
-        <img
-          class="feature__image image--rounded"
-          src="{{ image1 }}"
-          alt="{{ imageAlt1 }}"
-        />
+        <div class="click-zoom">
+          <label>
+            <input type="checkbox" />
+            <img
+              class="feature__image image--rounded"
+              src="{{ image1 }}"
+              alt="{{ imageAlt1 }}"
+            />
+          </label>
+        </div>
       </div>
     </article>
 
@@ -32,7 +37,16 @@ layout: "base.njk"
     </article>
     {% if imageAlt2|length %}
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image2 }}" alt="{{ imageAlt2 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="{{ image2 }}"
+            alt="{{ imageAlt2 }}"
+          />
+        </label>
+      </div>
       <p>{{ caption2 }}</p>
     </div>
 
@@ -49,7 +63,12 @@ layout: "base.njk"
     {% if imageAlt3|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image3 }}" alt="{{ imageAlt3 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="{{ image3 }}" alt="{{ imageAlt3 }}"
+        /></label>
+      </div>
       <p>{{ caption3 }}</p>
       <p></p>
     </div>
@@ -67,7 +86,12 @@ layout: "base.njk"
     {% if imageAlt4|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image4 }}" alt="{{ imageAlt4 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="{{ image4 }}" alt="{{ imageAlt4 }}"
+        /></label>
+      </div>
       <p>{{ caption4 }}</p>
       <p></p>
     </div>
@@ -84,7 +108,12 @@ layout: "base.njk"
     {% if imageAlt5|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image5 }}" alt="{{ imageAlt5 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="{{ image5 }}" alt="{{ imageAlt5 }}"
+        /></label>
+      </div>
       <p>{{ caption5 }}</p>
       <p></p>
     </div>
@@ -101,7 +130,12 @@ layout: "base.njk"
     {% if imageAlt6|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image6 }}" alt="{{ imageAlt6 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="{{ image6 }}" alt="{{ imageAlt6 }}"
+        /></label>
+      </div>
       <p>{{ caption6 }}</p>
       <p></p>
     </div>
@@ -118,7 +152,12 @@ layout: "base.njk"
     {% if imageAlt7|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image7 }}" alt="{{ imageAlt7 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="{{ image7 }}" alt="{{ imageAlt7 }}"
+        /></label>
+      </div>
       <p>{{ caption7 }}</p>
       <p></p>
     </div>
@@ -135,7 +174,12 @@ layout: "base.njk"
     {% if imageAlt8|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image8 }}" alt="{{ imageAlt8 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="{{ image8 }}" alt="{{ imageAlt8 }}"
+        /></label>
+      </div>
       <p>{{ caption8 }}</p>
       <p></p>
     </div>
@@ -152,7 +196,12 @@ layout: "base.njk"
     {% if imageAlt9|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image9 }}" alt="{{ imageAlt9 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="{{ image9 }}" alt="{{ imageAlt9 }}"
+        /></label>
+      </div>
       <p>{{ caption9 }}</p>
       <p></p>
     </div>
@@ -169,7 +218,15 @@ layout: "base.njk"
     {% if imageAlt10|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image10 }}" alt="{{ imageAlt10 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="{{ image10 }}"
+            alt="{{ imageAlt10 }}"
+        /></label>
+      </div>
       <p>{{ caption10 }}</p>
       <p></p>
     </div>
@@ -186,7 +243,15 @@ layout: "base.njk"
     {% if imageAlt11|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image11 }}" alt="{{ imageAlt11 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="{{ image11 }}"
+            alt="{{ imageAlt11 }}"
+        /></label>
+      </div>
       <p>{{ caption11 }}</p>
       <p></p>
     </div>
@@ -203,7 +268,15 @@ layout: "base.njk"
     {% if imageAlt12|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image12 }}" alt="{{ imageAlt12 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="{{ image12 }}"
+            alt="{{ imageAlt12 }}"
+        /></label>
+      </div>
       <p>{{ caption12 }}</p>
       <p></p>
     </div>
@@ -220,7 +293,15 @@ layout: "base.njk"
     {% if imageAlt13|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image13 }}" alt="{{ imageAlt13 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="{{ image13 }}"
+            alt="{{ imageAlt13 }}"
+        /></label>
+      </div>
       <p>{{ caption13 }}</p>
       <p></p>
     </div>
@@ -237,7 +318,15 @@ layout: "base.njk"
     {% if imageAlt14|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image14 }}" alt="{{ imageAlt14 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="{{ image14 }}"
+            alt="{{ imageAlt14 }}"
+        /></label>
+      </div>
       <p>{{ caption14 }}</p>
       <p></p>
     </div>
@@ -254,7 +343,15 @@ layout: "base.njk"
     {% if imageAlt15|length %}
 
     <div class="blog__image__container">
-      <img class="feature__image" src="{{ image15 }}" alt="{{ imageAlt15 }}" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="{{ image15 }}"
+            alt="{{ imageAlt15 }}"
+        /></label>
+      </div>
       <p>{{ caption15 }}</p>
       <p></p>
     </div>

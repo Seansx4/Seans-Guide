@@ -56,11 +56,16 @@
 <p>I learned to web scrape from hours of watching YouTube videos, reading blogs and tinkering with different lines of code, so I know first-hand that it is easy to be overwhelmed when you first look into web scraping. The first obstacle you will encounter is the numerous considerations to take into account. These range from which programming language to use, what kind of website you are scraping, to what libraries are available. I personally use Python for my web scraping antics and as such is what I outline in the demo below.</p>
       </div>
       <div class="feature__order">
-        <img
-          class="feature__image image--rounded"
-          src="/images/code.jpg"
-          alt="Python code for web scraping"
-        />
+        <div class="click-zoom">
+          <label>
+            <input type="checkbox" />
+            <img
+              class="feature__image image--rounded"
+              src="/images/code.jpg"
+              alt="Python code for web scraping"
+            />
+          </label>
+        </div>
       </div>
     </article>
 
@@ -91,11 +96,93 @@
     </article>
     
     <div class="blog__image__container">
-      <img class="feature__image" src="/images/content-page.png" alt="Content page with URLs" />
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="/images/contentpage.png"
+            alt="Content page with URLs"
+          />
+        </label>
+      </div>
       <p>BigCommerce page with the list of URLs</p>
     </div>
 
-                  
+      
+
+    <article class="feature">
+      <div class="feature__content">
+        <h3 class="feature__heading">------</h3>
+
+        <p>While we can see what looks like links to our webpages, if we right click and press inspect on any given link we can see that it is actually a link to another page. </p>
+
+      </div>
+    </article>
+
+    
+
+    <div class="blog__image__container">
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="/images/inspectcontentpage.jpg" alt="Inspecting URLs"
+        /></label>
+      </div>
+      <p>Inspecting URLss</p>
+      <p></p>
+    </div>
+
+      
+
+    <article class="feature">
+      <div class="feature__content">
+        <h3 class="feature__heading">------</h3>
+
+        <p>This next page acts as an editorial page for the webpage, and it is here that the webpage URL is stored.</p>
+      </div>
+    </article>
+
+    
+
+    <div class="blog__image__container">
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="/images/editorialpage.jpg" alt="Editorial page"
+        /></label>
+      </div>
+      <p>Editorial page, note you can see the correct web page URL.</p>
+      <p></p>
+    </div>
+
+      
+
+    <article class="feature">
+      <div class="feature__content">
+        <h3 class="feature__heading">------</h3>
+
+        <p>This means our task is split into two stages. First, we must scrape the list of editorial URLs on the dashboard, before visiting each URL individually and scraping the required webpage URL. </p>
+
+
+
+<p>The first step of our web scraping journey is to attempt to access our BigCommerce dashboard. To do this we must login and pass our one-time 2FA code for login. To simulate the process, we are going to login to the dashboard from an incognito browser. This ensures we follow the same route our program will, and that we are not automatically logged in.</p>
+      </div>
+    </article>
+    
+
+    <div class="blog__image__container">
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img class="feature__image" src="/images/login.jpg" alt="Login"
+        /></label>
+      </div>
+      <p></p>
+      <p></p>
+    </div>
+
+               
   </div>
 </section>
 

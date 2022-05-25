@@ -807,7 +807,6 @@ a {
     font-size: 4rem;
   }
 }
-
 .code_terminal {
   background-color: #eee;
   border: 1px solid #999;
@@ -815,16 +814,18 @@ a {
   padding: 20px;
 }
 
-.click-zoom input[type="checkbox"] {
-  display: none;
-}
+@media screen and (min-width: 768px) {
+  .click-zoom input[type="checkbox"] {
+    display: none;
+  }
 
-.click-zoom img {
-  transition: transform 0.25s ease;
-  cursor: zoom-in;
-}
+  .click-zoom img {
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+  }
 
-.click-zoom input[type="checkbox"]:checked ~ img {
-  transform: scale(2);
-  cursor: zoom-out;
+  .click-zoom input[type="checkbox"]:checked ~ img {
+    transform: scale(2);
+    cursor: zoom-out;
+  }
 }

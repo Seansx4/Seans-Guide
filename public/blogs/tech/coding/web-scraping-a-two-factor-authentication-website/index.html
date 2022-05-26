@@ -73,8 +73,6 @@
     <article class="feature">
       <div class="feature__content">
         
-        <h3 class="feature__heading">Overview</h3>
-        
 
         <p>In this blog I am going to outline how to scrape a website with two-factor authentication. Two-factor authentication (2FA) provides extra security to a user account. When a user attempts to login to a platform protected with 2FA, a once off passcode is often sent to the email address associated with the account. </p>
 
@@ -115,8 +113,6 @@
     <article class="feature">
       <div class="feature__content">
         
-        <h3 class="feature__heading">------</h3>
-        
 
         <p>While we can see what looks like links to our webpages, if we right click and press inspect on any given link we can see that it is actually a link to another page. </p>
 
@@ -141,8 +137,6 @@
       
     <article class="feature">
       <div class="feature__content">
-        
-        <h3 class="feature__heading">------</h3>
          <p>This next page acts as an editorial page for the webpage, and it is here that the webpage URL is stored.</p>
       </div>
     </article>
@@ -165,8 +159,6 @@
       
     <article class="feature">
       <div class="feature__content">
-        
-        <h3 class="feature__heading">------</h3>
          <p>This means our task is split into two stages. First, we must scrape the list of editorial URLs on the dashboard, before visiting each URL individually and scraping the required webpage URL. </p>
 
 
@@ -191,8 +183,6 @@
       
     <article class="feature">
       <div class="feature__content">
-        
-        <h3 class="feature__heading">------</h3>
          <p>By inspecting the email field, we can see the code for the input. In this example we can see that the input field has name = “user[email]” and id = “user_email”. We can use either of these for our function but in this case I am going to use the name attribute for the sake of consistency, as the login button has a name but not an ID. </p>
       </div>
     </article>
@@ -215,8 +205,6 @@
       
     <article class="feature">
       <div class="feature__content">
-        
-        <h3 class="feature__heading">------</h3>
          <p>We then repeat this process for the password.And again for the login button. </p>
 
 <p>From this we can see that the password has a name=“user[password]” and the login button has a name=“commit”.</p>
@@ -240,8 +228,6 @@
       
     <article class="feature">
       <div class="feature__content">
-        
-        <h3 class="feature__heading">------</h3>
          <p>In this instance they are name=“verification[opt_code]” and name=“commit”.</p>
 <p>With this data we can now begin to write our python program. Below are the lines of code for the dependencies you will need:</p>
 
@@ -335,7 +321,7 @@ driver.switch_to.frame("content-iframe")
           <input type="checkbox" />
           <img
             class="feature__image"
-            src="/images/inspectingurl.jpg"
+            src="/images/inspecturl.jpg"
             alt="Inspecting URL"
           />
         </label>

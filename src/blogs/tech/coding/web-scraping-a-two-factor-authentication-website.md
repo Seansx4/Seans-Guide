@@ -24,7 +24,7 @@ paragraph1: >-
   <p>I learned to web scrape from hours of watching YouTube videos, reading blogs and tinkering with different lines of code, so I know first-hand that it is easy to be overwhelmed when you first look into web scraping. The first obstacle you will encounter is the numerous considerations to take into account. These range from which programming language to use, what kind of website you are scraping, to what libraries are available. I personally use Python for my web scraping antics and as such is what I outline in the demo below.</p>
 image1: /images/code.jpg
 imageAlt1: Python code for web scraping
-subheading2: Overview
+subheading2: ""
 paragraph2: >-
   <p>In this blog I am going to outline how to scrape a website with two-factor
   authentication. Two-factor authentication (2FA) provides extra security to a
@@ -56,7 +56,7 @@ paragraph2: >-
 image2: /images/contentpage.png
 imageAlt2: Content page with URLs
 caption2: BigCommerce page with the list of URLs
-subheading3: ------
+subheading3: ""
 paragraph3: >
   <p>While we can see what looks like links to our webpages, if we right click
   and press inspect on any given link we can see that it is actually a link to
@@ -64,13 +64,13 @@ paragraph3: >
 image3: /images/inspectcontentpage.jpg
 imageAlt3: Inspecting URLs
 caption3: Inspecting URLss
-subheading4: ------
+subheading4: ""
 paragraph4: <p>This next page acts as an editorial page for the webpage, and it
   is here that the webpage URL is stored.</p>
 image4: /images/editorialpage.jpg
 imageAlt4: Editorial page
 caption4: Editorial page, note you can see the correct web page URL.
-subheading5: ------
+subheading5: ""
 paragraph5: >-
   <p>This means our task is split into two stages. First, we must scrape the
   list of editorial URLs on the dashboard, before visiting each URL individually
@@ -82,7 +82,7 @@ paragraph5: >-
   <p>The first step of our web scraping journey is to attempt to access our BigCommerce dashboard. To do this we must login and pass our one-time 2FA code for login. To simulate the process, we are going to login to the dashboard from an incognito browser. This ensures we follow the same route our program will, and that we are not automatically logged in.</p>
 image5: /images/login.jpg
 imageAlt5: Login
-subheading6: ------
+subheading6: ""
 paragraph6: <p>By inspecting the email field, we can see the code for the input.
   In this example we can see that the input field has name = “user[email]” and
   id = “user_email”. We can use either of these for our function but in this
@@ -92,7 +92,7 @@ image6: /images/inspectingemailinput.jpg
 imageAlt6: Inspecting email input
 caption6: Using developer tools we inspect the email input field. We then repeat
   this for the password field and the login button to find their names.
-subheading7: ------
+subheading7: ""
 paragraph7: >-
   <p>We then repeat this process for the password.And again for the login
   button. </p>
@@ -103,7 +103,7 @@ paragraph7: >-
   <p>After logging in manually you will be redirected towards a new page for the 2FA. On this page carry out the same inspection process to find the name of the code field and the verify button.</p>
 image7: /images/inspectingverify.jpg
 imageAlt7: Inspecting the verify option
-subheading8: ------
+subheading8: ""
 paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
   name=“commit”.</p>
 
@@ -285,6 +285,6 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
 
   \r\n"
-image8: /images/inspectingurl.jpg
+image8: /images/inspecturl.jpg
 imageAlt8: Inspecting URL
 ---

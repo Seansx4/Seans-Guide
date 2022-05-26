@@ -26,11 +26,12 @@ layout: "base.njk"
       </div>
     </article>
 
-    {% if subheading2|length %}
-
+    {% if paragraph2|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading2|length %}
         <h3 class="feature__heading">{{ subheading2 }}</h3>
+        {% endif %}
 
         {{ paragraph2 | safe }}
       </div>
@@ -47,176 +48,189 @@ layout: "base.njk"
           />
         </label>
       </div>
+      {% if caption2|length %}
       <p>{{ caption2 }}</p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading3|length %}
-
+    {% endif %} {% endif %} {% if paragraph3|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading3|length %}
         <h3 class="feature__heading">{{ subheading3 }}</h3>
+        {% endif %}
 
         {{ paragraph3 | safe }}
       </div>
     </article>
-
     {% if imageAlt3|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="{{ image3 }}" alt="{{ imageAlt3 }}"
-        /></label>
+          <img
+            class="feature__image"
+            src="{{ image3 }}"
+            alt="{{ imageAlt3 }}"
+          />
+        </label>
       </div>
+      {% if caption3|length %}
       <p>{{ caption3 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading4|length %}
-
+    {% endif %} {% endif %} {% if paragraph4|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading4|length %}
         <h3 class="feature__heading">{{ subheading4 }}</h3>
-
-        {{ paragraph4 | safe }}
+        {% endif %} {{ paragraph4 | safe }}
       </div>
     </article>
-
     {% if imageAlt4|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="{{ image4 }}" alt="{{ imageAlt4 }}"
-        /></label>
+          <img
+            class="feature__image"
+            src="{{ image4 }}"
+            alt="{{ imageAlt4 }}"
+          />
+        </label>
       </div>
+      {% if caption4|length %}
       <p>{{ caption4 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading5|length %}
-
+    {% endif %} {% endif %} {% if paragraph5|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading5|length %}
         <h3 class="feature__heading">{{ subheading5 }}</h3>
-
-        {{ paragraph5 | safe }}
+        {% endif %} {{ paragraph5 | safe }}
       </div>
     </article>
     {% if imageAlt5|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="{{ image5 }}" alt="{{ imageAlt5 }}"
-        /></label>
+          <img
+            class="feature__image"
+            src="{{ image5 }}"
+            alt="{{ imageAlt5 }}"
+          />
+        </label>
       </div>
+      {% if caption5|length %}
       <p>{{ caption5 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading6|length %}
-
+    {% endif %} {% endif %} {% if paragraph6|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading6|length %}
         <h3 class="feature__heading">{{ subheading6 }}</h3>
-
-        {{ paragraph6 | safe }}
+        {% endif %} {{ paragraph6 | safe }}
       </div>
     </article>
     {% if imageAlt6|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="{{ image6 }}" alt="{{ imageAlt6 }}"
-        /></label>
+          <img
+            class="feature__image"
+            src="{{ image6 }}"
+            alt="{{ imageAlt6 }}"
+          />
+        </label>
       </div>
+      {% if caption6|length %}
       <p>{{ caption6 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading7|length %}
-
+    {% endif %} {% endif %} {% if paragraph7|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading7|length %}
         <h3 class="feature__heading">{{ subheading7 }}</h3>
-
-        {{ paragraph7 | safe }}
+        {% endif %} {{ paragraph7 | safe }}
       </div>
     </article>
     {% if imageAlt7|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="{{ image7 }}" alt="{{ imageAlt7 }}"
-        /></label>
+          <img
+            class="feature__image"
+            src="{{ image7 }}"
+            alt="{{ imageAlt7 }}"
+          />
+        </label>
       </div>
+      {% if caption7|length %}
       <p>{{ caption7 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading8|length %}
-
+    {% endif %} {% endif %} {% if paragraph8|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading8|length %}
         <h3 class="feature__heading">{{ subheading8 }}</h3>
-
-        {{ paragraph8 | safe }}
+        {% endif %} {{ paragraph8 | safe }}
       </div>
     </article>
     {% if imageAlt8|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="{{ image8 }}" alt="{{ imageAlt8 }}"
-        /></label>
+          <img
+            class="feature__image"
+            src="{{ image8 }}"
+            alt="{{ imageAlt8 }}"
+          />
+        </label>
       </div>
+      {% if caption8|length %}
       <p>{{ caption8 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading9|length %}
-
+    {% endif %} {% endif %} {% if paragraph9|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading9|length %}
         <h3 class="feature__heading">{{ subheading9 }}</h3>
-
-        {{ paragraph9 | safe }}
+        {% endif %} {{ paragraph9 | safe }}
       </div>
     </article>
     {% if imageAlt9|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="{{ image9 }}" alt="{{ imageAlt9 }}"
-        /></label>
+          <img
+            class="feature__image"
+            src="{{ image9 }}"
+            alt="{{ imageAlt9 }}"
+          />
+        </label>
       </div>
+      {% if caption9|length %}
       <p>{{ caption9 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading10|length %}
-
+    {% endif %} {% endif %} {% if paragraph10|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading10|length %}
         <h3 class="feature__heading">{{ subheading10 }}</h3>
-
-        {{ paragraph10 | safe }}
+        {% endif %} {{ paragraph10 | safe }}
       </div>
     </article>
     {% if imageAlt10|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
@@ -225,23 +239,22 @@ layout: "base.njk"
             class="feature__image"
             src="{{ image10 }}"
             alt="{{ imageAlt10 }}"
-        /></label>
+          />
+        </label>
       </div>
+      {% if caption10|length %}
       <p>{{ caption10 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading11|length %}
-
+    {% endif %} {% endif %} {% if paragraph11|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading11|length %}
         <h3 class="feature__heading">{{ subheading11 }}</h3>
-
-        {{ paragraph11 | safe }}
+        {% endif %} {{ paragraph11 | safe }}
       </div>
     </article>
     {% if imageAlt11|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
@@ -250,23 +263,22 @@ layout: "base.njk"
             class="feature__image"
             src="{{ image11 }}"
             alt="{{ imageAlt11 }}"
-        /></label>
+          />
+        </label>
       </div>
+      {% if caption11|length %}
       <p>{{ caption11 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading12|length %}
-
+    {% endif %} {% endif %} {% if paragraph12|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading12|length %}
         <h3 class="feature__heading">{{ subheading12 }}</h3>
-
-        {{ paragraph12 | safe }}
+        {% endif %} {{ paragraph12 | safe }}
       </div>
     </article>
     {% if imageAlt12|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
@@ -275,23 +287,22 @@ layout: "base.njk"
             class="feature__image"
             src="{{ image12 }}"
             alt="{{ imageAlt12 }}"
-        /></label>
+          />
+        </label>
       </div>
+      {% if caption12|length %}
       <p>{{ caption12 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading13|length %}
-
+    {% endif %} {% endif %} {% if paragraph13|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading13|length %}
         <h3 class="feature__heading">{{ subheading13 }}</h3>
-
-        {{ paragraph13 | safe }}
+        {% endif %} {{ paragraph13 | safe }}
       </div>
     </article>
     {% if imageAlt13|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
@@ -300,23 +311,22 @@ layout: "base.njk"
             class="feature__image"
             src="{{ image13 }}"
             alt="{{ imageAlt13 }}"
-        /></label>
+          />
+        </label>
       </div>
+      {% if caption13|length %}
       <p>{{ caption13 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading14|length %}
-
+    {% endif %} {% endif %} {% if paragraph14|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading14|length %}
         <h3 class="feature__heading">{{ subheading14 }}</h3>
-
-        {{ paragraph14 | safe }}
+        {% endif %} {{ paragraph14 | safe }}
       </div>
     </article>
     {% if imageAlt14|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
@@ -325,23 +335,22 @@ layout: "base.njk"
             class="feature__image"
             src="{{ image14 }}"
             alt="{{ imageAlt14 }}"
-        /></label>
+          />
+        </label>
       </div>
+      {% if caption14|length %}
       <p>{{ caption14 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
-    {% endif %} {% endif %} {% if subheading15|length %}
-
+    {% endif %} {% endif %} {% if paragraph15|length %}
     <article class="feature">
       <div class="feature__content">
+        {% if subheading15|length %}
         <h3 class="feature__heading">{{ subheading15 }}</h3>
-
-        {{ paragraph15 | safe }}
+        {% endif %} {{ paragraph15 | safe }}
       </div>
     </article>
     {% if imageAlt15|length %}
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
@@ -350,12 +359,13 @@ layout: "base.njk"
             class="feature__image"
             src="{{ image15 }}"
             alt="{{ imageAlt15 }}"
-        /></label>
+          />
+        </label>
       </div>
+      {% if caption15|length %}
       <p>{{ caption15 }}</p>
-      <p></p>
+      {% endif %}
     </div>
-
     {% endif %} {% endif %}
   </div>
 </section>

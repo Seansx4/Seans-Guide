@@ -70,10 +70,11 @@
     </article>
 
     
-
     <article class="feature">
       <div class="feature__content">
+        
         <h3 class="feature__heading">Overview</h3>
+        
 
         <p>In this blog I am going to outline how to scrape a website with two-factor authentication. Two-factor authentication (2FA) provides extra security to a user account. When a user attempts to login to a platform protected with 2FA, a once off passcode is often sent to the email address associated with the account. </p>
 
@@ -106,63 +107,67 @@
           />
         </label>
       </div>
-      <p>BigCommerce page with the list of URLs</p>
-    </div>
-
       
-
+      <p>BigCommerce page with the list of URLs</p>
+      
+    </div>
+      
     <article class="feature">
       <div class="feature__content">
+        
         <h3 class="feature__heading">------</h3>
+        
 
         <p>While we can see what looks like links to our webpages, if we right click and press inspect on any given link we can see that it is actually a link to another page. </p>
 
       </div>
     </article>
-
     
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="/images/inspectcontentpage.jpg" alt="Inspecting URLs"
-        /></label>
+          <img
+            class="feature__image"
+            src="/images/inspectcontentpage.jpg"
+            alt="Inspecting URLs"
+          />
+        </label>
       </div>
-      <p>Inspecting URLss</p>
-      <p></p>
-    </div>
-
       
-
+      <p>Inspecting URLss</p>
+      
+    </div>
+      
     <article class="feature">
       <div class="feature__content">
+        
         <h3 class="feature__heading">------</h3>
-
-        <p>This next page acts as an editorial page for the webpage, and it is here that the webpage URL is stored.</p>
+         <p>This next page acts as an editorial page for the webpage, and it is here that the webpage URL is stored.</p>
       </div>
     </article>
-
     
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="/images/editorialpage.jpg" alt="Editorial page"
-        /></label>
+          <img
+            class="feature__image"
+            src="/images/editorialpage.jpg"
+            alt="Editorial page"
+          />
+        </label>
       </div>
-      <p>Editorial page, note you can see the correct web page URL.</p>
-      <p></p>
-    </div>
-
       
-
+      <p>Editorial page, note you can see the correct web page URL.</p>
+      
+    </div>
+      
     <article class="feature">
       <div class="feature__content">
+        
         <h3 class="feature__heading">------</h3>
-
-        <p>This means our task is split into two stages. First, we must scrape the list of editorial URLs on the dashboard, before visiting each URL individually and scraping the required webpage URL. </p>
+         <p>This means our task is split into two stages. First, we must scrape the list of editorial URLs on the dashboard, before visiting each URL individually and scraping the required webpage URL. </p>
 
 
 
@@ -170,72 +175,74 @@
       </div>
     </article>
     
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="/images/login.jpg" alt="Login"
-        /></label>
+          <img
+            class="feature__image"
+            src="/images/login.jpg"
+            alt="Login"
+          />
+        </label>
       </div>
-      <p></p>
-      <p></p>
-    </div>
-
       
-
+    </div>
+      
     <article class="feature">
       <div class="feature__content">
+        
         <h3 class="feature__heading">------</h3>
-
-        <p>By inspecting the email field, we can see the code for the input. In this example we can see that the input field has name = “user[email]” and id = “user_email”. We can use either of these for our function but in this case I am going to use the name attribute for the sake of consistency, as the login button has a name but not an ID. </p>
+         <p>By inspecting the email field, we can see the code for the input. In this example we can see that the input field has name = “user[email]” and id = “user_email”. We can use either of these for our function but in this case I am going to use the name attribute for the sake of consistency, as the login button has a name but not an ID. </p>
       </div>
     </article>
     
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="/images/inspectingemailinput.jpg" alt="Inspecting email input"
-        /></label>
+          <img
+            class="feature__image"
+            src="/images/inspectingemailinput.jpg"
+            alt="Inspecting email input"
+          />
+        </label>
       </div>
-      <p>Using developer tools we inspect the email input field. We then repeat this for the password field and the login button to find their names.</p>
-      <p></p>
-    </div>
-
       
-
+      <p>Using developer tools we inspect the email input field. We then repeat this for the password field and the login button to find their names.</p>
+      
+    </div>
+      
     <article class="feature">
       <div class="feature__content">
+        
         <h3 class="feature__heading">------</h3>
-
-        <p>We then repeat this process for the password.And again for the login button. </p>
+         <p>We then repeat this process for the password.And again for the login button. </p>
 
 <p>From this we can see that the password has a name=“user[password]” and the login button has a name=“commit”.</p>
 <p>After logging in manually you will be redirected towards a new page for the 2FA. On this page carry out the same inspection process to find the name of the code field and the verify button.</p>
       </div>
     </article>
     
-
     <div class="blog__image__container">
       <div class="click-zoom">
         <label>
           <input type="checkbox" />
-          <img class="feature__image" src="/images/inspectingverify.jpg" alt="Inspecting the verify option"
-        /></label>
+          <img
+            class="feature__image"
+            src="/images/inspectingverify.jpg"
+            alt="Inspecting the verify option"
+          />
+        </label>
       </div>
-      <p></p>
-      <p></p>
-    </div>
-
       
-
+    </div>
+      
     <article class="feature">
       <div class="feature__content">
+        
         <h3 class="feature__heading">------</h3>
-
-        <p>In this instance they are name=“verification[opt_code]” and name=“commit”.</p>
+         <p>In this instance they are name=“verification[opt_code]” and name=“commit”.</p>
 <p>With this data we can now begin to write our python program. Below are the lines of code for the dependencies you will need:</p>
 
 <pre class="code_terminal">
@@ -249,8 +256,92 @@ import time
           </code>
         </pre>
 
+<p>Next we initialise our chrome driver for the actual scraping. This is done by storing the browser driver file path in a variable and then using that variable to instantiate a driver object. The chrome service is to avoid depreciation in future releases. If you don’t understand just trust me and follow the guide.</p>
+
+<pre class="code_terminal">
+          <code>
+chrome_options = Options()
+
+path = Service("C:\Program Files (x86)\chromedriver.exe")
+
+driver = webdriver.Chrome(service=path)
+ </code>
+        </pre>
+
+
+<p>The next step is to create some variables to store our user email, password for login, dashboard URL and the URL for the page containing our links, in this instance I have named it content.</p>
+
+<pre class="code_terminal">
+          <code>
+username = "useremail@mail.com"
+password = "userpassword1"
+
+dashboard = "https://store-h68l9z2lnx.mybigcommerce.com/manage/dashboard"
+content = "https://store-h68l9z2lnx.mybigcommerce.com/manage/content/pages"
+ </code>
+        </pre>
+
+<p>We then pass the dashboard URL to the driver. When the driver attempts to access the dashboard page however, it will automatically be redirected to the login page instead. This is where our variables come into play.</p>
+<p>We use the “.find_element” function to find the user input fields which we earlier identified. We then use the “.send_keys” method and pass our matching constants, so username into the email input and password into the password input. At this stage, our driver finds the email, input and enters our username, which we have previously defined as our email address. We then locate the login button by its name of “commit”, and use .click() to continue. The next part is where the cunning of the program comes to play.</p>
+
+<pre class="code_terminal">
+          <code>
+driver.get(dashboard)
+
+driver.find_element(By.NAME, "user[email]").send_keys(username)
+driver.find_element(By.NAME, "user[password]").send_keys(password)
+driver.find_element(By.NAME, "commit").click()
+
+ </code>
+        </pre>
+
+<p>We create a variable called “verification” which stores a run time user input. This allows our program to pause. During this pause we check our emails for the verification code, paste it into the terminal and hit enter. Be sure not to include any spaces after the code or else the program will crash. Once we hit enter our program continues from where it left off. At this point it finds the input field for the verification code. Using “.send_keys” we send the new “verification” variable to the input field before using “.click()” to verify the code.</p>
+
+
+<pre class="code_terminal">
+          <code>
+verification = input("Enter verification code: ")
+
+driver.find_element(By.NAME,device_verification[otp_code]").send_keys(verification)
+
+driver.find_element(By.NAME, "commit").click()
+
+
+ </code>
+        </pre>
+
+<p>Just like that we are into the BigCommerce dashboard past the 2FA! At this stage we can navigate directly to the URL stored in our content variable. This “content” page contains the links to our webpages editorial pages, which in turn store our desired URLs. In this example I had to switch iframes to the iframe containing the content we require, but this step is not usually required. </p>
+
+<pre class="code_terminal">
+          <code>
+driver.get(content)
+driver.switch_to.frame("content-iframe")
+
+
+
+ </code>
+        </pre>
+
+<p>Inspecting each page link we can see that it is contained within an <a> tag that has a title of “Edit this page”, and so it is this that we target in our scraping bot. </p>
+
+
+
       </div>
     </article>
+    
+    <div class="blog__image__container">
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="/images/inspectingurl.jpg"
+            alt="Inspecting URL"
+          />
+        </label>
+      </div>
+      
+    </div>
             
   </div>
 </section>

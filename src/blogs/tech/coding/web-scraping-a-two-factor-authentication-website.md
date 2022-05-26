@@ -53,7 +53,7 @@ paragraph2: >-
 
 
   <p>For this example, we need to fetch the URL for each of our web pages (this was my original problem as BigCommerce does not allow the export of your webpage URLs). Below is the list of our webpages once we have logged into our dashboard.</p>
-image2: /images/capture.png
+image2: /images/picture5.png
 imageAlt2: Content page with URLs
 caption2: BigCommerce page with the list of URLs
 subheading3: ""

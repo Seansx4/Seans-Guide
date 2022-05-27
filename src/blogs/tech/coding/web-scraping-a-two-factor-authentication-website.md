@@ -18,6 +18,8 @@ paragraph1: >-
   queries. The possibilities are endless, and process is both helpful and fun to
   set up. Win Win.  </p>
 
+  <a href="#step1">Step 1</a>
+
 
 
 
@@ -463,7 +465,7 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
 
   \        </pre>"
 subheading15: Full Code
-paragraph15: "<h3>Step 1</h3>
+paragraph15: "<h3 id="step1">Step 1</h3>
 
   <pre class=\"code_terminal\">\r
 

@@ -33,6 +33,7 @@
 html {
   /* Font Size is 16px by default. 1rem is 1 x 16 so 16pxs. Set to 62.5% so 62.5% of 16px = 10pxs. Therefore 1rem is now 10pxs. */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {

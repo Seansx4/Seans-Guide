@@ -328,7 +328,39 @@ driver.switch_to.frame("content-iframe")
       </div>
       
     </div>
-            
+      
+    <article class="feature">
+      <div class="feature__content">
+         <p>To scrape all of these editorial page links we create a for loop, instructing the driver to find all <a> elements with the title of “Edit this page”. The for loop then cycles through all of these <a> tags and prints their hrefs, which is their editorial links. The code is below.</p>
+
+<pre class="code_terminal">
+          <code>
+for result in driver.find_elements(By.CSS_SELECTOR, 'a[title="Edit this page"]'):
+    print(result.get_attribute("href"))
+
+
+
+
+ </code>
+        </pre>
+Once we run this program we get a number of URLs printed on our terminal. 
+      </div>
+    </article>
+    
+    <div class="blog__image__container">
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="/images/codeterminal.png"
+            alt="code terminal of URLs"
+          />
+        </label>
+      </div>
+      
+    </div>
+           
   </div>
 </section>
 

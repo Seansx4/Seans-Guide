@@ -10,29 +10,35 @@ author: Sean
 tags:
   - post
   - coding
-paragraph1: >-
-  <p>Web scraping is a fantastic tool for any programmer to add to their
-  arsenal. Web scraping allows you to automate data retrieval from webpages. For
-  example, you could scrape a list of email addresses from a website, the price
-  of products from another, or even the Google results page for specific search
-  queries. The possibilities are endless, and process is both helpful and fun to
-  set up. Win Win.  </p>
-
-  <a href="#step1">Step 1</a>
+paragraph1: >
+  <p>Web scraping is a fantastic tool for any programmer to add to their skill
+  set. Web scraping allows you to automate data retrieval from web pages,
+  meaning you could scrape a list of email addresses from one website, the price
+  of products from another, or even the Google search results page for specific
+  search queries. The possibilities are endless, and the process is both helpful
+  and fun to set up.</p>
 
 
+  <h3>Table of Contents<h3>
 
+  <ul>
 
-  <p>I learned to web scrape from hours of watching YouTube videos, reading blogs and tinkering with different lines of code, so I know first-hand that it is easy to be overwhelmed when you first look into web scraping. The first obstacle you will encounter is the numerous considerations to take into account. These range from which programming language to use, what kind of website you are scraping, to what libraries are available. I personally use Python for my web scraping antics and as such is what I outline in the demo below.</p>
+  <li><a href="#2FA">Scraping a 2FA Website</a></li>
+
+  <li><a href="#step1">Step One</a></li>
+
+  <li><a href="#step2">Step Two</a></li>
+
+  <li><a href="#headlessbrowser">Creating a Headless Browser</a></li>
+
+  </ul>
 image1: /images/code.jpg
 imageAlt1: Python code for web scraping
 subheading2: ""
 paragraph2: >-
-  <p>In this blog I am going to outline how to scrape a website with two-factor
-  authentication. Two-factor authentication (2FA) provides extra security to a
-  user account. When a user attempts to login to a platform protected with 2FA,
-  a once off passcode is often sent to the email address associated with the
-  account. </p>
+  <h2 id="2FA">Scraping 2FA Website</h2>
+
+  <p>Web scraping a website with two-factor authentication (2FA) can be tricky. 2FA provides an extra layer of security to a given user account. When a user attempts to login to a platform protected with 2FA, a once off code is often sent to the email address associated with the account. </p>
 
 
   <p>When attempting to scrape a 2FA protected website myself, I found various tutorials outlining how to login to a regular website, but very sparse information on how to circumnavigate 2FA. I should make it clear that this tutorial is for someone who is the true owner of an account protected with 2FA and not a guide on how to hack someone else’s account. </p>
@@ -41,28 +47,24 @@ paragraph2: >-
   <p>I like to keep my blogs focused on the topic of discussion, so I won’t be going through the technicalities of how to install the required dependencies (Selenium and the WebDriver) in this blog, or any basic concepts of Python programming. In the future I am going to write some content surrounding this but for now I will leave it up to you to do some quick research (I recommend YouTube). </p>
 
 
-
-
   <p>There are two possible options to take when trying to overcome this problem, but which option you chose depends largely on what kind of website you are trying to scrape. If you are unsure of what kind of website you are scraping, check out my guide Static vs Dynamic Sites: What’s the Difference? </p>
 
 
   <p>If your site is a static website you can simply use the beautifulsoup library in conjunction with a neat little trick to store your cookies (link). This allows you to bypass login and TFA and scrape the data as required. If you are scraping a dynamic website however, thing can be a little more complicated. </p>
 
 
+  <p>Below I have outlined how to use Selenium to scrape the user dashboard of a BigCommerce website. Selenium allows for the automation of a webdriver, thereby simulating a web browsers interaction with a web page. BigCommerce is a popular eCommerce provider. The user dashboard for a BigCommerce website is dynamically generated and protected by 2FA at login. While this example will undoubtedly be different to your problem, changing some lines of code or following the general methodology may help your case. </p>
 
 
-  <p>Below I have outlined how to use Selenium to scrape the user dashboard of a BigCommerce website. BigCommerce is a popular ecommerce provider. The user dashboard for a BigCommerce website is dynamically generated and protected by 2FA at login. While this example may be different to the problem you are trying to solve, the solution should still function. </p>
-
-
-  <p>For this example, we need to fetch the URL for each of our web pages (this was my original problem as BigCommerce does not allow the export of your webpage URLs). Below is the list of our webpages once we have logged into our dashboard.</p>
+  <p>For this example, we need to fetch the URL for each of our web pages (this was my original problem as BigCommerce does not allow the export of your web page URLs). Below is the list of our web pages once we have logged into our dashboard.</p>
 image2: /images/contentPage.png
 imageAlt2: Content page with URLs
 caption2: BigCommerce page with the list of URLs
 subheading3: ""
 paragraph3: >
-  <p>While we can see what looks like links to our webpages, if we right click
-  and press inspect on any given link we can see that it is actually a link to
-  another page. </p>
+  <p>While we can see what looks like links to our web pages, if we right click
+  and inspect on any given link we can see that it is actually a link to another
+  page. </p>
 image3: /images/inspectingContentpage.png
 imageAlt3: Inspecting URLs
 caption3: Inspecting URLss
@@ -74,12 +76,14 @@ imageAlt4: Editorial page
 caption4: Editorial page, note you can see the correct web page URL.
 subheading5: ""
 paragraph5: >-
-  <p>This means our task is split into two stages. First, we must scrape the
-  list of editorial URLs on the dashboard, before visiting each URL individually
-  and scraping the required webpage URL. </p>
+  <p>This means that our task is split into two stages. First, we must scrape
+  the list of editorial URLs on the dashboard, before visiting each URL
+  individually and scraping the required web page URL. </p>
 
 
 
+
+  <h2 id="step1">Step One:</h2>
 
   <p>The first step of our web scraping journey is to attempt to access our BigCommerce dashboard. To do this we must login and pass our one-time 2FA code for login. To simulate the process, we are going to login to the dashboard from an incognito browser. This ensures we follow the same route our program will, and that we are not automatically logged in.</p>
 image5: /images/login.png
@@ -87,9 +91,9 @@ imageAlt5: Login
 subheading6: ""
 paragraph6: <p>By inspecting the email field, we can see the code for the input.
   In this example we can see that the input field has name = “user[email]” and
-  id = “user_email”. We can use either of these for our function but in this
-  case I am going to use the name attribute for the sake of consistency, as the
-  login button has a name but not an ID. </p>
+  id = “user_email”. We can target either of these within our webscraper but in
+  this case I am going to use the name attribute for the sake of consistency, as
+  the login button has a name but not an ID. </p>
 image6: /images/inspectingemailinput.png
 imageAlt6: Inspecting email input
 caption6: Using developer tools we inspect the email input field. We then repeat
@@ -102,12 +106,12 @@ paragraph7: >-
 
   <p>From this we can see that the password has a name=“user[password]” and the login button has a name=“commit”.</p>
 
-  <p>After logging in manually you will be redirected towards a new page for the 2FA. On this page carry out the same inspection process to find the name of the code field and the verify button.</p>
+  <p>After logging in manually we are redirected towards a new page requesting our 2FA code. On this page we carry out the same inspection process to find the name of the code field and the verify button.</p>
 image7: /images/inspectingverify.png
 imageAlt7: Inspecting the verify option
 subheading8: ""
-paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
-  name=“commit”.</p>
+paragraph8: "<p>In this instance they have the attributes
+  name=“verification[opt_code]” and name=“commit”.</p>
 
   <p>With this data we can now begin to write our python program. Below are
   the lines of code for the dependencies you will need:</p>
@@ -137,8 +141,7 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
   <p>Next we initialise our chrome driver for the actual scraping. This is
   done by storing the browser driver file path in a variable and then using that
   variable to instantiate a driver object. The chrome service is to avoid
-  depreciation in future releases. If you don’t understand just trust me and
-  follow the guide.</p>
+  depreciation in future releases.</p>
 
 
   <pre class=\"code_terminal\">\r
@@ -162,9 +165,9 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
   \r
 
-  <p>The next step is to create some variables to store our user email,
-  password for login, dashboard URL and the URL for the page containing our
-  links, in this instance I have named it content.</p>
+  <p>Next we create some variables to store our user email, password,
+  dashboard URL and the URL for the web page containing all of our links, in
+  this case I have named it content.</p>
 
 
   <pre class=\"code_terminal\">\r
@@ -177,11 +180,9 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
   \r
 
-  dashboard =
-  \"https://store-h68l9z2lnx.mybigcommerce.com/manage/dashboard\"\r
+  dashboard = \"https://store.mybigcommerce.com/manage/dashboard\"\r
 
-  content =
-  \"https://store-h68l9z2lnx.mybigcommerce.com/manage/content/pages\"
+  content = \"https://store.mybigcommerce.com/manage/content/pages\"
 
   \ </code>\r
 
@@ -189,16 +190,14 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
 
   <p>We then pass the dashboard URL to the driver. When the driver attempts to
-  access the dashboard page however, it will automatically be redirected to the
-  login page instead. This is where our variables come into play.</p>
+  access the dashboard page it will automatically be redirected to the login
+  page instead. This is where our variables come into play.</p>
 
   <p>We use the “.find_element” function to find the user input fields which
   we earlier identified. We then use the “.send_keys” method and pass our
-  matching constants, so username into the email input and password into the
-  password input. At this stage, our driver finds the email, input and enters
-  our username, which we have previously defined as our email address. We then
-  locate the login button by its name of “commit”, and use .click() to continue.
-  The next part is where the cunning of the program comes to play.</p>
+  matching variables, so username is passed into the email input and password is
+  passed into the password input.We then locate the login button by its name of
+  “commit”, and use .click() to continue.</p>
 
 
   <pre class=\"code_terminal\">\r
@@ -221,12 +220,12 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
   \        </pre>
 
 
-  <p>We create a variable called “verification” which stores a run time user
-  input. This allows our program to pause. During this pause we check our emails
-  for the verification code, paste it into the terminal and hit enter. Be sure
-  not to include any spaces after the code or else the program will crash. Once
-  we hit enter our program continues from where it left off. At this point it
-  finds the input field for the verification code. Using “.send_keys” we send
+  <p>Next we create a variable called “verification” which stores a run time
+  user input. This allows our program to pause. During this pause we check our
+  emails for the verification code, paste it into the terminal and hit enter. Be
+  sure not to include any spaces after the code or else the program will crash.
+  Once we hit enter our program continues from where it left off. At this point
+  it finds the input field for the verification code. Using “.send_keys” we send
   the new “verification” variable to the input field before using “.click()” to
   verify the code.</p>
 
@@ -257,10 +256,13 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
   <p>Just like that we are into the BigCommerce dashboard past the 2FA! At
   this stage we can navigate directly to the URL stored in our content variable.
-  This “content” page contains the links to our webpages editorial pages, which
+  This “content” page contains the links to our web pages editorial pages, which
   in turn store our desired URLs. In this example I had to switch iframes to the
-  iframe containing the content we require, but this step is not usually
-  required. </p>
+  iframe containing the content we require. To find the correct iframe simply
+  use developer tools to inspect the content you are attempting to scrape, use
+  CTRL + F to search for the keyword \"iframe\" and take the name of the iframe
+  that your content is contained within. This step is not usually required
+  though. </p>
 
 
   <pre class=\"code_terminal\">\r
@@ -282,8 +284,8 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
 
   <p>Inspecting each page link we can see that it is contained within an <a>
-  tag that has a title of “Edit this page”, and so it is this that we target in
-  our scraping bot. </p>
+  tag that has a title of “Edit this page”, and so it is this that we will
+  target in our scraping bot. </p>
 
 
   \r\n"
@@ -318,27 +320,26 @@ paragraph9: "<p>To scrape all of these editorial page links we create a for
   Once we run this program we get a number of URLs printed on our terminal. "
 image9: /images/codeterminal.png
 imageAlt9: code terminal of URLs
-paragraph10: <p>At this stage, you can simply copy and paste the terminal code
-  into Excel to tidy up the data. I remove duplicates, filter for any URLs not
-  containing “pageId=” and delete them, and prepare the new structure for
-  storing this list of URLs in a Python list. This stage could be handled as
-  part of the Python program itself, but sometimes I find Excel easier as I like
-  to visualize the data. </p>
+paragraph10: >-
+  <h2 id="step2">Step Two:</h2>
+
+  <p>Once we have a list of editorial web page URLs we can move onto step two. At this stage, we can simply copy and paste the terminal code into Excel to tidy up the data. Remove any duplicates, filter for URLs not containing “pageId=” and delete them, and prepare the new structure for storing this list of URLs in a Python list. This stage could be handled as part of the Python program itself, but sometimes I find Excel easier to visualize the data. </p>
 image10: /images/excelurls.png
 imageAlt10: list of URLs in Excel
 paragraph11: >-
-  <p>I prepare the URL structure by using the concatenate formula. The correct
-  URL structure is as follows:</p>
+  <p>We can prepare the URL structure by using the concatenate formula. The
+  correct URL structure is as follows:</p>
 
   <p>“URL“, &rarr; which looks like &rarr; “example.com/example-page”,</p>
 
-  <p>To do this we add a “ “, to the cells on either side of our URLs. We then use the concatenate formula to join them to our URLs. You can see the dollar signs in the cells on either side of the URL. This is to lock these cells in place meaning, the only cell to change as we go down the sheet is the URL. This is achieved by pressing F4.</p>
+  <p>To do this we add a “ “, to the cells on either side of our URLs. We then use the concatenate formula to join them to our URLs. Note the dollar signs in the cells on either side of the URL. This is to lock these cells in place meaning, the only cell to change as we go down the sheet is the URL. This is achieved by pressing F4.</p>
 image11: /images/concatenate.png
 imageAlt11: Using the concatenate formula in Excel
+paragraph12: <p>By dragging down we can now apply the correct structure to all the URLs.</p>
 image12: /images/correcturls.png
 imageAlt12: Correct URL structure in Excel
 paragraph13: "<p>We can now take the list of URLs and add them to a list in our
-  Python program. </p>
+  Python program.</p>
 
 
   <pre class=\"code_terminal\">\r
@@ -378,17 +379,13 @@ paragraph13: "<p>We can now take the list of URLs and add them to a list in our
 
 
   <p>Once we have this list of URLs which contains the actual data we require,
-  we can use a for loop to cycle through them. In this case I apply a wait of 3
-  second to the browser, just to make sure the webpage has finished loading and
-  we are not missing any elements. </p>
+  we can use a for loop to cycle through them. Applying a wait of 3 seconds to
+  the browser helps to ensure the web page has finished loading and we are not
+  missing any elements. </p>
 
 
-  <p>The next line of code is to switch to the iframe containing the content
-  we require, but this step may not be required in your example. </p>
-
-
-  <p>We can then create our desired output URL by creating a string in which
-  we concatenate our domain name to the individual page URL. We locate the
+  <p>Next we can then create our desired output URL by creating a string in
+  which we concatenate our domain name to the individual page URL. We locate the
   individual page URL by using its ID after inspecting.</p>"
 image13: /images/customurl.png
 imageAlt13: Retrieving the custom URL for the webpage
@@ -429,11 +426,14 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
   \        </pre>
 
 
+  <h2 id=\"headlessbrowser\">Creating a Headless Browser:</h2>
+
+
   <p>The final piece to the puzzle is to turn this session into a headless
   session, meaning selenium will run in the background for us and we do not have
   to watch the browser. To do this we simply create a chrome options object, in
   which we set the browser option to headless. We then pass this options object
-  as an argument to our driver.</p> <p id=\"step1\">scroll</p>
+  as an argument to our driver.</p>\ 
 
 
 

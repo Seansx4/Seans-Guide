@@ -53,7 +53,7 @@ paragraph2: >-
 
 
   <p>For this example, we need to fetch the URL for each of our web pages (this was my original problem as BigCommerce does not allow the export of your webpage URLs). Below is the list of our webpages once we have logged into our dashboard.</p>
-image2: /images/picture5.png
+image2: /images/contentPage.png
 imageAlt2: Content page with URLs
 caption2: BigCommerce page with the list of URLs
 subheading3: ""
@@ -61,13 +61,13 @@ paragraph3: >
   <p>While we can see what looks like links to our webpages, if we right click
   and press inspect on any given link we can see that it is actually a link to
   another page. </p>
-image3: /images/inspectcontentpage.jpg
+image3: /images/inspectingContentpage.png
 imageAlt3: Inspecting URLs
 caption3: Inspecting URLss
 subheading4: ""
 paragraph4: <p>This next page acts as an editorial page for the webpage, and it
   is here that the webpage URL is stored.</p>
-image4: /images/editorialpage.jpg
+image4: /images/editorialPage.png
 imageAlt4: Editorial page
 caption4: Editorial page, note you can see the correct web page URL.
 subheading5: ""
@@ -80,7 +80,7 @@ paragraph5: >-
 
 
   <p>The first step of our web scraping journey is to attempt to access our BigCommerce dashboard. To do this we must login and pass our one-time 2FA code for login. To simulate the process, we are going to login to the dashboard from an incognito browser. This ensures we follow the same route our program will, and that we are not automatically logged in.</p>
-image5: /images/login.jpg
+image5: /images/login.png
 imageAlt5: Login
 subheading6: ""
 paragraph6: <p>By inspecting the email field, we can see the code for the input.
@@ -88,7 +88,7 @@ paragraph6: <p>By inspecting the email field, we can see the code for the input.
   id = “user_email”. We can use either of these for our function but in this
   case I am going to use the name attribute for the sake of consistency, as the
   login button has a name but not an ID. </p>
-image6: /images/inspectingemailinput.jpg
+image6: /images/inspectingemailinput.png
 imageAlt6: Inspecting email input
 caption6: Using developer tools we inspect the email input field. We then repeat
   this for the password field and the login button to find their names.
@@ -101,7 +101,7 @@ paragraph7: >-
   <p>From this we can see that the password has a name=“user[password]” and the login button has a name=“commit”.</p>
 
   <p>After logging in manually you will be redirected towards a new page for the 2FA. On this page carry out the same inspection process to find the name of the code field and the verify button.</p>
-image7: /images/inspectingverify.jpg
+image7: /images/inspectingverify.png
 imageAlt7: Inspecting the verify option
 subheading8: ""
 paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
@@ -285,6 +285,6 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
 
 
   \r\n"
-image8: /images/inspecturl.jpg
+image8: /images/contentPage.png
 imageAlt8: Inspecting URL
 ---

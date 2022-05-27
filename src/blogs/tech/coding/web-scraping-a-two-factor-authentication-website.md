@@ -287,4 +287,33 @@ paragraph8: "<p>In this instance they are name=“verification[opt_code]” and
   \r\n"
 image8: /images/contentPage.png
 imageAlt8: Inspecting URL
+paragraph9: "<p>To scrape all of these editorial page links we create a for
+  loop, instructing the driver to find all <a> elements with the title of “Edit
+  this page”. The for loop then cycles through all of these <a> tags and prints
+  their hrefs, which is their editorial links. The code is below.</p>
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  for result in driver.find_elements(By.CSS_SELECTOR, 'a[title=\"Edit this
+  page\"]'):\r
+
+  \    print(result.get_attribute(\"href\"))\r
+
+  \r
+
+  \r
+
+  \r
+
+
+  \ </code>\r
+
+  \        </pre>
+
+  Once we run this program we get a number of URLs printed on our terminal. "
+image9: /images/codeterminal.png
+imageAlt9: code terminal of URLs
 ---

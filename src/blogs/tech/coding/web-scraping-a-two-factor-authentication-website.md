@@ -316,4 +316,369 @@ paragraph9: "<p>To scrape all of these editorial page links we create a for
   Once we run this program we get a number of URLs printed on our terminal. "
 image9: /images/codeterminal.png
 imageAlt9: code terminal of URLs
+paragraph10: <p>At this stage, you can simply copy and paste the terminal code
+  into Excel to tidy up the data. I remove duplicates, filter for any URLs not
+  containing “pageId=” and delete them, and prepare the new structure for
+  storing this list of URLs in a Python list. This stage could be handled as
+  part of the Python program itself, but sometimes I find Excel easier as I like
+  to visualize the data. </p>
+image10: /images/excelurls.png
+imageAlt10: list of URLs in Excel
+paragraph11: >-
+  <p>I prepare the URL structure by using the concatenate formula. The correct
+  URL structure is as follows:</p>
+
+  <p>“URL“, &rarr; which looks like &rarr; “example.com/example-page”,</p>
+
+  <p>To do this we add a “ “, to the cells on either side of our URLs. We then use the concatenate formula to join them to our URLs. You can see the dollar signs in the cells on either side of the URL. This is to lock these cells in place meaning, the only cell to change as we go down the sheet is the URL. This is achieved by pressing F4.</p>
+image11: /images/concatenate.png
+imageAlt11: Using the concatenate formula in Excel
+image12: /images/correcturls.png
+imageAlt12: Correct URL structure in Excel
+paragraph13: "<p>We can now take the list of URLs and add them to a list in our
+  Python program. </p>
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  urls =
+  [\"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&p\
+  ageId=1519\",\r
+
+  \"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&\
+  pageId=12542\",\r
+
+  \"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&\
+  pageId=1538\",\r
+
+  \"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&\
+  pageId=1540\",\r
+
+  \"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&\
+  pageId=1786\",\r
+
+  ]\r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+
+  \ </code>\r
+
+  \        </pre>
+
+
+  <p>Once we have this list of URLs which contains the actual data we require,
+  we can use a for loop to cycle through them. In this case I apply a wait of 3
+  second to the browser, just to make sure the webpage has finished loading and
+  we are not missing any elements. </p>
+
+
+  <p>The next line of code is to switch to the iframe containing the content
+  we require, but this step may not be required in your example. </p>
+
+
+  <p>We can then create our desired output URL by creating a string in which
+  we concatenate our domain name to the individual page URL. We locate the
+  individual page URL by using its ID after inspecting.</p>"
+image13: /images/customurl.png
+imageAlt13: Retrieving the custom URL for the webpage
+paragraph14: "<p>We then print the full URL for the page before moving on to the
+  next URL in the list. </p>
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  for url in urls:\r
+
+  \    driver.get(url)\r
+
+  \    time.sleep(3)\r
+
+  \    driver.switch_to.frame(\"content-iframe\")\r
+
+  \    url = \"https://www.example.com\" + driver.find_element(By.ID,
+  \"page_custom_url\").get_attribute(\"value\")\r
+
+  \    print(url)\r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+
+  \ </code>\r
+
+  \        </pre>
+
+
+  <p>The final piece to the puzzle is to turn this session into a headless
+  session, meaning selenium will run in the background for us and we do not have
+  to watch the browser. To do this we simply create a chrome options object, in
+  which we set the browser option to headless. We then pass this options object
+  as an argument to our driver.</p>
+
+
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  chrome_options = Options()\r
+
+  chrome_options.headless = True\r
+
+  driver = webdriver.Chrome(service=path, options=chrome_options)\r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+
+  \ </code>\r
+
+  \        </pre>"
+subheading15: Full Code
+paragraph15: "<h3>Step 1</h3>
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  from selenium import webdriver\r
+
+  import time\r
+
+  from selenium.webdriver.common.by import By\r
+
+  \r
+
+  from selenium.webdriver.chrome.options import Options\r
+
+  from selenium.webdriver.chrome.service import Service\r
+
+  \r
+
+  chrome_options = Options()\r
+
+  chrome_options.headless = True\r
+
+  \r
+
+  username = \"username@mail.com\"\r
+
+  password = \"password\"\r
+
+  \r
+
+  \r
+
+  path = Service(\"Filepath of your webdriver\")\r
+
+  driver = webdriver.Chrome(service=path, options=chrome_options)\r
+
+  dashboard = \"Dashboard URL\"\r
+
+  content = \"Content URL\"\r
+
+  driver.get(dashboard)\r
+
+  \r
+
+  \r
+
+  driver.find_element(By.NAME, \"user[email]\").send_keys(username)\r
+
+  driver.find_element(By.NAME, \"user[password]\").send_keys(password)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+  \r
+
+  verification = input(\"Enter verification code: \")\r
+
+  driver.find_element(By.NAME,
+  \"device_verification[otp_code]\").send_keys(verification)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+  driver.get(content)\r
+
+  driver.switch_to.frame(\"content-iframe\")\r
+
+  \r
+
+  for result in driver.find_elements(By.CSS_SELECTOR, 'a[title=\"Edit this
+  page\"]'):\r
+
+  \    print(result.get_attribute(\"href\"))\r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+
+  \ </code>\r
+
+  \        </pre>
+
+
+
+
+  <h3>Step 2</h3>
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  from selenium import webdriver\r
+
+  import time\r
+
+  from selenium.webdriver.common.by import By\r
+
+  \r
+
+  from selenium.webdriver.chrome.options import Options\r
+
+  from selenium.webdriver.chrome.service import Service\r
+
+  \r
+
+  chrome_options = Options()\r
+
+  chrome_options.headless = True\r
+
+  \r
+
+  username = \"username@mail.com\"\r
+
+  password = \"password\"\r
+
+  \r
+
+  \r
+
+  path = Service(\"Filepath of your webdriver\")\r
+
+  driver = webdriver.Chrome(service=path, options=chrome_options)\r
+
+  dashboard = \"Dashboard URL\"\r
+
+  content = \"Content URL\"\r
+
+  driver.get(dashboard)\r
+
+  \r
+
+  \r
+
+  driver.find_element(By.NAME, \"user[email]\").send_keys(username)\r
+
+  driver.find_element(By.NAME, \"user[password]\").send_keys(password)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+  \r
+
+  verification = input(\"Enter verification code: \")\r
+
+  driver.find_element(By.NAME,
+  \"device_verification[otp_code]\").send_keys(verification)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+  \r
+
+  urls = [\"URL 1\",\r
+
+  \"URL 2\",\r
+
+  \"URL 3\",\r
+
+  \"Etc etc..\"\r
+
+  ]\r
+
+  \r
+
+  \r
+
+  for url in urls:\r
+
+  \r
+
+  \    driver.get(url)\r
+
+  \    time.sleep(3)\r
+
+  \    driver.switch_to.frame(\"content-iframe\")\r
+
+  \    url = \"yourdomain.com\" + driver.find_element(By.ID,
+  \"page_custom_url\").get_attribute(\"value\")\r
+
+  \    print(url)\r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+
+  \ </code>\r
+
+  \        </pre>"
 ---

@@ -433,7 +433,7 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
   session, meaning selenium will run in the background for us and we do not have
   to watch the browser. To do this we simply create a chrome options object, in
   which we set the browser option to headless. We then pass this options object
-  as an argument to our driver.</p>
+  as an argument to our driver.</p> <p id=\"step1\">scroll</p>
 
 
 

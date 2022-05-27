@@ -50,6 +50,7 @@
     <article class="feature grid grid--1x2" data-aos="zoom-in-up">
       <div class="feature__content">
         <p>Web scraping is a fantastic tool for any programmer to add to their arsenal. Web scraping allows you to automate data retrieval from webpages. For example, you could scrape a list of email addresses from a website, the price of products from another, or even the Google results page for specific search queries. The possibilities are endless, and process is both helpful and fun to set up. Win Win.  </p>
+<a href="#step1">Step 1</a>
 
 
 
@@ -360,7 +361,133 @@ Once we run this program we get a number of URLs printed on our terminal.
       </div>
       
     </div>
-           
+      
+    <article class="feature">
+      <div class="feature__content">
+         <p>At this stage, you can simply copy and paste the terminal code into Excel to tidy up the data. I remove duplicates, filter for any URLs not containing “pageId=” and delete them, and prepare the new structure for storing this list of URLs in a Python list. This stage could be handled as part of the Python program itself, but sometimes I find Excel easier as I like to visualize the data. </p>
+      </div>
+    </article>
+    
+    <div class="blog__image__container">
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="/images/excelurls.png"
+            alt="list of URLs in Excel"
+          />
+        </label>
+      </div>
+      
+    </div>
+      
+    <article class="feature">
+      <div class="feature__content">
+         <p>I prepare the URL structure by using the concatenate formula. The correct URL structure is as follows:</p>
+<p>“URL“, &rarr; which looks like &rarr; “example.com/example-page”,</p>
+<p>To do this we add a “ “, to the cells on either side of our URLs. We then use the concatenate formula to join them to our URLs. You can see the dollar signs in the cells on either side of the URL. This is to lock these cells in place meaning, the only cell to change as we go down the sheet is the URL. This is achieved by pressing F4.</p>
+      </div>
+    </article>
+    
+    <div class="blog__image__container">
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="/images/concatenate.png"
+            alt="Using the concatenate formula in Excel"
+          />
+        </label>
+      </div>
+      
+    </div>
+       
+    <article class="feature">
+      <div class="feature__content">
+         <p>We can now take the list of URLs and add them to a list in our Python program. </p>
+
+<pre class="code_terminal">
+          <code>
+urls = ["https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1519",
+"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=12542",
+"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1538",
+"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1540",
+"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1786",
+]
+
+
+
+
+
+ </code>
+        </pre>
+
+<p>Once we have this list of URLs which contains the actual data we require, we can use a for loop to cycle through them. In this case I apply a wait of 3 second to the browser, just to make sure the webpage has finished loading and we are not missing any elements. </p>
+
+<p>The next line of code is to switch to the iframe containing the content we require, but this step may not be required in your example. </p>
+
+<p>We can then create our desired output URL by creating a string in which we concatenate our domain name to the individual page URL. We locate the individual page URL by using its ID after inspecting.</p>
+      </div>
+    </article>
+    
+    <div class="blog__image__container">
+      <div class="click-zoom">
+        <label>
+          <input type="checkbox" />
+          <img
+            class="feature__image"
+            src="/images/customurl.png"
+            alt="Retrieving the custom URL for the webpage"
+          />
+        </label>
+      </div>
+      
+    </div>
+      
+    <article class="feature">
+      <div class="feature__content">
+         <p>We then print the full URL for the page before moving on to the next URL in the list. </p>
+
+<pre class="code_terminal">
+          <code>
+for url in urls:
+    driver.get(url)
+    time.sleep(3)
+    driver.switch_to.frame("content-iframe")
+    url = "https://www.example.com" + driver.find_element(By.ID, "page_custom_url").get_attribute("value")
+    print(url)
+
+
+
+
+
+
+ </code>
+        </pre>
+
+<p>The final piece to the puzzle is to turn this session into a headless session, meaning selenium will run in the background for us and we do not have to watch the browser. To do this we simply create a chrome options object, in which we set the browser option to headless. We then pass this options object as an argument to our driver.</p>
+
+
+
+<pre class="code_terminal">
+          <code>
+chrome_options = Options()
+chrome_options.headless = True
+driver = webdriver.Chrome(service=path, options=chrome_options)
+
+
+
+
+
+
+
+ </code>
+ </pre>
+      </div>
+    </article>
+      
   </div>
 </section>
 

@@ -10,9 +10,7 @@ author: Sean
 tags:
   - post
   - coding
-JSON: "<script type=\"application/ld+json\">\r
-
-  { \"@context\": \"https://schema.org\", \r
+JSON: "{ \"@context\": \"https://schema.org\", \r
 
   \ \"@type\": \"Blog\",\r
 
@@ -45,9 +43,7 @@ JSON: "<script type=\"application/ld+json\">\r
   \ \"description\": \"This blog outlines how to correctly web scrape a
   dynamic website protected with 2FA using Python and Selenium.\"\r
 
-  \ }\r
-
-  </script>"
+  \ }"
 paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
   their skill\r
 

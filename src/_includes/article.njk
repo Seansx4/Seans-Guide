@@ -3,12 +3,8 @@ layout: "base.njk"
 ---
 
 {% if JSON|length %}
-<script>
-  {
-    {
-      JSON;
-    }
-  }
+<script type="application/ld+json">
+  {{ JSON }}
 </script>
 
 {% endif %}

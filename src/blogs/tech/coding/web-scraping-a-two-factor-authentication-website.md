@@ -338,7 +338,6 @@ paragraph8: "<p>In this instance they have the attributes
 
   driver.find_element(By.NAME, \"commit\").click()\r
 
-
   \ </code>\r
 
   \        </pre>
@@ -386,7 +385,6 @@ paragraph8: "<p>In this instance they have the attributes
 
   \r
 
-
   \ </code>\r
 
   \        </pre>
@@ -413,7 +411,6 @@ paragraph8: "<p>In this instance they have the attributes
   \r
 
   \r
-
 
   \ </code>\r
 
@@ -455,7 +452,6 @@ paragraph9: "for result in driver.find_elements(By.CSS_SELECTOR, 'a[title=\"Edit
   \r
 
   \r
-
 
   \ </code>\r
 
@@ -516,7 +512,6 @@ paragraph13: "\r
 
   \r
 
-
   \ </code>\r
 
   \        </pre>
@@ -565,7 +560,6 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
   \r
 
   \r
-
 
   \ </code>\r
 
@@ -703,7 +697,6 @@ paragraph15: "<h2 id=\"fullcode\">Full Code</h2>
 
   \r
 
-
   \ </code>\r
 
   \ </pre>
@@ -812,7 +805,6 @@ paragraph15: "<h2 id=\"fullcode\">Full Code</h2>
   \"page_custom_url\").get_attribute(\"value\")\r
 
   \    print(url)\r
-
 
   \ </code>\r
 

@@ -17,13 +17,12 @@ paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
   websites. For example, you could scrape a list of email addresses from one
   website, the price\r
 
-  \  of products from another, or even the Google search results page for
-  specific\r
+  \  of products from another, or even the Google Search results page. The
+  possibilities are endless, and the process is both helpful\r
 
-  \  search queries. The possibilities are endless, and the process is both
-  helpful\r
-
-  \  and fun to set up.</p>\r
+  \  and fun to set up. While this example will undoubtedly be different to
+  your problem, changing some lines of code or following the general methodology
+  may help.</p>\r
 
   \r
 
@@ -143,9 +142,7 @@ paragraph2: "<h2 id=\"2FA\">Why Scrape a Website with 2FA-Factor
   of a BigCommerce website. Selenium allows for the automation of a webdriver,
   thereby simulating a web browsers interaction with a web page. BigCommerce is
   a popular eCommerce provider. The user dashboard for a BigCommerce website is
-  dynamically generated and protected by 2FA at login. While this example will
-  undoubtedly be different to your problem, changing some lines of code or
-  following the general methodology may help you solve your problem.</p>\r
+  dynamically generated and protected by 2FA at login.</p>\r
 
   \r
 
@@ -427,15 +424,10 @@ image8: /images/inspectcontentpage.jpg
 imageAlt8: Inspecting URL
 caption8: Inspection of content page URLs shows that they all have a title
   attribute of “Edit this page”
-paragraph9: "for result in driver.find_elements(By.CSS_SELECTOR, 'a[title=\"Edit
-  this page\"]'):\r
-
-  \    print(result.get_attribute(\"href\"))\r
-
-  <p>To scrape all of these editorial page links we create a for loop,
-  instructing the driver to find all <a> elements with the title of “Edit this
-  page”. The for loop then cycles through all of these <a> tags and prints their
-  hrefs, which is their editorial links. The code is below.</p>
+paragraph9: "<p>To scrape all of these editorial page links we create a for
+  loop, instructing the driver to find all <a> elements with the title of “Edit
+  this page”. The for loop then cycles through all of these <a> tags and prints
+  their hrefs, which is their editorial links. The code is below.</p>
 
 
   <pre class=\"code_terminal\">\r
@@ -707,14 +699,7 @@ paragraph15: "<h2 id=\"fullcode\">Full Code</h2>
 
   <pre class=\"code_terminal\">\r
 
-  \          <code>
-
-
-  \r
-
-  \r
-
-  \r
+  \         <code>\r
 
   \r
 

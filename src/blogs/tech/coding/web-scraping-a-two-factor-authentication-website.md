@@ -33,42 +33,42 @@ paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
 
   \r
 
-  \  <ul>\r
+  \  <ul class=\"list--jump\">\r
 
   \r
 
-  \  <li><a href=\"#2FA\">Why Scrape a Website with 2FA-Factor
+  \  <li><a class=\"jump\" href=\"#2FA\">Why Scrape a Website with 2FA-Factor
   Authentication?</a></li>\r
 
   \r
 
-  \  <li><a href=\"#StaticVsDynamic\">Static Vs. Dynamic Websites</a></li>
+  \  <li><a class=\"jump\" href=\"#StaticVsDynamic\">Static Vs. Dynamic Websites</a></li>
 
-  \  <li><a href=\"#ScrapingDynamicSelenium\r\">Scraping a Dynamic Website
+  \  <li><a class=\"jump\" href=\"#ScrapingDynamicSelenium\r\">Scraping a Dynamic Website
   with Selenium</a></li>
 
   \r
 
-  \  <li><a href=\"#step1\">Step One: Simulating the Process</a></li>\r
+  \  <li><a class=\"jump\" href=\"#step1\">Step One: Simulating the Process</a></li>\r
 
   \r
 
-  \  <li><a href=\"#step2\">Step Two: Creating the Scraper</a></li>
+  \  <li><a class=\"jump\" href=\"#step2\">Step Two: Creating the Scraper</a></li>
 
-  \  <li><a href=\"#step3\">Step Three: Bypassing Two-Factor
+  \  <li><a class=\"jump\" href=\"#step3\">Step Three: Bypassing Two-Factor
   Authentication</a></li>
 
-  \  <li><a href=\"#step4\">Step Four: Using Excel to Tidy Data</a></li>
+  \  <li><a class=\"jump\" href=\"#step4\">Step Four: Using Excel to Tidy Data</a></li>
 
-  \  <li><a href=\"#step5\">Step Five: Scraping Content Page URLs</a></li>
-
-  \r
+  \  <li><a class=\"jump\" href=\"#step5\">Step Five: Scraping Content Page URLs</a></li>
 
   \r
 
-  \  <li><a href=\"#step6\">Creating a Headless Browser</a></li>
+  \r
 
-  \  <li><a href=\"#fullcode\">Full Code</a></li>\r
+  \  <li><a class=\"jump\" href=\"#step6\">Creating a Headless Browser</a></li>
+
+  \  <li><a class=\"jump\" href=\"#fullcode\">Full Code</a></li>\r
 
   \r
 
@@ -553,7 +553,7 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
   session, meaning selenium will run in the background for us and we do not have
   to watch the browser. To do this we simply create a chrome options object, in
   which we set the browser option to headless. We then pass this options object
-  as an argument to our driver.</p>\ 
+  as an argument to our driver.</p>\
 
 
 

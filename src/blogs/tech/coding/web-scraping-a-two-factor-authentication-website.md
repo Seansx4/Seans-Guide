@@ -10,6 +10,44 @@ author: Sean
 tags:
   - post
   - coding
+JSON: "<script type=\"application/ld+json\">\r
+
+  { \"@context\": \"https://schema.org\", \r
+
+  \ \"@type\": \"Blog\",\r
+
+  \ \"headline\": \"Web Scraping a Two-Factor Authentication Website\",\r
+
+  \r
+
+  \ \"image\": \"https://www.seansguide.com/images/code.jpg\",\r
+
+  \r
+
+  \ \"editor\": \"Sean Grayson\", \r
+
+  \ \"genre\": \"Webscraping\", \r
+
+  \ \"keywords\": \"Webscraping, Python, Selenium, 2FA\", \r
+
+  \r
+
+  \ \"url\":
+  \"https://www.seansguide.com/blogs/tech/coding/web-scraping-a-two-factor-auth\
+  entication-website/\",\r
+
+  \ \"datePublished\": \"2022-05-24\",\r
+
+  \ \"dateCreated\": \"2022-05-24\",\r
+
+  \ \"dateModified\": \"2022-05-28\",\r
+
+  \ \"description\": \"This blog outlines how to correctly web scrape a
+  dynamic website protected with 2FA using Python and Selenium.\"\r
+
+  \ }\r
+
+  </script>"
 paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
   their skill\r
 

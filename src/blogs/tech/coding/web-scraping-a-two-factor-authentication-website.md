@@ -488,15 +488,7 @@ paragraph12: <p>By dragging down we can now apply the correct structure to all
 image12: /images/correcturls.png
 imageAlt12: Correct URL structure in Excel
 caption12: Correct structure applied to all URLs
-paragraph13: "urls =
-  [\"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1519\
-  \",\r
-
-  \"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=12542\
-  \",\r
-
-  \"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1538]\
-  \r
+paragraph13: "\r
 
   <p>We can now take the list of URLs and add them to a list in our Python
   program.</p>
@@ -507,22 +499,14 @@ paragraph13: "urls =
   \          <code>
 
   urls =
-  [\"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&p\
-  ageId=1519\",\r
+  [\"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1519\
+  \",\r
 
-  \"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&\
-  pageId=12542\",\r
+  \"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=12542\
+  \",\r
 
-  \"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&\
-  pageId=1538\",\r
-
-  \"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&\
-  pageId=1540\",\r
-
-  \"https://store-h68l9z2lnx.mybigcommerce.com/admin/index.php?ToDo=editPage&\
-  pageId=1786\",\r
-
-  ]\r
+  \"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1538]\
+  \r
 
   \r
 
@@ -551,51 +535,8 @@ paragraph13: "urls =
 image13: /images/customurl.png
 imageAlt13: Retrieving the custom URL for the webpage
 caption13: Inspecting the URL field so we can target its ID in our scraper
-paragraph14: "for url in urls:\r
-
-  \r
-
-  \    driver.get(url)\r
-
-  \    time.sleep(3)\r
-
-  \    driver.switch_to.frame(\"content-iframe\")\r
-
-  \    url = \"yourdomain.com\" + driver.find_element(By.ID,
-  \"page_custom_url\").get_attribute(\"value\")\r
-
-  \    print(url)\rfor url in urls:\r
-
-  \r
-
-  \    driver.get(url)\r
-
-  \    time.sleep(3)\r
-
-  \    driver.switch_to.frame(\"content-iframe\")\r
-
-  \    url = \"yourdomain.com\" + driver.find_element(By.ID,
-  \"page_custom_url\").get_attribute(\"value\")\r
-
-  \    print(url)\rfor url in urls:\r
-
-  \r
-
-  \    driver.get(url)\r
-
-  \    time.sleep(3)\r
-
-  \    driver.switch_to.frame(\"content-iframe\")\r
-
-  \    url = \"yourdomain.com\" + driver.find_element(By.ID,
-  \"page_custom_url\").get_attribute(\"value\")\r
-
-  \    print(url)\r
-
-
-
-  <p>We then print the full URL for the page before moving on to the next URL
-  in the list. </p>
+paragraph14: "<p>We then print the full URL for the page before moving on to the
+  next URL in the list. </p>
 
 
   <pre class=\"code_terminal\">\r
@@ -668,7 +609,15 @@ paragraph14: "for url in urls:\r
   \ </code>\r
 
   \ </pre>"
-paragraph15: "from selenium import webdriver\r
+paragraph15: "<h2 id=\"fullcode\">Full Code</h2>
+
+  <h3>Stage One:</h3>
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+  from selenium import webdriver\r
 
   import time\r
 
@@ -740,9 +689,118 @@ paragraph15: "from selenium import webdriver\r
 
   \    print(result.get_attribute(\"href\"))\r
 
-  <pre class=\"code_terminal\">          <code>\r
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+
+  \ </code>\r
+
+  \ </pre>
+
+
+  <h3>Stage Two:</h3>
+
+
+  <pre class=\"code_terminal\">\r
+
+  \          <code>
+
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  from selenium import webdriver\r
+
+  import time\r
+
+  from selenium.webdriver.common.by import By\r
+
+  \r
+
+  from selenium.webdriver.chrome.options import Options\r
+
+  from selenium.webdriver.chrome.service import Service\r
+
+  \r
+
+  chrome_options = Options()\r
+
+  chrome_options.headless = True\r
+
+  \r
+
+  username = \"username@mail.com\"\r
+
+  password = \"password\"\r
+
+  \r
+
+  \r
+
+  path = Service(\"Filepath of your webdriver\")\r
+
+  driver = webdriver.Chrome(service=path, options=chrome_options)\r
+
+  dashboard = \"Dashboard URL\"\r
+
+  content = \"Content URL\"\r
+
+  driver.get(dashboard)\r
+
+  \r
+
+  \r
+
+  driver.find_element(By.NAME, \"user[email]\").send_keys(username)\r
+
+  driver.find_element(By.NAME, \"user[password]\").send_keys(password)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+  \r
+
+  verification = input(\"Enter verification code: \")\r
+
+  driver.find_element(By.NAME,
+  \"device_verification[otp_code]\").send_keys(verification)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
 
   for url in urls:\r
+
+  \r
 
   \    driver.get(url)\r
 
@@ -750,24 +808,13 @@ paragraph15: "from selenium import webdriver\r
 
   \    driver.switch_to.frame(\"content-iframe\")\r
 
-  \    url = \"https://www.example.com\" + driver.find_element(By.ID,
+  \    url = \"yourdomain.com\" + driver.find_element(By.ID,
   \"page_custom_url\").get_attribute(\"value\")\r
 
   \    print(url)\r
 
-  \r
-
-  \r
-
-  \r
-
-  \r
-
-  \r
-
-  \r
 
   \ </code>\r
 
-  \        </pre>"
+  \ </pre>"
 ---

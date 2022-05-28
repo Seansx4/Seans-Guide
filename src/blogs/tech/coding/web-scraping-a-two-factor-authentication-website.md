@@ -10,82 +10,173 @@ author: Sean
 tags:
   - post
   - coding
-paragraph1: >
-  <p>Web scraping is a fantastic tool for any programmer to add to their skill
-  set. Web scraping allows you to automate data retrieval from web pages,
-  meaning you could scrape a list of email addresses from one website, the price
-  of products from another, or even the Google search results page for specific
-  search queries. The possibilities are endless, and the process is both helpful
-  and fun to set up.</p>
+paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
+  their skill\r
 
+  \  set. Web scraping allows you to automate data retrieval from different
+  websites. For example, you could scrape a list of email addresses from one
+  website, the price\r
 
-  <h3>Table of Contents<h3>
+  \  of products from another, or even the Google search results page for
+  specific\r
 
-  <ul>
+  \  search queries. The possibilities are endless, and the process is both
+  helpful\r
 
-  <li><a href="#2FA">Scraping a 2FA Website</a></li>
+  \  and fun to set up.</p>\r
 
-  <li><a href="#step1">Step One</a></li>
+  \r
 
-  <li><a href="#step2">Step Two</a></li>
+  \r
 
-  <li><a href="#headlessbrowser">Creating a Headless Browser</a></li>
+  \  <h3>Table of Contents<h3>\r
 
-  </ul>
+  \r
+
+  \  <ul>\r
+
+  \r
+
+  \  <li><a href=\"#2FA\">Why Scrape a Website with 2FA-Factor
+  Authentication?</a></li>\r
+
+  \r
+
+  \  <li><a href=\"#StaticVsDynamic\">Static Vs. Dynamic Websites</a></li>\r
+
+  \r
+
+  \  <li><a href=\"#step1\">Step One: Simulating the Process</a></li>\r
+
+  \r
+
+  \  <li><a href=\"#step2\">Step Two</a></li>\r
+
+  \r
+
+  \  <li><a href=\"#headlessbrowser\">Creating a Headless Browser</a></li>\r
+
+  \r
+
+  \  </ul>"
 image1: /images/code.jpg
 imageAlt1: Python code for web scraping
 subheading2: ""
-paragraph2: >-
-  <h2 id="2FA">Scraping 2FA Website</h2>
+paragraph2: "<h2 id=\"2FA\">Why Scrape a Website with 2FA-Factor
+  Authentication?</h2>\r
 
-  <p>Web scraping a website with two-factor authentication (2FA) can be tricky. 2FA provides an extra layer of security to a given user account. When a user attempts to login to a platform protected with 2FA, a once off code is often sent to the email address associated with the account. </p>
+  \r
 
-
-  <p>When attempting to scrape a 2FA protected website myself, I found various tutorials outlining how to login to a regular website, but very sparse information on how to circumnavigate 2FA. I should make it clear that this tutorial is for someone who is the true owner of an account protected with 2FA and not a guide on how to hack someone else’s account. </p>
-
-
-  <p>I like to keep my blogs focused on the topic of discussion, so I won’t be going through the technicalities of how to install the required dependencies (Selenium and the WebDriver) in this blog, or any basic concepts of Python programming. In the future I am going to write some content surrounding this but for now I will leave it up to you to do some quick research (I recommend YouTube). </p>
-
-
-  <p>There are two possible options to take when trying to overcome this problem, but which option you chose depends largely on what kind of website you are trying to scrape. If you are unsure of what kind of website you are scraping, check out my guide Static vs Dynamic Sites: What’s the Difference? </p>
-
-
-  <p>If your site is a static website you can simply use the beautifulsoup library in conjunction with a neat little trick to store your cookies (link). This allows you to bypass login and TFA and scrape the data as required. If you are scraping a dynamic website however, thing can be a little more complicated. </p>
+  \  <p>The need to scrape a website with two-factor authentication (2FA) is
+  quite rare. 2FA provides an extra layer of security to a user account of a
+  given platform. When a user attempts to login to the platform a once off code
+  is often sent to the email address associated with the account. Typically,
+  most data the user can access on their dashboard can be exported, or there is
+  usually an API for data retrieval. If neither of these options exist however,
+  webscraping can allow you to retrieve the data you need, you just have the
+  small task of bypassing 2FA.</p>
 
 
-  <p>Below I have outlined how to use Selenium to scrape the user dashboard of a BigCommerce website. Selenium allows for the automation of a webdriver, thereby simulating a web browsers interaction with a web page. BigCommerce is a popular eCommerce provider. The user dashboard for a BigCommerce website is dynamically generated and protected by 2FA at login. While this example will undoubtedly be different to your problem, changing some lines of code or following the general methodology may help your case. </p>
+  <p>When attempting to scrape a 2FA protected website myself, I found various
+  tutorials outlining how to login to a regular website, but very sparse
+  information on how to circumnavigate 2FA. I should make it clear that this
+  tutorial is for someone who is the true owner of an account protected with 2FA
+  and not a guide on how to hack someone else’s account. </p>
 
 
-  <p>For this example, we need to fetch the URL for each of our web pages (this was my original problem as BigCommerce does not allow the export of your web page URLs). Below is the list of our web pages once we have logged into our dashboard.</p>
+  <p>I like to keep my blogs focused on the topic of discussion, so I won’t be
+  going through the technicalities of how to install the required dependencies
+  (Selenium and the WebDriver) in this blog, or any basic concepts of Python
+  programming. In the future I am going to write some content surrounding this
+  but for now I will leave it up to you to do some quick research (I recommend
+  YouTube). </p>
+
+
+  <h2 id=\"StaticVsDynamic\">Static vs Dynamic Websites?</h2>\r
+
+  \r
+
+  \  <p>There are two possible options to take when trying to overcomethe
+  scraping a 2FA website, but which option you chose depends largely on what
+  kind of website you are trying to scrape. If you are unsure of what kind of
+  website you are scraping, check out my guide Static vs Dynamic Sites: What’s
+  the Difference? </p>\r
+
+  \r
+
+  \r
+
+  \  <p>If your site is a static website you can simply use the beautifulsoup
+  library in conjunction with a neat little trick to store your cookies (I will
+  be writing some content on this soon). This allows you to bypass login and TFA
+  and scrape the data as required. If you are scraping a dynamic website
+  however, thing can be a little more complicated. </p>\r
+
+  \r
+
+  \r
+
+  <h2 id=\"ScrapingDynamicSelenium\">Scraping a Dynamic Website with
+  Selenium</h2>\r
+
+  \  <p>Below I have outlined how to use Selenium to scrape the user dashboard
+  of a BigCommerce website. Selenium allows for the automation of a webdriver,
+  thereby simulating a web browsers interaction with a web page. BigCommerce is
+  a popular eCommerce provider. The user dashboard for a BigCommerce website is
+  dynamically generated and protected by 2FA at login. While this example will
+  undoubtedly be different to your problem, changing some lines of code or
+  following the general methodology may help you solve your problem.</p>\r
+
+  \r
+
+  \r
+
+  \  <p>For this example, we need to fetch the URL for each of our content
+  pages (this was my original problem as BigCommerce does not allow the export
+  of your content page URLs). Below is the list of our content pages once we
+  have logged into our dashboard.</p>"
 image2: /images/contentPage.png
 imageAlt2: Content page with URLs
 caption2: BigCommerce page with the list of URLs
 subheading3: ""
-paragraph3: >
-  <p>While we can see what looks like links to our web pages, if we right click
-  and inspect on any given link we can see that it is actually a link to another
-  page. </p>
+paragraph3: "<p>While we can see what looks like links to our content pages, if
+  we right click\r
+
+  \  and inspect on any given link we can see that it is actually a link to
+  another\r
+
+  \  page. </p>\n"
 image3: /images/inspectingContentpage.png
 imageAlt3: Inspecting URLs
 caption3: Inspecting URLss
 subheading4: ""
-paragraph4: <p>This next page acts as an editorial page for the webpage, and it
-  is here that the webpage URL is stored.</p>
+paragraph4: "<p>This next page acts as an editorial page for the content page,
+  and it\r
+
+  \  is here that the content web page URL is stored.</p>"
 image4: /images/editorialPage.png
 imageAlt4: Editorial page
 caption4: Editorial page, note you can see the correct web page URL.
 subheading5: ""
-paragraph5: >-
-  <p>This means that our task is split into two stages. First, we must scrape
-  the list of editorial URLs on the dashboard, before visiting each URL
-  individually and scraping the required web page URL. </p>
+paragraph5: "  <p>This means that our task is split into two stages. First, we
+  must scrape\r
+
+  \  the list of editorial URLs on the dashboard, before visiting each URL\r
+
+  \  individually and scraping the required content web page URL. </p>
 
 
 
 
-  <h2 id="step1">Step One:</h2>
+  \  <h2 id=\"step1\">Step One: Simulating the Process</h2>\r
 
-  <p>The first step of our web scraping journey is to attempt to access our BigCommerce dashboard. To do this we must login and pass our one-time 2FA code for login. To simulate the process, we are going to login to the dashboard from an incognito browser. This ensures we follow the same route our program will, and that we are not automatically logged in.</p>
+  \r
+
+  \  <p>The first step of our web scraping journey is to attempt to access our
+  BigCommerce dashboard. To do this we must login and pass our one-time 2FA code
+  for login. To simulate the process, we are going to login to the dashboard
+  from an incognito browser. This ensures we follow the same route our program
+  will, and that we are not automatically logged in.</p>"
 image5: /images/login.png
 imageAlt5: Login
 subheading6: ""
@@ -99,14 +190,18 @@ imageAlt6: Inspecting email input
 caption6: Using developer tools we inspect the email input field. We then repeat
   this for the password field and the login button to find their names.
 subheading7: ""
-paragraph7: >-
-  <p>We then repeat this process for the password.And again for the login
-  button. </p>
+paragraph7: " <p>We then repeat this process for the password. And again for the
+  login\r
+
+  \  button. </p>
 
 
-  <p>From this we can see that the password has a name=“user[password]” and the login button has a name=“commit”.</p>
+  <p>From this we can see that the password has a name=“user[password]” and
+  the login button has a name=“commit”.</p>
 
-  <p>After logging in manually we are redirected towards a new page requesting our 2FA code. On this page we carry out the same inspection process to find the name of the code field and the verify button.</p>
+  <p>After logging in manually we are redirected towards a new page requesting
+  our 2FA code. On this page we carry out the same inspection process to find
+  the name of the code field and the verify button.</p>"
 image7: /images/inspectingverify.png
 imageAlt7: Inspecting the verify option
 subheading8: ""
@@ -138,10 +233,14 @@ paragraph8: "<p>In this instance they have the attributes
   \        </pre>
 
 
-  <p>Next we initialise our chrome driver for the actual scraping. This is
-  done by storing the browser driver file path in a variable and then using that
-  variable to instantiate a driver object. The chrome service is to avoid
-  depreciation in future releases.</p>
+  \ <p>Next we initialise our chrome driver for the actual scraping. This is\r
+
+  \  done by storing the browser driver file path in a variable and then using
+  that\r
+
+  \  variable to instantiate a driver object. The chrome service is to avoid\r
+
+  \  depreciation in future Selenium releases.</p>
 
 
   <pre class=\"code_terminal\">\r

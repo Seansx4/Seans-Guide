@@ -10,22 +10,14 @@ author: Sean
 tags:
   - post
   - coding
-JSON: "\r
-
-  {\r
+JSON: "\r{\r
 
   \  \"@context\" : \"http://schema.org\",\r
 
-  \  \"@type\" : \"SoftwareApplication\",\r
+  \  \"@type\" : \"Article\",\r
 
   \  \"name\" : \"Web Scraping Content from Two-Factor Authentication
   Website\",\r
-
-  \  \"image\" : \"https://www.seansguide.com/images/code.jpg\",\r
-
-  \  \"url\" :
-  \"https://www.seansguide.com/blogs/tech/coding/web-scraping-a-two-factor-auth\
-  entication-website/\",\r
 
   \  \"author\" : {\r
 
@@ -35,9 +27,15 @@ JSON: "\r
 
   \  },\r
 
-  \  \"datePublished\" : \"2022-05-24\"\r
+  \  \"datePublished\" : \"2022-05-24\",\r
 
-  }\r\n"
+  \  \"image\" : \"https://www.seansguide.com/images/code.jpg\",\r
+
+  \  \"url\" :
+  \"https://www.seansguide.com/blogs/tech/coding/web-scraping-a-two-factor-auth\
+  entication-website/\"\r
+
+  }\n"
 paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
   their skill\r
 

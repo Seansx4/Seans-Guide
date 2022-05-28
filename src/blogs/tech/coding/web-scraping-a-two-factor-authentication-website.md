@@ -29,7 +29,7 @@ paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
 
   \r
 
-  \  <h3>Table of Contents<h3>\r
+  \  <h3>Jump to:<h3>\r
 
   \r
 
@@ -42,7 +42,10 @@ paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
 
   \r
 
-  \  <li><a href=\"#StaticVsDynamic\">Static Vs. Dynamic Websites</a></li>\r
+  \  <li><a href=\"#StaticVsDynamic\">Static Vs. Dynamic Websites</a></li>
+
+  \  <li><a href=\"#ScrapingDynamicSelenium\r\">Scraping a Dynamic Website
+  with Selenium</a></li>
 
   \r
 
@@ -50,11 +53,22 @@ paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
 
   \r
 
-  \  <li><a href=\"#step2\">Step Two</a></li>\r
+  \  <li><a href=\"#step2\">Step Two: Creating the Scraper</a></li>
+
+  \  <li><a href=\"#step3\">Step Three: Bypassing Two-Factor
+  Authentication</a></li>
+
+  \  <li><a href=\"#step4\">Step Four: Using Excel to Tidy Data</a></li>
+
+  \  <li><a href=\"#step5\">Step Five: Scraping Content Page URLs</a></li>
 
   \r
 
-  \  <li><a href=\"#headlessbrowser\">Creating a Headless Browser</a></li>\r
+  \r
+
+  \  <li><a href=\"#step6\">Creating a Headless Browser</a></li>
+
+  \  <li><a href=\"#fullcode\">Full Code</a></li>\r
 
   \r
 
@@ -208,6 +222,9 @@ subheading8: ""
 paragraph8: "<p>In this instance they have the attributes
   name=“verification[opt_code]” and name=“commit”.</p>
 
+
+  <h2 id=\"step2\">Step Two: Creating the Scraper</h2>
+
   <p>With this data we can now begin to write our python program. Below are
   the lines of code for the dependencies you will need:</p>
 
@@ -235,8 +252,8 @@ paragraph8: "<p>In this instance they have the attributes
 
   \ <p>Next we initialise our chrome driver for the actual scraping. This is\r
 
-  \  done by storing the browser driver file path in a variable and then using
-  that\r
+  \  achieved by storing the browser driver file path in a variable and then
+  using that\r
 
   \  variable to instantiate a driver object. The chrome service is to avoid\r
 
@@ -265,7 +282,7 @@ paragraph8: "<p>In this instance they have the attributes
   \r
 
   <p>Next we create some variables to store our user email, password,
-  dashboard URL and the URL for the web page containing all of our links, in
+  dashboard URL and the URL for the page containing all of our content pages, in
   this case I have named it content.</p>
 
 
@@ -295,7 +312,7 @@ paragraph8: "<p>In this instance they have the attributes
   <p>We use the “.find_element” function to find the user input fields which
   we earlier identified. We then use the “.send_keys” method and pass our
   matching variables, so username is passed into the email input and password is
-  passed into the password input.We then locate the login button by its name of
+  passed into the password input. We then locate the login button by its name of
   “commit”, and use .click() to continue.</p>
 
 
@@ -319,14 +336,17 @@ paragraph8: "<p>In this instance they have the attributes
   \        </pre>
 
 
+  <h2 id=\"step3\">Step Three: Bypassing Two-Factor Authentication</h2>
+
   <p>Next we create a variable called “verification” which stores a run time
-  user input. This allows our program to pause. During this pause we check our
-  emails for the verification code, paste it into the terminal and hit enter. Be
-  sure not to include any spaces after the code or else the program will crash.
-  Once we hit enter our program continues from where it left off. At this point
-  it finds the input field for the verification code. Using “.send_keys” we send
-  the new “verification” variable to the input field before using “.click()” to
-  verify the code.</p>
+  user input. This step allows the program to pause as it waits for our input
+  and is essentially the step that allows us to bypass 2FA. During this pause we
+  check our emails for the verification code, paste it into the terminal and hit
+  enter. Be sure not to include any spaces after the code or else the program
+  will crash. Once we hit enter our program continues from where it left off. At
+  this point it finds the input field for the verification code. Using
+  “.send_keys” we send the new “verification” variable to the input field before
+  using “.click()” to verify the code.</p>
 
 
 
@@ -355,13 +375,12 @@ paragraph8: "<p>In this instance they have the attributes
 
   <p>Just like that we are into the BigCommerce dashboard past the 2FA! At
   this stage we can navigate directly to the URL stored in our content variable.
-  This “content” page contains the links to our web pages editorial pages, which
-  in turn store our desired URLs. In this example I had to switch iframes to the
+  This “content” page contains all of the links to our editorial pages, which in
+  turn store our desired URLs. In this example I had to switch iframes to the
   iframe containing the content we require. To find the correct iframe simply
   use developer tools to inspect the content you are attempting to scrape, use
   CTRL + F to search for the keyword \"iframe\" and take the name of the iframe
-  that your content is contained within. This step is not usually required
-  though. </p>
+  that your content is contained within. This step is not always required. </p>
 
 
   <pre class=\"code_terminal\">\r
@@ -420,9 +439,9 @@ paragraph9: "<p>To scrape all of these editorial page links we create a for
 image9: /images/codeterminal.png
 imageAlt9: code terminal of URLs
 paragraph10: >-
-  <h2 id="step2">Step Two:</h2>
+  <h2 id="step4">Using Excel to Tidy Our Data:</h2>
 
-  <p>Once we have a list of editorial web page URLs we can move onto step two. At this stage, we can simply copy and paste the terminal code into Excel to tidy up the data. Remove any duplicates, filter for URLs not containing “pageId=” and delete them, and prepare the new structure for storing this list of URLs in a Python list. This stage could be handled as part of the Python program itself, but sometimes I find Excel easier to visualize the data. </p>
+  <p>Once we have a list of editorial page URLs we can move onto stage two of the process. First, we simply copy and paste the terminal code into Excel to tidy up the data. We can remove any duplicates, filter for URLs not containing “pageId=” and delete them, and prepare the new structure for storing this list of URLs in a Python list. This stage could be handled as part of the Python program itself, but sometimes I find Excel easier to visualize the data. </p>
 image10: /images/excelurls.png
 imageAlt10: list of URLs in Excel
 paragraph11: >-
@@ -434,7 +453,8 @@ paragraph11: >-
   <p>To do this we add a “ “, to the cells on either side of our URLs. We then use the concatenate formula to join them to our URLs. Note the dollar signs in the cells on either side of the URL. This is to lock these cells in place meaning, the only cell to change as we go down the sheet is the URL. This is achieved by pressing F4.</p>
 image11: /images/concatenate.png
 imageAlt11: Using the concatenate formula in Excel
-paragraph12: <p>By dragging down we can now apply the correct structure to all the URLs.</p>
+paragraph12: <p>By dragging down we can now apply the correct structure to all
+  of our URLs.</p>
 image12: /images/correcturls.png
 imageAlt12: Correct URL structure in Excel
 paragraph13: "<p>We can now take the list of URLs and add them to a list in our
@@ -476,10 +496,11 @@ paragraph13: "<p>We can now take the list of URLs and add them to a list in our
 
   \        </pre>
 
+  <h2 id=\"step5\">Scraping Content Page URLs:</h2>
 
   <p>Once we have this list of URLs which contains the actual data we require,
   we can use a for loop to cycle through them. Applying a wait of 3 seconds to
-  the browser helps to ensure the web page has finished loading and we are not
+  the browser helps to ensure the page has finished loading and we are not
   missing any elements. </p>
 
 
@@ -525,7 +546,7 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
   \        </pre>
 
 
-  <h2 id=\"headlessbrowser\">Creating a Headless Browser:</h2>
+  <h2 id=\"step6\">Creating a Headless Browser:</h2>
 
 
   <p>The final piece to the puzzle is to turn this session into a headless

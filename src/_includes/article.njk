@@ -2,6 +2,9 @@
 layout: "base.njk"
 ---
 
+{% if JSON|length %}
+{{ JSON }}
+{% endif %}
 <section class="block">
   <div class="container">
     <header class="block__header" data-aos="fade-up">

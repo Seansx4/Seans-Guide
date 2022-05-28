@@ -42,31 +42,37 @@ paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
 
   \r
 
-  \  <li><a class=\"jump\" href=\"#StaticVsDynamic\">Static Vs. Dynamic Websites</a></li>
+  \  <li><a class=\"jump\" href=\"#StaticVsDynamic\">Static Vs. Dynamic
+  Websites</a></li>
 
-  \  <li><a class=\"jump\" href=\"#ScrapingDynamicSelenium\r\">Scraping a Dynamic Website
-  with Selenium</a></li>
-
-  \r
-
-  \  <li><a class=\"jump\" href=\"#step1\">Step One: Simulating the Process</a></li>\r
+  \  <li><a class=\"jump\" href=\"#ScrapingDynamicSelenium\r\">Scraping a
+  Dynamic Website with Selenium</a></li>
 
   \r
 
-  \  <li><a class=\"jump\" href=\"#step2\">Step Two: Creating the Scraper</a></li>
+  \  <li><a class=\"jump\" href=\"#step1\">Step One: Simulating the
+  Process</a></li>\r
+
+  \r
+
+  \  <li><a class=\"jump\" href=\"#step2\">Step Two: Creating the
+  Scraper</a></li>
 
   \  <li><a class=\"jump\" href=\"#step3\">Step Three: Bypassing Two-Factor
   Authentication</a></li>
 
-  \  <li><a class=\"jump\" href=\"#step4\">Step Four: Using Excel to Tidy Data</a></li>
+  \  <li><a class=\"jump\" href=\"#step4\">Step Four: Using Excel to Tidy
+  Data</a></li>
 
-  \  <li><a class=\"jump\" href=\"#step5\">Step Five: Scraping Content Page URLs</a></li>
+  \  <li><a class=\"jump\" href=\"#step5\">Step Five: Scraping Content Page
+  URLs</a></li>
 
   \r
 
   \r
 
-  \  <li><a class=\"jump\" href=\"#step6\">Creating a Headless Browser</a></li>
+  \  <li><a class=\"jump\" href=\"#step6\">Creating a Headless
+  Browser</a></li>
 
   \  <li><a class=\"jump\" href=\"#fullcode\">Full Code</a></li>\r
 
@@ -162,7 +168,7 @@ paragraph3: "<p>While we can see what looks like links to our content pages, if
   \  page. </p>\n"
 image3: /images/inspectingContentpage.png
 imageAlt3: Inspecting URLs
-caption3: Inspecting URLss
+caption3: Inspecting the URLs in developer tools
 subheading4: ""
 paragraph4: "<p>This next page acts as an editorial page for the content page,
   and it\r
@@ -170,7 +176,7 @@ paragraph4: "<p>This next page acts as an editorial page for the content page,
   \  is here that the content web page URL is stored.</p>"
 image4: /images/editorialPage.png
 imageAlt4: Editorial page
-caption4: Editorial page, note you can see the correct web page URL.
+caption4: Editorial page, note you can see the true page URL
 subheading5: ""
 paragraph5: "  <p>This means that our task is split into two stages. First, we
   must scrape\r
@@ -193,6 +199,7 @@ paragraph5: "  <p>This means that our task is split into two stages. First, we
   will, and that we are not automatically logged in.</p>"
 image5: /images/login.png
 imageAlt5: Login
+caption5: BigCommerce login page
 subheading6: ""
 paragraph6: <p>By inspecting the email field, we can see the code for the input.
   In this example we can see that the input field has name = “user[email]” and
@@ -202,7 +209,7 @@ paragraph6: <p>By inspecting the email field, we can see the code for the input.
 image6: /images/inspectingemailinput.png
 imageAlt6: Inspecting email input
 caption6: Using developer tools we inspect the email input field. We then repeat
-  this for the password field and the login button to find their names.
+  this for the password field and the login button to find their names
 subheading7: ""
 paragraph7: " <p>We then repeat this process for the password. And again for the
   login\r
@@ -218,6 +225,7 @@ paragraph7: " <p>We then repeat this process for the password. And again for the
   the name of the code field and the verify button.</p>"
 image7: /images/inspectingverify.png
 imageAlt7: Inspecting the verify option
+caption7: Inspecting 2FA code input field
 subheading8: ""
 paragraph8: "<p>In this instance they have the attributes
   name=“verification[opt_code]” and name=“commit”.</p>
@@ -310,7 +318,7 @@ paragraph8: "<p>In this instance they have the attributes
   page instead. This is where our variables come into play.</p>
 
   <p>We use the “.find_element” function to find the user input fields which
-  we earlier identified. We then use the “.send_keys” method and pass our
+  we identified earlier. We then use the “.send_keys” method and pass our
   matching variables, so username is passed into the email input and password is
   passed into the password input. We then locate the login button by its name of
   “commit”, and use .click() to continue.</p>
@@ -365,6 +373,17 @@ paragraph8: "<p>In this instance they have the attributes
 
   driver.find_element(By.NAME, \"commit\").click()\r
 
+  verification = input(\"Enter verification code: \")\r
+
+  \r
+
+  driver.find_element(By.NAME,device_verification[otp_code]\").send_keys(veri\
+  fication)\r
+
+  \r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
   \r
 
 
@@ -407,12 +426,19 @@ paragraph8: "<p>In this instance they have the attributes
 
 
   \r\n"
-image8: /images/contentPage.png
+image8: /images/inspectcontentpage.jpg
 imageAlt8: Inspecting URL
-paragraph9: "<p>To scrape all of these editorial page links we create a for
-  loop, instructing the driver to find all <a> elements with the title of “Edit
-  this page”. The for loop then cycles through all of these <a> tags and prints
-  their hrefs, which is their editorial links. The code is below.</p>
+caption8: Inspection of content page URLs shows that they all have a title
+  attribute of “Edit this page”
+paragraph9: "for result in driver.find_elements(By.CSS_SELECTOR, 'a[title=\"Edit
+  this page\"]'):\r
+
+  \    print(result.get_attribute(\"href\"))\r
+
+  <p>To scrape all of these editorial page links we create a for loop,
+  instructing the driver to find all <a> elements with the title of “Edit this
+  page”. The for loop then cycles through all of these <a> tags and prints their
+  hrefs, which is their editorial links. The code is below.</p>
 
 
   <pre class=\"code_terminal\">\r
@@ -438,12 +464,14 @@ paragraph9: "<p>To scrape all of these editorial page links we create a for
   Once we run this program we get a number of URLs printed on our terminal. "
 image9: /images/codeterminal.png
 imageAlt9: code terminal of URLs
+caption9: List of URLs printed on our terminal
 paragraph10: >-
   <h2 id="step4">Using Excel to Tidy Our Data:</h2>
 
   <p>Once we have a list of editorial page URLs we can move onto stage two of the process. First, we simply copy and paste the terminal code into Excel to tidy up the data. We can remove any duplicates, filter for URLs not containing “pageId=” and delete them, and prepare the new structure for storing this list of URLs in a Python list. This stage could be handled as part of the Python program itself, but sometimes I find Excel easier to visualize the data. </p>
 image10: /images/excelurls.png
 imageAlt10: list of URLs in Excel
+caption10: Pasting data into Excel for clean up
 paragraph11: >-
   <p>We can prepare the URL structure by using the concatenate formula. The
   correct URL structure is as follows:</p>
@@ -453,12 +481,25 @@ paragraph11: >-
   <p>To do this we add a “ “, to the cells on either side of our URLs. We then use the concatenate formula to join them to our URLs. Note the dollar signs in the cells on either side of the URL. This is to lock these cells in place meaning, the only cell to change as we go down the sheet is the URL. This is achieved by pressing F4.</p>
 image11: /images/concatenate.png
 imageAlt11: Using the concatenate formula in Excel
+caption11: Note the dollar signs to lock cell E1 and G1 so that they are applied
+  to each cell (or URL) as we drag down.
 paragraph12: <p>By dragging down we can now apply the correct structure to all
   of our URLs.</p>
 image12: /images/correcturls.png
 imageAlt12: Correct URL structure in Excel
-paragraph13: "<p>We can now take the list of URLs and add them to a list in our
-  Python program.</p>
+caption12: Correct structure applied to all URLs
+paragraph13: "urls =
+  [\"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1519\
+  \",\r
+
+  \"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=12542\
+  \",\r
+
+  \"https://store.mybigcommerce.com/admin/index.php?ToDo=editPage&pageId=1538]\
+  \r
+
+  <p>We can now take the list of URLs and add them to a list in our Python
+  program.</p>
 
 
   <pre class=\"code_terminal\">\r
@@ -509,8 +550,52 @@ paragraph13: "<p>We can now take the list of URLs and add them to a list in our
   individual page URL by using its ID after inspecting.</p>"
 image13: /images/customurl.png
 imageAlt13: Retrieving the custom URL for the webpage
-paragraph14: "<p>We then print the full URL for the page before moving on to the
-  next URL in the list. </p>
+caption13: Inspecting the URL field so we can target its ID in our scraper
+paragraph14: "for url in urls:\r
+
+  \r
+
+  \    driver.get(url)\r
+
+  \    time.sleep(3)\r
+
+  \    driver.switch_to.frame(\"content-iframe\")\r
+
+  \    url = \"yourdomain.com\" + driver.find_element(By.ID,
+  \"page_custom_url\").get_attribute(\"value\")\r
+
+  \    print(url)\rfor url in urls:\r
+
+  \r
+
+  \    driver.get(url)\r
+
+  \    time.sleep(3)\r
+
+  \    driver.switch_to.frame(\"content-iframe\")\r
+
+  \    url = \"yourdomain.com\" + driver.find_element(By.ID,
+  \"page_custom_url\").get_attribute(\"value\")\r
+
+  \    print(url)\rfor url in urls:\r
+
+  \r
+
+  \    driver.get(url)\r
+
+  \    time.sleep(3)\r
+
+  \    driver.switch_to.frame(\"content-iframe\")\r
+
+  \    url = \"yourdomain.com\" + driver.find_element(By.ID,
+  \"page_custom_url\").get_attribute(\"value\")\r
+
+  \    print(url)\r
+
+
+
+  <p>We then print the full URL for the page before moving on to the next URL
+  in the list. </p>
 
 
   <pre class=\"code_terminal\">\r
@@ -553,8 +638,7 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
   session, meaning selenium will run in the background for us and we do not have
   to watch the browser. To do this we simply create a chrome options object, in
   which we set the browser option to headless. We then pass this options object
-  as an argument to our driver.</p>\
-
+  as an argument to our driver.</p>
 
 
 
@@ -584,4 +668,106 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
   \ </code>\r
 
   \ </pre>"
+paragraph15: "from selenium import webdriver\r
+
+  import time\r
+
+  from selenium.webdriver.common.by import By\r
+
+  \r
+
+  from selenium.webdriver.chrome.options import Options\r
+
+  from selenium.webdriver.chrome.service import Service\r
+
+  \r
+
+  chrome_options = Options()\r
+
+  chrome_options.headless = True\r
+
+  \r
+
+  username = \"username@mail.com\"\r
+
+  password = \"password\"\r
+
+  \r
+
+  \r
+
+  path = Service(\"Filepath of your webdriver\")\r
+
+  driver = webdriver.Chrome(service=path, options=chrome_options)\r
+
+  dashboard = \"Dashboard URL\"\r
+
+  content = \"Content URL\"\r
+
+  driver.get(dashboard)\r
+
+  \r
+
+  \r
+
+  driver.find_element(By.NAME, \"user[email]\").send_keys(username)\r
+
+  driver.find_element(By.NAME, \"user[password]\").send_keys(password)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+  \r
+
+  verification = input(\"Enter verification code: \")\r
+
+  driver.find_element(By.NAME,
+  \"device_verification[otp_code]\").send_keys(verification)\r
+
+  driver.find_element(By.NAME, \"commit\").click()\r
+
+  \r
+
+  driver.get(content)\r
+
+  driver.switch_to.frame(\"content-iframe\")\r
+
+  \r
+
+  for result in driver.find_elements(By.CSS_SELECTOR, 'a[title=\"Edit this
+  page\"]'):\r
+
+  \    print(result.get_attribute(\"href\"))\r
+
+  <pre class=\"code_terminal\">          <code>\r
+
+  for url in urls:\r
+
+  \    driver.get(url)\r
+
+  \    time.sleep(3)\r
+
+  \    driver.switch_to.frame(\"content-iframe\")\r
+
+  \    url = \"https://www.example.com\" + driver.find_element(By.ID,
+  \"page_custom_url\").get_attribute(\"value\")\r
+
+  \    print(url)\r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \r
+
+  \ </code>\r
+
+  \        </pre>"
 ---

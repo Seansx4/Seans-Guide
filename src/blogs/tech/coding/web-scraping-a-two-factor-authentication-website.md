@@ -96,7 +96,7 @@ paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
 
   \r
 
-  \  <li><a class=\"jump\" href=\"#step6\">Step Five: Creating a Headless
+  \  <li><a class=\"jump\" href=\"#step6\">Step Six: Creating a Headless
   Browser</a></li>
 
   \  <li><a class=\"jump\" href=\"#fullcode\">Full Code</a></li>\r

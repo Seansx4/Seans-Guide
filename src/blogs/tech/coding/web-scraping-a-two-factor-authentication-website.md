@@ -1,9 +1,9 @@
 ---
-title: Web Scraping a Two-Factor Authentication Website
+title: 6 Easy Steps to Scrape a 2FA Website
 metaDescription: This blog outlines how to correctly web scrape a dynamic
-  website protected with 2FA using Python and Selenium.
+  website protected with two factor authentication using Python and Selenium.
 datum: May 24th 22
-blogTitle: Web Scraping Content from Two-Factor Authentication Website
+blogTitle: 6 Easy Steps to Scrape a Two-Factor Authentication Website
 description: This blog outlines how to correctly web scrape a dynamic website
   protected with 2FA using Python and Selenium.
 author: Sean
@@ -17,8 +17,7 @@ JSON: "\r{\r
 
   \  \"@type\" : \"Article\",\r
 
-  \  \"name\" : \"Web Scraping Content from Two-Factor Authentication
-  Website\",\r
+  \  \"name\" : \"6 Easy Steps to Scrape a 2FA Website\",\r
 
   \  \"author\" : {\r
 

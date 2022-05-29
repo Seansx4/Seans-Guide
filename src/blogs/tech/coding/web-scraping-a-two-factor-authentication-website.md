@@ -96,7 +96,7 @@ paragraph1: " <p>Web scraping is a fantastic tool for any programmer to add to
 
   \r
 
-  \  <li><a class=\"jump\" href=\"#step6\">Creating a Headless
+  \  <li><a class=\"jump\" href=\"#step6\">Step Five: Creating a Headless
   Browser</a></li>
 
   \  <li><a class=\"jump\" href=\"#fullcode\">Full Code</a></li>\r
@@ -196,7 +196,7 @@ subheading4: ""
 paragraph4: "<p>This next page acts as an editorial page for the content page,
   and it\r
 
-  \  is here that the content web page URL is stored.</p>"
+  \  is here that the content page URL is stored.</p>"
 image4: /images/editorialPage.png
 imageAlt4: Editorial page
 caption4: Editorial page, note you can see the true page URL
@@ -226,9 +226,9 @@ caption5: BigCommerce login page
 subheading6: ""
 paragraph6: <p>By inspecting the email field, we can see the code for the input.
   In this example we can see that the input field has name = “user[email]” and
-  id = “user_email”. We can target either of these within our webscraper but in
-  this case I am going to use the name attribute for the sake of consistency, as
-  the login button has a name but not an ID. </p>
+  id = “user_email”. We can target either of these attributes within our
+  webscraper but in this case I am going to use the name attribute for the sake
+  of consistency, as the login button has a name but not an ID. </p>
 image6: /images/inspectingemailinput.png
 imageAlt6: Inspecting email input
 caption6: Using developer tools we inspect the email input field. We then repeat
@@ -413,14 +413,15 @@ paragraph8: "<p>In this instance they have the attributes
   \        </pre>
 
 
-  <p>Just like that we are into the BigCommerce dashboard past the 2FA! At
-  this stage we can navigate directly to the URL stored in our content variable.
-  This “content” page contains all of the links to our editorial pages, which in
-  turn store our desired URLs. In this example I had to switch iframes to the
-  iframe containing the content we require. To find the correct iframe simply
-  use developer tools to inspect the content you are attempting to scrape, use
-  CTRL + F to search for the keyword \"iframe\" and take the name of the iframe
-  that your content is contained within. This step is not always required. </p>
+  <p>Just like that we are into the BigCommerce dashboard past the 2FA!
+  </p><p>At this stage we can navigate directly to the URL stored in our content
+  variable. This “content” page contains all of the links to our editorial
+  pages, which in turn store our desired URLs. </p><p> In this example I had to
+  switch iframes to the iframe containing the content we require. To find the
+  correct iframe simply use developer tools to inspect the content you are
+  attempting to scrape, use CTRL + F to search for the keyword \"iframe\" and
+  take the name of the iframe that your content is contained within. This step
+  is not always required. </p>
 
 
   <pre class=\"code_terminal\">\r
@@ -440,9 +441,9 @@ paragraph8: "<p>In this instance they have the attributes
   \        </pre>
 
 
-  <p>Inspecting each page link we can see that it is contained within an <a>
-  tag that has a title of “Edit this page”, and so it is this that we will
-  target in our scraping bot. </p>
+  <p>Inspecting each page link we can see that it is contained within an
+  anchor tag that has a title of “Edit this page”, and so it is this that we
+  will target in our scraping bot. </p>
 
 
   \r\n"
@@ -451,8 +452,8 @@ imageAlt8: Inspecting URL
 caption8: Inspection of content page URLs shows that they all have a title
   attribute of “Edit this page”
 paragraph9: "<p>To scrape all of these editorial page links we create a for
-  loop, instructing the driver to find all <a> elements with the title of “Edit
-  this page”. The for loop then cycles through all of these <a> tags and prints
+  loop, instructing the driver to find all anchor tags with the title of “Edit
+  this page”. The for loop then cycles through all of these tags and prints
   their hrefs, which is their editorial links. The code is below.</p>
 
 
@@ -478,9 +479,9 @@ paragraph9: "<p>To scrape all of these editorial page links we create a for
   Once we run this program we get a number of URLs printed on our terminal. "
 image9: /images/codeterminal.png
 imageAlt9: code terminal of URLs
-caption9: List of URLs printed on our terminal
+caption9: List of editorial page URLs printed on our terminal
 paragraph10: >-
-  <h2 id="step4">Using Excel to Tidy Our Data:</h2>
+  <h2 id="step4">Step Four: Using Excel to Tidy Our Data:</h2>
 
   <p>Once we have a list of editorial page URLs we can move onto stage two of the process. First, we simply copy and paste the terminal code into Excel to tidy up the data. We can remove any duplicates, filter for URLs not containing “pageId=” and delete them, and prepare the new structure for storing this list of URLs in a Python list. This stage could be handled as part of the Python program itself, but sometimes I find Excel easier to visualize the data. </p>
 image10: /images/excelurls.png
@@ -492,7 +493,7 @@ paragraph11: >-
 
   <p>“URL“, &rarr; which looks like &rarr; “example.com/example-page”,</p>
 
-  <p>To do this we add a “ “, to the cells on either side of our URLs. We then use the concatenate formula to join them to our URLs. Note the dollar signs in the cells on either side of the URL. This is to lock these cells in place meaning, the only cell to change as we go down the sheet is the URL. This is achieved by pressing F4.</p>
+  <p>To do this we add a “ and “, to the cells on either side of our URLs. We then use the concatenate formula to join them to our URLs. Note the dollar signs in the cells on either side of the URL. This is to lock these cells in place meaning the only cell to change as we go down the sheet is the URL. This is achieved by pressing F4.</p>
 image11: /images/concatenate.png
 imageAlt11: Using the concatenate formula in Excel
 caption11: Note the dollar signs to lock cell E1 and G1 so that they are applied
@@ -534,7 +535,7 @@ paragraph13: "\r
 
   \        </pre>
 
-  <h2 id=\"step5\">Scraping Content Page URLs:</h2>
+  <h2 id=\"step5\">Step Five: Scraping Content Page URLs:</h2>
 
   <p>Once we have this list of URLs which contains the actual data we require,
   we can use a for loop to cycle through them. Applying a wait of 3 seconds to
@@ -542,8 +543,8 @@ paragraph13: "\r
   missing any elements. </p>
 
 
-  <p>Next we can then create our desired output URL by creating a string in
-  which we concatenate our domain name to the individual page URL. We locate the
+  <p>Next we can create our desired output URL by creating a string in which
+  we concatenate our domain name to the individual page URL. We locate the
   individual page URL by using its ID after inspecting.</p>"
 image13: /images/customurl.png
 imageAlt13: Retrieving the custom URL for the webpage
@@ -584,11 +585,11 @@ paragraph14: "<p>We then print the full URL for the page before moving on to the
   \        </pre>
 
 
-  <h2 id=\"step6\">Creating a Headless Browser:</h2>
+  <h2 id=\"step6\">Step Six: Creating a Headless Browser:</h2>
 
 
   <p>The final piece to the puzzle is to turn this session into a headless
-  session, meaning selenium will run in the background for us and we do not have
+  session, meaning Selenium will run in the background for us and we do not have
   to watch the browser. To do this we simply create a chrome options object, in
   which we set the browser option to headless. We then pass this options object
   as an argument to our driver.</p>

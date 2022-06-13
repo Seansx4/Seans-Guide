@@ -144,8 +144,9 @@ paragraph2: "<h2 id=\"2FA\">Why Scrape a Website with 2FA-Factor
   \  <p>There are two possible options to take when trying to overcomethe
   scraping a 2FA website, but which option you chose depends largely on what
   kind of website you are trying to scrape. If you are unsure of what kind of
-  website you are scraping, check out my guide Static vs Dynamic Sites: What’s
-  the Difference? </p>\r
+  website you are scraping, check out <a
+  href=\"https://www.seansguide.com/blogs/tech/coding/a-guide-static-vs-dynamic\
+  -websites/\">A Guide: Static Vs. Dynamic Websites</a></p>\r
 
   \r
 

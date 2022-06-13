@@ -13,6 +13,7 @@ author: Sean
 tags:
   - post
   - coding
+  - featured
 JSON: "\r{\r
 
   \  \"@context\" : \"http://schema.org\",\r

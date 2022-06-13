@@ -32,11 +32,11 @@ JSON: "\r{\r
 
   \  \"datePublished\" : \"2022-06-13\",\r
 
-  \  \"image\" : \"https://www.seansguide.com/images/code.jpg\",\r
+  \  \"image\" : \"https://www.seansguide.com/images/websitebuilder.png\",\r
 
   \  \"url\" :
-  \"https://www.seansguide.com/blogs/tech/coding/web-scraping-a-two-factor-auth\
-  entication-website/\"\r
+  \"https://www.seansguide.com/blogs/tech/coding/a-guide-static-vs-dynamic-webs\
+  ites/\"\r
 
   }\n"
 paragraph1: <p>An important concept to understand when learning about the web is

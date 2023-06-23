@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
+    "prebuild": "rimraf public",
     "build": "eleventy"
   },
   "keywords": [],
@@ -12,9 +13,10 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "rimraf": "^5.0.1"
   },
   "dependencies": {
-    "luxon": "^2.4.0"
+    "luxon": "^2.5.2"
   }
 }

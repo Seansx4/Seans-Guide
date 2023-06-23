@@ -4,26 +4,25 @@
       {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}"
         >&laquo;</a
       >
-
       {% endif %}
     </li>
 
     <li>
       {% if pagination.href.previous %}<a
         href="{{ pagination.href.previous }}"
-        >{{ pagination.pageNumber - 1 }}</a
+        >{{ pagination.pageNumber }}</a
       >{% endif %}
     </li>
 
     <li>
       <a class="active" href="{{ pagination.href }}">{{
-        pagination.pageNumber
+        pagination.pageNumber + 1
       }}</a>
     </li>
 
     <li>
       {% if pagination.href.next %}<a href="{{ pagination.href.next }}">{{
-        pagination.pageNumber + 1
+        pagination.pageNumber + 1 + 1
       }}</a
       >{% endif %}
     </li>

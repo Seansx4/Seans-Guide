@@ -858,3 +858,43 @@ a {
     font-size: 2.1rem;
   }
 }
+
+
+
+
+/*Experiment. */
+.containerblog {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* creates two columns */
+  grid-gap: 1rem; /* adds space between grid items */
+}
+
+.containerblog--centered {
+  text-align: center;
+}
+
+.containerblog--leftright {
+  text-align: left;
+}
+
+.containerblog--rightleft {
+  text-align: right;
+}
+
+.headerblog-centered {
+  grid-column: span 2; /* makes the header span both columns */
+  text-align: center;
+}
+
+.paragraphblog-centered {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.imageglog-right {
+  justify-self: end;
+}
+
+.imageblog-left {
+  justify-self: start;
+}

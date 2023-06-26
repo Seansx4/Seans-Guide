@@ -6,6 +6,42 @@ media_folder: "public/src/images"
 public_folder: "/images"
 # public_folder: "src/images"
 
+# collections:
+#   - name: "blog"
+#     label: "Blog"
+#     folder: "src/blogs"
+#     create: true
+#     slug: "{{slug}}"
+#     fields:
+#       - { label: "Page Title", name: "title", widget: "string" }
+#       - {
+#           label: "Meta Description",
+#           name: "metaDescription",
+#           widget: "string",
+#           required: false,
+#         }
+#       - {
+#           label: "Blog Datum",
+#           name: "datum",
+#           widget: "datetime",
+#           default: "",
+#           format: "MMM Do YY",
+#         }
+#       - { label: "Blog Title", name: "blogTitle", widget: "string" }
+#       - { label: "Author", name: "author", widget: "string" }
+#       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+#       - name: "sections"
+#         label: "Sections"
+#         widget: "list"
+#         fields:
+#           - {
+#               label: "Type",
+#               name: "type",
+#               widget: "select",
+#               options: ["Paragraph", "Image", "Heading"],
+#             }
+#           - { label: "Content", name: "content", widget: "string" }
+
 collections:
   - name: "blog"
     label: "Blog"
@@ -28,16 +64,25 @@ collections:
           format: "MMM Do YY",
         }
       - { label: "Blog Title", name: "blogTitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - name: "sections"
-        label: "Sections"
+      - label: "Sections"
+        name: "sections"
         widget: "list"
         fields:
           - {
               label: "Type",
               name: "type",
               widget: "select",
-              options: ["Paragraph", "Image", "Heading"],
+              options:
+                [
+                  "Header centered",
+                  "Paragraph left",
+                  "Image right",
+                  "Paragraph centered",
+                  "Image left",
+                  "Paragraph right",
+                ],
             }
           - { label: "Content", name: "content", widget: "string" }
